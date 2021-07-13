@@ -81,7 +81,7 @@ namespace QuanLyHocSinh
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(208, 608);
+            this.panelLogo.Size = new System.Drawing.Size(208, 617);
             this.panelLogo.TabIndex = 0;
             // 
             // panelMenu
@@ -99,7 +99,7 @@ namespace QuanLyHocSinh
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 69);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(204, 535);
+            this.panelMenu.Size = new System.Drawing.Size(204, 544);
             this.panelMenu.TabIndex = 2;
             // 
             // panelIconDownUp
@@ -139,7 +139,7 @@ namespace QuanLyHocSinh
             this.panelHocPhi.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelHocPhi.Location = new System.Drawing.Point(0, 360);
             this.panelHocPhi.Name = "panelHocPhi";
-            this.panelHocPhi.Size = new System.Drawing.Size(206, 175);
+            this.panelHocPhi.Size = new System.Drawing.Size(206, 184);
             this.panelHocPhi.TabIndex = 17;
             // 
             // btnThanhToan
@@ -496,7 +496,7 @@ namespace QuanLyHocSinh
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(208, 53);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(756, 555);
+            this.panelContent.Size = new System.Drawing.Size(868, 564);
             this.panelContent.TabIndex = 2;
             // 
             // pictureHome
@@ -505,7 +505,7 @@ namespace QuanLyHocSinh
             this.pictureHome.Image = global::QuanLyHocSinh.Properties.Resources.dashboard;
             this.pictureHome.Location = new System.Drawing.Point(0, 0);
             this.pictureHome.Name = "pictureHome";
-            this.pictureHome.Size = new System.Drawing.Size(756, 555);
+            this.pictureHome.Size = new System.Drawing.Size(868, 564);
             this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureHome.TabIndex = 1;
             this.pictureHome.TabStop = false;
@@ -523,7 +523,7 @@ namespace QuanLyHocSinh
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gradientPanel1.Location = new System.Drawing.Point(208, 0);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(756, 53);
+            this.gradientPanel1.Size = new System.Drawing.Size(868, 53);
             this.gradientPanel1.TabIndex = 1;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(210)))));
             // 
@@ -541,7 +541,7 @@ namespace QuanLyHocSinh
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(588, 15);
+            this.iconButton2.Location = new System.Drawing.Point(700, 15);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(22, 30);
             this.iconButton2.TabIndex = 5;
@@ -561,7 +561,7 @@ namespace QuanLyHocSinh
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(616, 15);
+            this.iconButton1.Location = new System.Drawing.Point(728, 15);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(24, 30);
             this.iconButton1.TabIndex = 5;
@@ -572,7 +572,7 @@ namespace QuanLyHocSinh
             this.lblLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("VNI-Ariston", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(682, 18);
+            this.lblLogin.Location = new System.Drawing.Point(794, 18);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(53, 22);
             this.lblLogin.TabIndex = 3;
@@ -582,7 +582,7 @@ namespace QuanLyHocSinh
             // 
             this.pictureAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureAvatar.Image = global::QuanLyHocSinh.Properties.Resources.avata_02;
-            this.pictureAvatar.Location = new System.Drawing.Point(646, 15);
+            this.pictureAvatar.Location = new System.Drawing.Point(758, 15);
             this.pictureAvatar.Name = "pictureAvatar";
             this.pictureAvatar.Size = new System.Drawing.Size(30, 30);
             this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -623,7 +623,7 @@ namespace QuanLyHocSinh
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(964, 608);
+            this.ClientSize = new System.Drawing.Size(1076, 617);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.panelLogo);
