@@ -229,7 +229,7 @@ go
 
 /* Users permissions */
 
-insert into ThongTinCaNhan values ('TTCN01',N'NguyêÞn Vãn Tiêìn','avata_nv_02.png',21,N'11/13/2000',N'Nam',N'Thanh Hoìa','0123456789')
+insert into ThongTinCaNhan values ('TTCN01',N'NguyêÞn Vãn Tiêìn','./Image/avata_nv_02.png',21,N'11/13/2000',N'Nam',N'Thanh Hoìa','0123456789')
 insert into NhanVien values ('NV01','07/14/2021',N'Nhân viên',1,'TTCN01')
 insert into TaiKhoan values ('TK01','admin','123456','NV01')
 
@@ -238,3 +238,6 @@ select * from NhanVien
 select * from TaiKhoan
 
 delete from ThongTinCaNhan where MaCN = 'TTCN01'
+
+alter table ThongTinCaNhan
+alter column Anh nvarchar(max) not null;
