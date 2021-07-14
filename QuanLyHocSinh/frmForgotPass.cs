@@ -12,13 +12,11 @@ namespace QuanLyHocSinh
 {
     public partial class frmForgotPass : Form
     {
-        private string user, pass;
-        public frmForgotPass(string user,string pass)
+        private dbDataContext db = new dbDataContext();
+        public frmForgotPass()
         {
             InitializeComponent();
             loadCaptchaImage();
-            this.user = user;
-            this.pass = pass;
         }
         int number = 0;
         private void loadCaptchaImage()
@@ -39,16 +37,20 @@ namespace QuanLyHocSinh
 
         private void btnYeuCau_Click(object sender, EventArgs e)
         {
-            if (txtXacThuc.Text == number.ToString() && txtTaiKhoan.Text == user)
+            foreach (var p in db.TaiKhoans)
             {
-                this.Hide();
-                frmResetPass resetForm = new frmResetPass(user,pass);
-                resetForm.Show();
+                if (txtXacThuc.Text == number.ToString() && txtTaiKhoan.Text == p.TaiKhoan1.Trim())
+                {
+                    this.Hide();
+                    frmResetPass resetForm = new frmResetPass(txtTaiKhoan.Text);
+                    resetForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Xác thực không thành công!!!");
+                }
             }
-            else
-            {
-                MessageBox.Show("Xác thực không thành công!!!");
-            }
+            
         }
     }
 }

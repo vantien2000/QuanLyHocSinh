@@ -1,6 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Windows.Forms;
 
 namespace QuanLyHocSinh
@@ -10,15 +11,14 @@ namespace QuanLyHocSinh
         private IconButton currentBtn; //nut ien tai
         private Panel leftBorderBtn; //panel thanh chay
         private Form currentChildForm; //form con hien tai
+        private IconPictureBox iconHide = new IconPictureBox();
         //Nut sổ lên
         private IconButton caretUpBtn = new IconButton();
-        public frmAdmin(string name, string pass)
+        public frmAdmin(TaiKhoan tk)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(5, 40);
-           
-
             //form
             //this.Text = string.Empty;
             //this.ControlBox = false;
@@ -28,15 +28,19 @@ namespace QuanLyHocSinh
             //open form
             //login
             lblLogin.BackColor = Color.Transparent;
-            lblLogin.Text = name;
+            lblLogin.Text = tk.TaiKhoan1;
             lblLogin.ForeColor = Color.White;
             //panel Hoc Phi
             panelHocPhi.Hide();
             //xử lý event
             caretUpBtn.Click += caretUpBtn_Click;
+
             //scroll menu
             panelMenu.AutoScroll = true;
             panelHocPhi.AutoScroll = true;
+            //load Avatar
+            string filename = @"E:\BTL-Win\QuanLyHocSinh\Image\"+tk.NhanVien.ThongTinCaNhan.Anh;
+            pictureAvatar.Image = Image.FromFile(filename);
         }
 
         private void ActivateButton(object senderBtn,Color color,Panel inputPanel)
@@ -188,8 +192,6 @@ namespace QuanLyHocSinh
         {
             OpenChildForm(new frmDashBoard());
         }
-
-        
         private void iconCaretDown_Click(object sender, System.EventArgs e)
         {
             panelHocPhi.Show();
@@ -237,7 +239,6 @@ namespace QuanLyHocSinh
 
         private void btnThanhToan_MouseHover(object sender, System.EventArgs e)
         {
-
             ActivateButton(sender, Color.FromArgb(225, 83, 33), panelHocPhi);
             //set lai mau nut sổ xuống
             caretUpBtn.IconColor = Color.DimGray;
