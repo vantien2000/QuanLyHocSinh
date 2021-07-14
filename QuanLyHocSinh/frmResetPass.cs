@@ -12,12 +12,11 @@ namespace QuanLyHocSinh
 {
     public partial class frmResetPass : Form
     {
-        private string user, pass;
-        public frmResetPass(string user, string pass)
+        private string user;
+        public frmResetPass(string user)
         {
             InitializeComponent();
             this.user = user;
-            this.pass = pass;
         }
         private void btnXacThuc_Click(object sender, EventArgs e)
         {

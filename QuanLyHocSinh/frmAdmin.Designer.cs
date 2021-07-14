@@ -55,10 +55,10 @@ namespace QuanLyHocSinh
             this.gradientPanel1 = new QuanLyHocSinh.GradientPanel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.lblLogin = new System.Windows.Forms.Label();
             this.pictureAvatar = new QuanLyHocSinh.CircularPictureBox();
             this.lblChange = new System.Windows.Forms.Label();
             this.iconChange = new FontAwesome.Sharp.IconPictureBox();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelIconDownUp.SuspendLayout();
@@ -514,9 +514,9 @@ namespace QuanLyHocSinh
             // 
             this.gradientPanel1.Angle = 180F;
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(143)))), ((int)(((byte)(199)))));
+            this.gradientPanel1.Controls.Add(this.lblLogin);
             this.gradientPanel1.Controls.Add(this.iconButton2);
             this.gradientPanel1.Controls.Add(this.iconButton1);
-            this.gradientPanel1.Controls.Add(this.lblLogin);
             this.gradientPanel1.Controls.Add(this.pictureAvatar);
             this.gradientPanel1.Controls.Add(this.lblChange);
             this.gradientPanel1.Controls.Add(this.iconChange);
@@ -537,11 +537,11 @@ namespace QuanLyHocSinh
             this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.FacebookMessenger;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(700, 15);
+            this.iconButton2.Location = new System.Drawing.Point(686, 14);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(22, 30);
             this.iconButton2.TabIndex = 5;
@@ -557,32 +557,20 @@ namespace QuanLyHocSinh
             this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(728, 15);
+            this.iconButton1.Location = new System.Drawing.Point(714, 14);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(24, 30);
             this.iconButton1.TabIndex = 5;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
-            // lblLogin
-            // 
-            this.lblLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("VNI-Ariston", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(794, 18);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(53, 22);
-            this.lblLogin.TabIndex = 3;
-            this.lblLogin.Text = "label3";
-            // 
             // pictureAvatar
             // 
             this.pictureAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureAvatar.Image = global::QuanLyHocSinh.Properties.Resources.avata_02;
-            this.pictureAvatar.Location = new System.Drawing.Point(758, 15);
+            this.pictureAvatar.Location = new System.Drawing.Point(744, 14);
             this.pictureAvatar.Name = "pictureAvatar";
             this.pictureAvatar.Size = new System.Drawing.Size(30, 30);
             this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -615,6 +603,19 @@ namespace QuanLyHocSinh
             this.iconChange.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconChange.TabIndex = 0;
             this.iconChange.TabStop = false;
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.White;
+            this.lblLogin.Font = new System.Drawing.Font("VNI-Ariston", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.Black;
+            this.lblLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblLogin.Location = new System.Drawing.Point(780, 17);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(53, 22);
+            this.lblLogin.TabIndex = 3;
+            this.lblLogin.Text = "label3";
             // 
             // frmAdmin
             // 
@@ -670,7 +671,6 @@ namespace QuanLyHocSinh
         private FontAwesome.Sharp.IconButton btnDashBoard;
         private System.Windows.Forms.Panel panelContent;
         private CircularPictureBox pictureAvatar;
-        private System.Windows.Forms.Label lblLogin;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panelHocPhi;
@@ -680,5 +680,6 @@ namespace QuanLyHocSinh
         private FontAwesome.Sharp.IconButton iconCaretDown;
         private System.Windows.Forms.Panel panelIconDownUp;
         private System.Windows.Forms.PictureBox pictureHome;
+        private System.Windows.Forms.Label lblLogin;
     }
 }

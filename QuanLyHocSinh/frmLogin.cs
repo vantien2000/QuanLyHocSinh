@@ -12,8 +12,7 @@ namespace QuanLyHocSinh
 {
     public partial class frmLogin : Form
     {
-        private string USER_NAME = "admin";
-        private string PASSWORD = "admin";
+        private dbDataContext db = new dbDataContext();
         int solanClick = 1;
         public frmLogin()
         {
@@ -27,50 +26,65 @@ namespace QuanLyHocSinh
             //Tắt control của form
             this.ControlBox = false;
             this.DoubleBuffered = true;
+            
         }
 
         public frmLogin(string user,string pass)
         {
             InitializeComponent();
-            this.USER_NAME = user;
-            this.PASSWORD = pass;
+            foreach (var p in db.TaiKhoans)
+            {
+                if (p.TaiKhoan1.Trim().Equals(user))
+                {
+                    //gán mật khẩu mới
+                    p.MatKhau = pass;
+                }
+            }
         }
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == USER_NAME && txtPass.Text == PASSWORD)
+
+            foreach(var p in db.TaiKhoans)
             {
-                this.Hide();
-                frmAdmin admin = new frmAdmin(USER_NAME,PASSWORD);
-                admin.Show();
-            }
-            else
-            {
-                lblThongBao.Text = "Nhập sai mật khẩu quá 5 lần. Tài khoản sẽ bị khóa";
-                lblThongBao.ForeColor = System.Drawing.Color.Red;
-                lblThongBao.Visible = true;
-                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (solanClick == 5)
+                //if(txtUser.Text == "" || txtPass.Text == "")
+                //{
+                //    MessageBox.Show("Bạn chưa nhập thông tin tài khoản và mật khẩu!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+
+                if(p.TaiKhoan1.Trim().Equals(txtUser.Text) && p.MatKhau.Trim().Equals(txtPass.Text))
                 {
-                    txtUser.Enabled = false;
-                    txtPass.Enabled = false;
-                    lblThongBao.Text = "Bạn đã Nhập sai mật khẩu quá 5 lần. Không thể đăng nhập";
-                    lblThongBao.ForeColor = System.Drawing.Color.Red;
-                    btnDangNhap.Enabled = false;
+                    this.Hide();
+                    frmAdmin admin = new frmAdmin(p);
+                    admin.Show();
                 }
-                solanClick++;
+                else
+                {
+                    lblThongBao.Text = "Nhập sai mật khẩu quá 5 lần. Tài khoản sẽ bị khóa";
+                    lblThongBao.ForeColor = System.Drawing.Color.Red;
+                    lblThongBao.Visible = true;
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (solanClick == 5)
+                    {
+                        txtUser.Enabled = false;
+                        txtPass.Enabled = false;
+                        lblThongBao.Text = "Bạn đã Nhập sai mật khẩu quá 5 lần. Không thể đăng nhập";
+                        lblThongBao.ForeColor = System.Drawing.Color.Red;
+                        btnDangNhap.Enabled = false;
+                    }
+                    solanClick++;
+                }
             }
-            
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Close();
         }
 
         private void ForgetPass(object sender, EventArgs e)
         {
             this.Hide();
-            frmForgotPass fgpFrom = new frmForgotPass(USER_NAME,PASSWORD);
+            frmForgotPass fgpFrom = new frmForgotPass();
             fgpFrom.Show();
         }
     }
