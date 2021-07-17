@@ -244,5 +244,120 @@ namespace QuanLyHocSinh
             caretUpBtn.IconColor = Color.DimGray;
             iconCaretDown.IconColor = Color.DimGray;
         }
+
+        private void pictureHome_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void lblChange_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void lblLogin_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnCongNo_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnDiemSo_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void panelIconDownUp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelHocPhi_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnThanhToan_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void iconChange_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnQLLopHoc_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnThonTin_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnThongKe_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnLichSu_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void pictureAvatar_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
