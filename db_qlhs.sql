@@ -11,6 +11,7 @@ Database		MS SQL 2005
 use master
 create database db_qlhs
 use db_qlhs
+drop database db_qlhs
 
 Create table [ThongTinCaNhan]
 (
@@ -163,7 +164,6 @@ Create table [LoaiDiem]
 	[MaLoai] Char(10) NOT NULL,
 	[LoaiDiem] Nvarchar(50) NULL,
 	[HeSo] Integer NULL,
-	[DiemSo] Float NULL,
 	[MaHS] Char(10) NOT NULL,
 	[MaMon] Char(10) NOT NULL,
 Primary Key ([MaLoai])
@@ -300,16 +300,18 @@ insert into MonHoc values ('M09', N'GDCD', 'GV05', 1)
 insert into MonHoc values ('M10', N'Thể dục', 'GV06', 1)
 
 insert into LoaiDiem values ('LD01', N'Điểm miệng', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD01', N'Điểm kiểm tra 15 phút', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD01', N'Điểm kiểm tra 1 tiết', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD01', N'Điểm giữa kỳ', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD01', N'Điểm cuối kỳ', 1, 'HS01', 'M01')
+insert into LoaiDiem values ('LD02', N'Điểm kiểm tra 15 phút', 1, 'HS01', 'M01')
+insert into LoaiDiem values ('LD03', N'Điểm kiểm tra 1 tiết', 1, 'HS01', 'M01')
+insert into LoaiDiem values ('LD04', N'Điểm giữa kỳ', 1, 'HS01', 'M01')
+insert into LoaiDiem values ('LD05', N'Điểm cuối kỳ', 1, 'HS01', 'M01')
 
 select * from ThongTinCaNhan
 select * from NhanVien
 select * from TaiKhoan
-
-delete from ThongTinCaNhan where MaCN = 'TTCN01'
+select * from GVCN
+select * from MonHoc
+select * from LoaiDiem
+delete from ThongTinCaNhan where MaCN = 'TTCN02'
 
 alter table ThongTinCaNhan
 alter column Anh nvarchar(max) not null;

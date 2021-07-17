@@ -81,7 +81,7 @@ namespace QuanLyHocSinh
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(320, 648);
+            this.panelLogo.Size = new System.Drawing.Size(277, 750);
             this.panelLogo.TabIndex = 0;
             // 
             // panelMenu
@@ -99,7 +99,7 @@ namespace QuanLyHocSinh
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 72);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(316, 572);
+            this.panelMenu.Size = new System.Drawing.Size(273, 674);
             this.panelMenu.TabIndex = 2;
             // 
             // panelIconDownUp
@@ -139,7 +139,7 @@ namespace QuanLyHocSinh
             this.panelHocPhi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHocPhi.Location = new System.Drawing.Point(0, 376);
             this.panelHocPhi.Name = "panelHocPhi";
-            this.panelHocPhi.Size = new System.Drawing.Size(316, 196);
+            this.panelHocPhi.Size = new System.Drawing.Size(273, 298);
             this.panelHocPhi.TabIndex = 17;
             // 
             // btnThanhToan
@@ -161,7 +161,7 @@ namespace QuanLyHocSinh
             this.btnThanhToan.Location = new System.Drawing.Point(0, 94);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.btnThanhToan.Size = new System.Drawing.Size(316, 47);
+            this.btnThanhToan.Size = new System.Drawing.Size(273, 47);
             this.btnThanhToan.TabIndex = 19;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,7 +188,7 @@ namespace QuanLyHocSinh
             this.btnCongNo.Location = new System.Drawing.Point(0, 47);
             this.btnCongNo.Name = "btnCongNo";
             this.btnCongNo.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.btnCongNo.Size = new System.Drawing.Size(316, 47);
+            this.btnCongNo.Size = new System.Drawing.Size(273, 47);
             this.btnCongNo.TabIndex = 18;
             this.btnCongNo.Text = "Công Nợ";
             this.btnCongNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,7 +216,7 @@ namespace QuanLyHocSinh
             this.btnLichSu.Location = new System.Drawing.Point(0, 0);
             this.btnLichSu.Name = "btnLichSu";
             this.btnLichSu.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.btnLichSu.Size = new System.Drawing.Size(316, 47);
+            this.btnLichSu.Size = new System.Drawing.Size(273, 47);
             this.btnLichSu.TabIndex = 17;
             this.btnLichSu.Text = "Lịch Sử Giao Dịch";
             this.btnLichSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,7 +243,7 @@ namespace QuanLyHocSinh
             this.btnHocPhi.Location = new System.Drawing.Point(0, 329);
             this.btnHocPhi.Name = "btnHocPhi";
             this.btnHocPhi.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnHocPhi.Size = new System.Drawing.Size(316, 47);
+            this.btnHocPhi.Size = new System.Drawing.Size(273, 47);
             this.btnHocPhi.TabIndex = 16;
             this.btnHocPhi.Text = "Học Phí";
             this.btnHocPhi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -271,7 +271,7 @@ namespace QuanLyHocSinh
             this.btnThonTin.Location = new System.Drawing.Point(0, 282);
             this.btnThonTin.Name = "btnThonTin";
             this.btnThonTin.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnThonTin.Size = new System.Drawing.Size(316, 47);
+            this.btnThonTin.Size = new System.Drawing.Size(273, 47);
             this.btnThonTin.TabIndex = 15;
             this.btnThonTin.Text = "Thông Tin";
             this.btnThonTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,7 +298,7 @@ namespace QuanLyHocSinh
             this.btnThongKe.Location = new System.Drawing.Point(0, 235);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnThongKe.Size = new System.Drawing.Size(316, 47);
+            this.btnThongKe.Size = new System.Drawing.Size(273, 47);
             this.btnThongKe.TabIndex = 14;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,7 +325,7 @@ namespace QuanLyHocSinh
             this.btnDiemSo.Location = new System.Drawing.Point(0, 188);
             this.btnDiemSo.Name = "btnDiemSo";
             this.btnDiemSo.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnDiemSo.Size = new System.Drawing.Size(316, 47);
+            this.btnDiemSo.Size = new System.Drawing.Size(273, 47);
             this.btnDiemSo.TabIndex = 13;
             this.btnDiemSo.Text = "Điểm Số";
             this.btnDiemSo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -352,7 +352,7 @@ namespace QuanLyHocSinh
             this.btnGVCN.Location = new System.Drawing.Point(0, 141);
             this.btnGVCN.Name = "btnGVCN";
             this.btnGVCN.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnGVCN.Size = new System.Drawing.Size(316, 47);
+            this.btnGVCN.Size = new System.Drawing.Size(273, 47);
             this.btnGVCN.TabIndex = 12;
             this.btnGVCN.Text = "Giáo Viên Chủ Nhiệm";
             this.btnGVCN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -380,7 +380,7 @@ namespace QuanLyHocSinh
             this.btnQLLopHoc.Location = new System.Drawing.Point(0, 94);
             this.btnQLLopHoc.Name = "btnQLLopHoc";
             this.btnQLLopHoc.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnQLLopHoc.Size = new System.Drawing.Size(316, 47);
+            this.btnQLLopHoc.Size = new System.Drawing.Size(273, 47);
             this.btnQLLopHoc.TabIndex = 11;
             this.btnQLLopHoc.Text = "Quản Lý Lớp Học";
             this.btnQLLopHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -406,7 +406,7 @@ namespace QuanLyHocSinh
             this.btnQLHocSinh.Location = new System.Drawing.Point(0, 47);
             this.btnQLHocSinh.Name = "btnQLHocSinh";
             this.btnQLHocSinh.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnQLHocSinh.Size = new System.Drawing.Size(316, 47);
+            this.btnQLHocSinh.Size = new System.Drawing.Size(273, 47);
             this.btnQLHocSinh.TabIndex = 10;
             this.btnQLHocSinh.Text = "Quản Lý Học Sinh";
             this.btnQLHocSinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -435,7 +435,7 @@ namespace QuanLyHocSinh
             this.btnDashBoard.Location = new System.Drawing.Point(0, 0);
             this.btnDashBoard.Name = "btnDashBoard";
             this.btnDashBoard.Padding = new System.Windows.Forms.Padding(22, 0, 22, 0);
-            this.btnDashBoard.Size = new System.Drawing.Size(316, 47);
+            this.btnDashBoard.Size = new System.Drawing.Size(273, 47);
             this.btnDashBoard.TabIndex = 9;
             this.btnDashBoard.Text = "DashBoard";
             this.btnDashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -453,7 +453,7 @@ namespace QuanLyHocSinh
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(316, 72);
+            this.panel2.Size = new System.Drawing.Size(273, 72);
             this.panel2.TabIndex = 0;
             // 
             // label2
@@ -461,9 +461,9 @@ namespace QuanLyHocSinh
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
-            this.label2.Location = new System.Drawing.Point(86, 9);
+            this.label2.Location = new System.Drawing.Point(86, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 26);
+            this.label2.Size = new System.Drawing.Size(109, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Trường THPT";
             // 
@@ -474,7 +474,7 @@ namespace QuanLyHocSinh
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(83)))), ((int)(((byte)(33)))));
             this.label1.Location = new System.Drawing.Point(86, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 26);
+            this.label1.Size = new System.Drawing.Size(136, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chuyên Lam Sơn";
             // 
@@ -482,9 +482,9 @@ namespace QuanLyHocSinh
             // 
             this.btnLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogo.Image = global::QuanLyHocSinh.Properties.Resources.logo;
-            this.btnLogo.Location = new System.Drawing.Point(11, 8);
+            this.btnLogo.Location = new System.Drawing.Point(23, 10);
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(64, 54);
+            this.btnLogo.Size = new System.Drawing.Size(57, 46);
             this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnLogo.TabIndex = 0;
             this.btnLogo.TabStop = false;
@@ -494,9 +494,9 @@ namespace QuanLyHocSinh
             // 
             this.panelContent.Controls.Add(this.pictureHome);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(320, 62);
+            this.panelContent.Location = new System.Drawing.Point(277, 56);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(896, 586);
+            this.panelContent.Size = new System.Drawing.Size(939, 694);
             this.panelContent.TabIndex = 2;
             // 
             // pictureHome
@@ -505,7 +505,7 @@ namespace QuanLyHocSinh
             this.pictureHome.Image = global::QuanLyHocSinh.Properties.Resources.dashboard;
             this.pictureHome.Location = new System.Drawing.Point(0, 0);
             this.pictureHome.Name = "pictureHome";
-            this.pictureHome.Size = new System.Drawing.Size(896, 586);
+            this.pictureHome.Size = new System.Drawing.Size(939, 694);
             this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureHome.TabIndex = 1;
             this.pictureHome.TabStop = false;
@@ -521,22 +521,23 @@ namespace QuanLyHocSinh
             this.gradientPanel1.Controls.Add(this.lblChange);
             this.gradientPanel1.Controls.Add(this.iconChange);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanel1.Location = new System.Drawing.Point(320, 0);
+            this.gradientPanel1.Location = new System.Drawing.Point(277, 0);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(896, 62);
+            this.gradientPanel1.Size = new System.Drawing.Size(939, 56);
             this.gradientPanel1.TabIndex = 1;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(210)))));
             // 
             // lblLogin
             // 
+            this.lblLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLogin.AutoSize = true;
             this.lblLogin.BackColor = System.Drawing.Color.White;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.Black;
             this.lblLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblLogin.Location = new System.Drawing.Point(801, 20);
+            this.lblLogin.Location = new System.Drawing.Point(870, 17);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(85, 29);
+            this.lblLogin.Size = new System.Drawing.Size(57, 20);
             this.lblLogin.TabIndex = 3;
             this.lblLogin.Text = "label3";
             // 
@@ -553,10 +554,10 @@ namespace QuanLyHocSinh
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(692, 22);
+            this.iconButton2.IconSize = 30;
+            this.iconButton2.Location = new System.Drawing.Point(761, 12);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(24, 31);
+            this.iconButton2.Size = new System.Drawing.Size(22, 31);
             this.iconButton2.TabIndex = 5;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
@@ -573,19 +574,19 @@ namespace QuanLyHocSinh
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(723, 22);
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(799, 12);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(26, 31);
+            this.iconButton1.Size = new System.Drawing.Size(24, 31);
             this.iconButton1.TabIndex = 5;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // pictureAvatar
             // 
             this.pictureAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureAvatar.Location = new System.Drawing.Point(755, 19);
+            this.pictureAvatar.Location = new System.Drawing.Point(832, 12);
             this.pictureAvatar.Name = "pictureAvatar";
-            this.pictureAvatar.Size = new System.Drawing.Size(34, 31);
+            this.pictureAvatar.Size = new System.Drawing.Size(32, 31);
             this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureAvatar.TabIndex = 2;
             this.pictureAvatar.TabStop = false;
@@ -594,11 +595,11 @@ namespace QuanLyHocSinh
             // 
             this.lblChange.AutoSize = true;
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
-            this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblChange.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblChange.Location = new System.Drawing.Point(65, 21);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(71, 26);
+            this.lblChange.Size = new System.Drawing.Size(52, 20);
             this.lblChange.TabIndex = 1;
             this.lblChange.Text = "Home";
             // 
@@ -609,22 +610,22 @@ namespace QuanLyHocSinh
             this.iconChange.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconChange.IconColor = System.Drawing.Color.Gainsboro;
             this.iconChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconChange.IconSize = 37;
+            this.iconChange.IconSize = 30;
             this.iconChange.Location = new System.Drawing.Point(22, 17);
             this.iconChange.Name = "iconChange";
-            this.iconChange.Size = new System.Drawing.Size(37, 40);
+            this.iconChange.Size = new System.Drawing.Size(37, 30);
             this.iconChange.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconChange.TabIndex = 0;
             this.iconChange.TabStop = false;
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1216, 648);
+            this.ClientSize = new System.Drawing.Size(1216, 750);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.panelLogo);

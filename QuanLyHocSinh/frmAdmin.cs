@@ -39,9 +39,16 @@ namespace QuanLyHocSinh
             panelMenu.AutoScroll = true;
             panelHocPhi.AutoScroll = true;
             //load Avatar
-            //string filename = @"E:\BTL-Win\QuanLyHocSinh\Image\"+tk.NhanVien.ThongTinCaNhan.Anh;
-            string filename = @"E:\lapTrinhWindows\btl\QuanLyHocSinh\Image\" + tk.NhanVien.ThongTinCaNhan.Anh;
+            
+            string filename = pathImage() + tk.NhanVien.ThongTinCaNhan.Anh;
             pictureAvatar.Image = Image.FromFile(filename);
+        }
+
+        private string pathImage()
+        {
+            string pathProject = Application.StartupPath;
+            string newPath = pathProject.Substring(0, pathProject.Length - 23)+"Image"+'\\';
+            return newPath;
         }
 
         private void ActivateButton(object senderBtn,Color color,Panel inputPanel)

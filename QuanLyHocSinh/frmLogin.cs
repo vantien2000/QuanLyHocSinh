@@ -53,22 +53,19 @@ namespace QuanLyHocSinh
                     tk = p;
                     check = true;
                     break;
-                }      
+                }
                 else
-                    check =  false;
+                    check = false;
             }
             return check;
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            //if(txtUser.Text == "" || txtPass.Text == "")
-            //{
-            //    MessageBox.Show("Bạn chưa nhập thông tin tài khoản và mật khẩu!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            if(checkAdmin())
-            {
+                //if(txtUser.Text == "" || txtPass.Text == "")
+                //{
+                //    MessageBox.Show("Bạn chưa nhập thông tin tài khoản và mật khẩu!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+            if (checkAdmin()) { 
                 this.Hide();
                 frmAdmin admin = new frmAdmin(tk);
                 admin.Show();
@@ -88,8 +85,7 @@ namespace QuanLyHocSinh
                     btnDangNhap.Enabled = false;
                 }
                 solanClick++;
-            }
-            
+            } 
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
