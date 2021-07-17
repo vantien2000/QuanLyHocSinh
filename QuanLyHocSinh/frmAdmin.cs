@@ -252,5 +252,12 @@ namespace QuanLyHocSinh
             caretUpBtn.IconColor = Color.DimGray;
             iconCaretDown.IconColor = Color.DimGray;
         }
+
+        private void inconLogout_Click(object sender, System.EventArgs e)
+        {
+            this.Hide();
+            frmLogin frmout = new frmLogin();
+            frmout.Show();
+        }
     }
 }

@@ -54,8 +54,8 @@ namespace QuanLyHocSinh
             this.pictureHome = new System.Windows.Forms.PictureBox();
             this.gradientPanel1 = new QuanLyHocSinh.GradientPanel();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconProfile = new FontAwesome.Sharp.IconButton();
+            this.inconLogout = new FontAwesome.Sharp.IconButton();
             this.pictureAvatar = new QuanLyHocSinh.CircularPictureBox();
             this.lblChange = new System.Windows.Forms.Label();
             this.iconChange = new FontAwesome.Sharp.IconPictureBox();
@@ -81,7 +81,7 @@ namespace QuanLyHocSinh
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(277, 750);
+            this.panelLogo.Size = new System.Drawing.Size(277, 710);
             this.panelLogo.TabIndex = 0;
             // 
             // panelMenu
@@ -99,7 +99,7 @@ namespace QuanLyHocSinh
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 72);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(273, 674);
+            this.panelMenu.Size = new System.Drawing.Size(273, 634);
             this.panelMenu.TabIndex = 2;
             // 
             // panelIconDownUp
@@ -139,7 +139,7 @@ namespace QuanLyHocSinh
             this.panelHocPhi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHocPhi.Location = new System.Drawing.Point(0, 376);
             this.panelHocPhi.Name = "panelHocPhi";
-            this.panelHocPhi.Size = new System.Drawing.Size(273, 298);
+            this.panelHocPhi.Size = new System.Drawing.Size(273, 258);
             this.panelHocPhi.TabIndex = 17;
             // 
             // btnThanhToan
@@ -461,9 +461,9 @@ namespace QuanLyHocSinh
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
-            this.label2.Location = new System.Drawing.Point(86, 15);
+            this.label2.Location = new System.Drawing.Point(72, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 18);
+            this.label2.Size = new System.Drawing.Size(151, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Trường THPT";
             // 
@@ -472,9 +472,9 @@ namespace QuanLyHocSinh
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(83)))), ((int)(((byte)(33)))));
-            this.label1.Location = new System.Drawing.Point(86, 34);
+            this.label1.Location = new System.Drawing.Point(72, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 18);
+            this.label1.Size = new System.Drawing.Size(195, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chuyên Lam Sơn";
             // 
@@ -482,7 +482,7 @@ namespace QuanLyHocSinh
             // 
             this.btnLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogo.Image = global::QuanLyHocSinh.Properties.Resources.logo;
-            this.btnLogo.Location = new System.Drawing.Point(23, 10);
+            this.btnLogo.Location = new System.Drawing.Point(10, 13);
             this.btnLogo.Name = "btnLogo";
             this.btnLogo.Size = new System.Drawing.Size(57, 46);
             this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -494,9 +494,9 @@ namespace QuanLyHocSinh
             // 
             this.panelContent.Controls.Add(this.pictureHome);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(277, 56);
+            this.panelContent.Location = new System.Drawing.Point(277, 61);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(939, 694);
+            this.panelContent.Size = new System.Drawing.Size(1120, 649);
             this.panelContent.TabIndex = 2;
             // 
             // pictureHome
@@ -505,7 +505,7 @@ namespace QuanLyHocSinh
             this.pictureHome.Image = global::QuanLyHocSinh.Properties.Resources.dashboard;
             this.pictureHome.Location = new System.Drawing.Point(0, 0);
             this.pictureHome.Name = "pictureHome";
-            this.pictureHome.Size = new System.Drawing.Size(939, 694);
+            this.pictureHome.Size = new System.Drawing.Size(1120, 649);
             this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureHome.TabIndex = 1;
             this.pictureHome.TabStop = false;
@@ -515,15 +515,15 @@ namespace QuanLyHocSinh
             this.gradientPanel1.Angle = 180F;
             this.gradientPanel1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(143)))), ((int)(((byte)(199)))));
             this.gradientPanel1.Controls.Add(this.lblLogin);
-            this.gradientPanel1.Controls.Add(this.iconButton2);
-            this.gradientPanel1.Controls.Add(this.iconButton1);
+            this.gradientPanel1.Controls.Add(this.iconProfile);
+            this.gradientPanel1.Controls.Add(this.inconLogout);
             this.gradientPanel1.Controls.Add(this.pictureAvatar);
             this.gradientPanel1.Controls.Add(this.lblChange);
             this.gradientPanel1.Controls.Add(this.iconChange);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gradientPanel1.Location = new System.Drawing.Point(277, 0);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(939, 56);
+            this.gradientPanel1.Size = new System.Drawing.Size(1120, 61);
             this.gradientPanel1.TabIndex = 1;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(210)))));
             // 
@@ -535,56 +535,57 @@ namespace QuanLyHocSinh
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.Black;
             this.lblLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblLogin.Location = new System.Drawing.Point(870, 17);
+            this.lblLogin.Location = new System.Drawing.Point(1015, 14);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(57, 20);
+            this.lblLogin.Size = new System.Drawing.Size(85, 29);
             this.lblLogin.TabIndex = 3;
             this.lblLogin.Text = "label3";
             // 
-            // iconButton2
+            // iconProfile
             // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 30;
-            this.iconButton2.Location = new System.Drawing.Point(761, 12);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(22, 31);
-            this.iconButton2.TabIndex = 5;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconProfile.BackColor = System.Drawing.Color.Transparent;
+            this.iconProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconProfile.FlatAppearance.BorderSize = 0;
+            this.iconProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.iconProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.iconProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.iconProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconProfile.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.iconProfile.IconColor = System.Drawing.Color.White;
+            this.iconProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconProfile.IconSize = 30;
+            this.iconProfile.Location = new System.Drawing.Point(906, 16);
+            this.iconProfile.Name = "iconProfile";
+            this.iconProfile.Size = new System.Drawing.Size(22, 31);
+            this.iconProfile.TabIndex = 5;
+            this.iconProfile.UseVisualStyleBackColor = false;
             // 
-            // iconButton1
+            // inconLogout
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(799, 12);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(24, 31);
-            this.iconButton1.TabIndex = 5;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.inconLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.inconLogout.BackColor = System.Drawing.Color.Transparent;
+            this.inconLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inconLogout.FlatAppearance.BorderSize = 0;
+            this.inconLogout.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.inconLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.inconLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.inconLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inconLogout.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.inconLogout.IconColor = System.Drawing.Color.White;
+            this.inconLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.inconLogout.IconSize = 30;
+            this.inconLogout.Location = new System.Drawing.Point(944, 16);
+            this.inconLogout.Name = "inconLogout";
+            this.inconLogout.Size = new System.Drawing.Size(24, 31);
+            this.inconLogout.TabIndex = 5;
+            this.inconLogout.UseVisualStyleBackColor = false;
+            this.inconLogout.Click += new System.EventHandler(this.inconLogout_Click);
             // 
             // pictureAvatar
             // 
             this.pictureAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureAvatar.Location = new System.Drawing.Point(832, 12);
+            this.pictureAvatar.Location = new System.Drawing.Point(977, 13);
             this.pictureAvatar.Name = "pictureAvatar";
             this.pictureAvatar.Size = new System.Drawing.Size(32, 31);
             this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -597,9 +598,9 @@ namespace QuanLyHocSinh
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblChange.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblChange.Location = new System.Drawing.Point(65, 21);
+            this.lblChange.Location = new System.Drawing.Point(65, 15);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(52, 20);
+            this.lblChange.Size = new System.Drawing.Size(78, 29);
             this.lblChange.TabIndex = 1;
             this.lblChange.Text = "Home";
             // 
@@ -620,12 +621,12 @@ namespace QuanLyHocSinh
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1216, 750);
+            this.ClientSize = new System.Drawing.Size(1397, 710);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.panelLogo);
@@ -672,8 +673,8 @@ namespace QuanLyHocSinh
         private FontAwesome.Sharp.IconButton btnDashBoard;
         private System.Windows.Forms.Panel panelContent;
         private CircularPictureBox pictureAvatar;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconProfile;
+        private FontAwesome.Sharp.IconButton inconLogout;
         private System.Windows.Forms.Panel panelHocPhi;
         private FontAwesome.Sharp.IconButton btnThanhToan;
         private FontAwesome.Sharp.IconButton btnCongNo;
