@@ -39,7 +39,8 @@ namespace QuanLyHocSinh
             panelMenu.AutoScroll = true;
             panelHocPhi.AutoScroll = true;
             //load Avatar
-            string filename = @"E:\BTL-Win\QuanLyHocSinh\Image\"+tk.NhanVien.ThongTinCaNhan.Anh;
+            //string filename = @"E:\BTL-Win\QuanLyHocSinh\Image\"+tk.NhanVien.ThongTinCaNhan.Anh;
+            string filename = @"E:\lapTrinhWindows\btl\QuanLyHocSinh\Image\" + tk.NhanVien.ThongTinCaNhan.Anh;
             pictureAvatar.Image = Image.FromFile(filename);
         }
 

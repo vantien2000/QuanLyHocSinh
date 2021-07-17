@@ -47,7 +47,7 @@ namespace QuanLyHocSinh
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
             this.label1.Location = new System.Drawing.Point(25, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 31);
+            this.label1.Size = new System.Drawing.Size(320, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quên Mật Khẩu";
             // 
@@ -56,25 +56,25 @@ namespace QuanLyHocSinh
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(27, 64);
+            this.label2.Location = new System.Drawing.Point(27, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(119, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tài khoản";
             // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTaiKhoan.Location = new System.Drawing.Point(31, 87);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(32, 122);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(330, 26);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(330, 35);
             this.txtTaiKhoan.TabIndex = 2;
             // 
             // pictureCaptcha
             // 
-            this.pictureCaptcha.Location = new System.Drawing.Point(31, 119);
+            this.pictureCaptcha.Location = new System.Drawing.Point(33, 184);
             this.pictureCaptcha.Name = "pictureCaptcha";
-            this.pictureCaptcha.Size = new System.Drawing.Size(100, 28);
+            this.pictureCaptcha.Size = new System.Drawing.Size(100, 36);
             this.pictureCaptcha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureCaptcha.TabIndex = 4;
             this.pictureCaptcha.TabStop = false;
@@ -82,9 +82,9 @@ namespace QuanLyHocSinh
             // txtXacThuc
             // 
             this.txtXacThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtXacThuc.Location = new System.Drawing.Point(31, 176);
+            this.txtXacThuc.Location = new System.Drawing.Point(31, 268);
             this.txtXacThuc.Name = "txtXacThuc";
-            this.txtXacThuc.Size = new System.Drawing.Size(100, 26);
+            this.txtXacThuc.Size = new System.Drawing.Size(100, 35);
             this.txtXacThuc.TabIndex = 5;
             // 
             // btnYeuCau
@@ -93,9 +93,9 @@ namespace QuanLyHocSinh
             this.btnYeuCau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYeuCau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnYeuCau.ForeColor = System.Drawing.Color.White;
-            this.btnYeuCau.Location = new System.Drawing.Point(31, 208);
+            this.btnYeuCau.Location = new System.Drawing.Point(31, 318);
             this.btnYeuCau.Name = "btnYeuCau";
-            this.btnYeuCau.Size = new System.Drawing.Size(180, 31);
+            this.btnYeuCau.Size = new System.Drawing.Size(115, 44);
             this.btnYeuCau.TabIndex = 6;
             this.btnYeuCau.Text = "Yêu Cầu";
             this.btnYeuCau.UseVisualStyleBackColor = false;
@@ -106,9 +106,9 @@ namespace QuanLyHocSinh
             this.btnLamMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Location = new System.Drawing.Point(137, 119);
+            this.btnLamMoi.Location = new System.Drawing.Point(139, 179);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(94, 28);
+            this.btnLamMoi.Size = new System.Drawing.Size(112, 36);
             this.btnLamMoi.TabIndex = 7;
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
@@ -119,17 +119,17 @@ namespace QuanLyHocSinh
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(27, 153);
+            this.label3.Location = new System.Drawing.Point(27, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.Size = new System.Drawing.Size(105, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Xác thực";
             // 
             // frmForgotPass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 262);
+            this.ClientSize = new System.Drawing.Size(417, 400);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnYeuCau);
