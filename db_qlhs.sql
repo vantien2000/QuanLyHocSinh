@@ -11,7 +11,6 @@ Database		MS SQL 2005
 use master
 create database db_qlhs
 use db_qlhs
-drop database db_qlhs
 
 Create table [ThongTinCaNhan]
 (
@@ -75,6 +74,7 @@ Create table [MonHoc]
 	[TenMon] Nvarchar(30) NULL,
 	[MaGV] Char(10) NULL,
 	[HeSo] Integer NULL,
+	[MaLoai] Char(10) NOT NULL,
 Primary Key ([MaMon])
 ) 
 go
@@ -164,8 +164,6 @@ Create table [LoaiDiem]
 	[MaLoai] Char(10) NOT NULL,
 	[LoaiDiem] Nvarchar(50) NULL,
 	[HeSo] Integer NULL,
-	[MaHS] Char(10) NOT NULL,
-	[MaMon] Char(10) NOT NULL,
 Primary Key ([MaLoai])
 ) 
 go
@@ -202,7 +200,7 @@ Alter table [Diem] add  foreign key([MaMon]) references [MonHoc] ([MaMon])  on u
 go
 Alter table [LichSuGiaoDich] add  foreign key([MaGD]) references [ThanhToan] ([MaGD])  on update cascade on delete cascade 
 go
-Alter table [LoaiDiem] add  foreign key([MaHS],[MaMon]) references [Diem] ([MaHS],[MaMon])  on update cascade on delete cascade
+Alter table [MonHoc] add  foreign key([MaLoai]) references [LoaiDiem] ([MaLoai])  on update cascade on delete cascade
 go
 Alter table [Diem] add  foreign key([MaKQ]) references [KetQua] ([MaKQ])  on update cascade on delete cascade 
 go
@@ -288,30 +286,64 @@ insert into HocSinh values ('HS09', '39', 'TTCN13', 'L02')
 insert into HocSinh values ('HS10', '42', 'TTCN14', 'L02')
 insert into HocSinh values ('HS11', '40', 'TTCN15', 'L03')
 
-insert into MonHoc values ('M01', N'Toán', 'GV01', 2)
-insert into MonHoc values ('M02', N'Văn', 'GV02', 2)
-insert into MonHoc values ('M03', N'Anh', 'GV03', 1)
-insert into MonHoc values ('M04', N'Vật lý', 'GV01', 1)
-insert into MonHoc values ('M05', N'Hóa học', 'GV04', 1)
-insert into MonHoc values ('M06', N'Sinh học', 'GV05', 1)
-insert into MonHoc values ('M07', N'Lịch sử', 'GV02', 1)
-insert into MonHoc values ('M08', N'Địa lý', 'GV03', 1)
-insert into MonHoc values ('M09', N'GDCD', 'GV05', 1)
-insert into MonHoc values ('M10', N'Thể dục', 'GV06', 1)
+insert into LoaiDiem values ('LD01', N'Điểm miệng', 1)
+insert into LoaiDiem values ('LD02', N'Điểm kiểm tra 15 phút', 1)
+insert into LoaiDiem values ('LD03', N'Điểm kiểm tra 1 tiết', 1)
+insert into LoaiDiem values ('LD04', N'Điểm giữa kỳ', 2)
+insert into LoaiDiem values ('LD05', N'Điểm cuối kỳ', 2)
 
-insert into LoaiDiem values ('LD01', N'Điểm miệng', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD02', N'Điểm kiểm tra 15 phút', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD03', N'Điểm kiểm tra 1 tiết', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD04', N'Điểm giữa kỳ', 1, 'HS01', 'M01')
-insert into LoaiDiem values ('LD05', N'Điểm cuối kỳ', 1, 'HS01', 'M01')
+insert into MonHoc values ('M01', N'Toán', 'GV01', 2, 'LD01')
+insert into MonHoc values ('M02', N'Toán', 'GV01', 2, 'LD02')
+insert into MonHoc values ('M03', N'Toán', 'GV01', 2, 'LD03')
+insert into MonHoc values ('M04', N'Toán', 'GV01', 2, 'LD04')
+insert into MonHoc values ('M05', N'Toán', 'GV01', 2, 'LD05')
+insert into MonHoc values ('M06', N'Văn', 'GV02', 2, 'LD01')
+insert into MonHoc values ('M07', N'Văn', 'GV02', 2, 'LD02')
+insert into MonHoc values ('M08', N'Văn', 'GV02', 2, 'LD03')
+insert into MonHoc values ('M9', N'Văn', 'GV02', 2, 'LD04')
+insert into MonHoc values ('M10', N'Văn', 'GV02', 2, 'LD05')
+insert into MonHoc values ('M11', N'Văn', 'GV02', 1, 'LD01')
+insert into MonHoc values ('M12', N'Anh', 'GV03', 1, 'LD02')
+insert into MonHoc values ('M13', N'Anh', 'GV03', 1, 'LD03')
+insert into MonHoc values ('M14', N'Anh', 'GV03', 1, 'LD04')
+insert into MonHoc values ('M15', N'Anh', 'GV03', 1, 'LD05')
+
+insert into HocKy values ('HK01', N'Học kỳ 1', 1)
+insert into HocKy values ('HK02', N'Học kỳ 2', 2)
+
+insert into HocLuc values ('HL01', N'Học lực giỏi', 8, 10)
+insert into HocLuc values ('HL02', N'Học lực khá', 6.5, 7.9)
+insert into HocLuc values ('HL03', N'Học lực trung bình', 5, 6.4)
+insert into HocLuc values ('HL04', N'Học lực yếu', 0, 4.9)
+
+insert into HanhKiem values ('HKiem01', N'Xuất sắc')
+insert into HanhKiem values ('HKiem02', N'Tốt')
+insert into HanhKiem values ('HKiem03', N'Khá')
+insert into HanhKiem values ('HKiem04', N'Trung bình')
+insert into HanhKiem values ('HKiem05', N'Yếu')
+
+insert into ThanhToan values ('TT01', '6000000', '300000', '6300000', N'Đã nộp', 'HS01')
+
+insert into LichSuGiaoDich values ('LS01', N'Đã nộp ngày 09/09/2020', 'TT01')
 
 select * from ThongTinCaNhan
 select * from NhanVien
 select * from TaiKhoan
 select * from GVCN
-select * from MonHoc
+select * from KhoiLop
+select * from LopHoc
+select * from HocSinh
 select * from LoaiDiem
-delete from ThongTinCaNhan where MaCN = 'TTCN02'
+select * from MonHoc
+select * from HocKy
+select * from HocLuc
+select * from HanhKiem
+select * from ThanhToan
+select * from LichSuGiaoDich
+select * from TaiKhoan
+select * from TaiKhoan
+
+delete from ThongTinCaNhan where MaCN = 'TTCN01'
 
 alter table ThongTinCaNhan
 alter column Anh nvarchar(max) not null;
