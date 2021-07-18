@@ -362,3 +362,5 @@ group by TenMon
 select TenLop,MaGV,count(MaHS) as "SoHocSinh",1
  from LopHoc inner join HocSinh on LopHoc.MaLop = HocSinh.MaLop
  group by TenLop,MaGV
+
+select * from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join GVCN on LopHoc.MaGV=GVCN.MaGV inner join ThongTinCaNhan on HocSinh.MaCN=ThongTinCaNhan.MaCN 

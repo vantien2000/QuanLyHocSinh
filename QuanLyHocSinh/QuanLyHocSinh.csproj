@@ -83,6 +83,12 @@
     <Compile Include="frmForgotPass.Designer.cs">
       <DependentUpon>frmForgotPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLLopHoc.Designer.cs">
+      <DependentUpon>frmQLLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResetPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,18 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuaHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaHS.Designer.cs">
+      <DependentUpon>frmSuaHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemHS.Designer.cs">
+      <DependentUpon>frmThemHS.cs</DependentUpon>
     </Compile>
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
@@ -121,11 +139,20 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQLLopHoc.resx">
+      <DependentUpon>frmQLLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmResetPass.resx">
       <DependentUpon>frmResetPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaHS.resx">
+      <DependentUpon>frmSuaHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemHS.resx">
+      <DependentUpon>frmThemHS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
