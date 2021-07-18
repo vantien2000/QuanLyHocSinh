@@ -47,7 +47,7 @@ namespace QuanLyHocSinh
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
             this.label1.Location = new System.Drawing.Point(25, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 47);
+            this.label1.Size = new System.Drawing.Size(215, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quên Mật Khẩu";
             // 
@@ -58,7 +58,7 @@ namespace QuanLyHocSinh
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(27, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 29);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tài khoản";
             // 
@@ -67,7 +67,7 @@ namespace QuanLyHocSinh
             this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTaiKhoan.Location = new System.Drawing.Point(32, 122);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(330, 35);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(330, 26);
             this.txtTaiKhoan.TabIndex = 2;
             // 
             // pictureCaptcha
@@ -84,7 +84,7 @@ namespace QuanLyHocSinh
             this.txtXacThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtXacThuc.Location = new System.Drawing.Point(31, 268);
             this.txtXacThuc.Name = "txtXacThuc";
-            this.txtXacThuc.Size = new System.Drawing.Size(100, 35);
+            this.txtXacThuc.Size = new System.Drawing.Size(100, 26);
             this.txtXacThuc.TabIndex = 5;
             // 
             // btnYeuCau
@@ -121,13 +121,13 @@ namespace QuanLyHocSinh
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(27, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 29);
+            this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Xác thực";
             // 
             // frmForgotPass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 400);
             this.Controls.Add(this.txtTaiKhoan);
