@@ -52,3 +52,4 @@ E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.cspro
 E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.CopyComplete
 E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
 E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb
+E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmQLLopHoc.resources

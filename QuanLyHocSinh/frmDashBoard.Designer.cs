@@ -79,9 +79,10 @@ namespace QuanLyHocSinh
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(114)))), ((int)(((byte)(150)))));
             this.panel2.Controls.Add(this.iconPictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(90, 0);
+            this.panel2.Location = new System.Drawing.Point(135, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(76, 88);
+            this.panel2.Size = new System.Drawing.Size(114, 135);
             this.panel2.TabIndex = 0;
             // 
             // iconPictureBox1
@@ -93,10 +94,11 @@ namespace QuanLyHocSinh
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 41;
-            this.iconPictureBox1.Location = new System.Drawing.Point(19, 24);
+            this.iconPictureBox1.IconSize = 62;
+            this.iconPictureBox1.Location = new System.Drawing.Point(28, 37);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(41, 41);
+            this.iconPictureBox1.Size = new System.Drawing.Size(62, 63);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
@@ -109,9 +111,10 @@ namespace QuanLyHocSinh
             this.lblEmp.AutoSize = true;
             this.lblEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblEmp.ForeColor = System.Drawing.Color.White;
-            this.lblEmp.Location = new System.Drawing.Point(12, 25);
+            this.lblEmp.Location = new System.Drawing.Point(18, 38);
+            this.lblEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmp.Name = "lblEmp";
-            this.lblEmp.Size = new System.Drawing.Size(32, 24);
+            this.lblEmp.Size = new System.Drawing.Size(49, 32);
             this.lblEmp.TabIndex = 1;
             this.lblEmp.Text = "40";
             // 
@@ -123,9 +126,10 @@ namespace QuanLyHocSinh
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 49);
+            this.label2.Location = new System.Drawing.Point(20, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Employees";
             // 
@@ -135,9 +139,10 @@ namespace QuanLyHocSinh
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblEmp);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Location = new System.Drawing.Point(20, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 88);
+            this.panel1.Size = new System.Drawing.Size(249, 135);
             this.panel1.TabIndex = 0;
             // 
             // lblTeacher
@@ -148,9 +153,10 @@ namespace QuanLyHocSinh
             this.lblTeacher.AutoSize = true;
             this.lblTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblTeacher.Location = new System.Drawing.Point(13, 25);
+            this.lblTeacher.Location = new System.Drawing.Point(20, 38);
+            this.lblTeacher.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTeacher.Name = "lblTeacher";
-            this.lblTeacher.Size = new System.Drawing.Size(32, 24);
+            this.lblTeacher.Size = new System.Drawing.Size(49, 32);
             this.lblTeacher.TabIndex = 1;
             this.lblTeacher.Text = "20";
             // 
@@ -159,9 +165,10 @@ namespace QuanLyHocSinh
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(192)))), ((int)(((byte)(230)))));
             this.panel5.Controls.Add(this.iconPictureBox3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(89, 0);
+            this.panel5.Location = new System.Drawing.Point(133, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(77, 88);
+            this.panel5.Size = new System.Drawing.Size(116, 135);
             this.panel5.TabIndex = 0;
             // 
             // iconPictureBox3
@@ -173,10 +180,11 @@ namespace QuanLyHocSinh
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
             this.iconPictureBox3.IconColor = System.Drawing.Color.White;
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 41;
-            this.iconPictureBox3.Location = new System.Drawing.Point(16, 27);
+            this.iconPictureBox3.IconSize = 63;
+            this.iconPictureBox3.Location = new System.Drawing.Point(24, 42);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(43, 41);
+            this.iconPictureBox3.Size = new System.Drawing.Size(64, 63);
             this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox3.TabIndex = 0;
             this.iconPictureBox3.TabStop = false;
@@ -189,9 +197,10 @@ namespace QuanLyHocSinh
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(14, 50);
+            this.label6.Location = new System.Drawing.Point(21, 77);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.Size = new System.Drawing.Size(87, 20);
             this.label6.TabIndex = 2;
             this.label6.Text = "Teachers";
             // 
@@ -201,9 +210,10 @@ namespace QuanLyHocSinh
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.lblTeacher);
-            this.panel3.Location = new System.Drawing.Point(378, 12);
+            this.panel3.Location = new System.Drawing.Point(567, 18);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(166, 88);
+            this.panel3.Size = new System.Drawing.Size(249, 135);
             this.panel3.TabIndex = 1;
             // 
             // lblStudent
@@ -214,9 +224,10 @@ namespace QuanLyHocSinh
             this.lblStudent.AutoSize = true;
             this.lblStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblStudent.ForeColor = System.Drawing.Color.White;
-            this.lblStudent.Location = new System.Drawing.Point(11, 25);
+            this.lblStudent.Location = new System.Drawing.Point(16, 38);
+            this.lblStudent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(43, 24);
+            this.lblStudent.Size = new System.Drawing.Size(66, 32);
             this.lblStudent.TabIndex = 1;
             this.lblStudent.Text = "200";
             // 
@@ -225,9 +236,10 @@ namespace QuanLyHocSinh
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(137)))), ((int)(((byte)(192)))));
             this.panel6.Controls.Add(this.iconPictureBox2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(88, 0);
+            this.panel6.Location = new System.Drawing.Point(132, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(78, 88);
+            this.panel6.Size = new System.Drawing.Size(117, 135);
             this.panel6.TabIndex = 0;
             // 
             // iconPictureBox2
@@ -239,10 +251,11 @@ namespace QuanLyHocSinh
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.GraduationCap;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 42;
-            this.iconPictureBox2.Location = new System.Drawing.Point(18, 25);
+            this.iconPictureBox2.IconSize = 65;
+            this.iconPictureBox2.Location = new System.Drawing.Point(27, 38);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.iconPictureBox2.Size = new System.Drawing.Size(68, 65);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox2.TabIndex = 0;
             this.iconPictureBox2.TabStop = false;
@@ -255,9 +268,10 @@ namespace QuanLyHocSinh
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 49);
+            this.label4.Location = new System.Drawing.Point(18, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Students";
             // 
@@ -267,9 +281,10 @@ namespace QuanLyHocSinh
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.lblStudent);
-            this.panel4.Location = new System.Drawing.Point(196, 13);
+            this.panel4.Location = new System.Drawing.Point(294, 20);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(166, 88);
+            this.panel4.Size = new System.Drawing.Size(249, 135);
             this.panel4.TabIndex = 2;
             // 
             // lblSubject
@@ -280,9 +295,10 @@ namespace QuanLyHocSinh
             this.lblSubject.AutoSize = true;
             this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSubject.Location = new System.Drawing.Point(13, 26);
+            this.lblSubject.Location = new System.Drawing.Point(20, 40);
+            this.lblSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(32, 24);
+            this.lblSubject.Size = new System.Drawing.Size(49, 32);
             this.lblSubject.TabIndex = 1;
             this.lblSubject.Text = "10";
             // 
@@ -291,9 +307,10 @@ namespace QuanLyHocSinh
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(205)))), ((int)(((byte)(207)))));
             this.panel8.Controls.Add(this.iconPictureBox4);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(91, 0);
+            this.panel8.Location = new System.Drawing.Point(137, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(75, 88);
+            this.panel8.Size = new System.Drawing.Size(112, 135);
             this.panel8.TabIndex = 0;
             // 
             // iconPictureBox4
@@ -305,10 +322,11 @@ namespace QuanLyHocSinh
             this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
             this.iconPictureBox4.IconColor = System.Drawing.Color.White;
             this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.IconSize = 41;
-            this.iconPictureBox4.Location = new System.Drawing.Point(17, 26);
+            this.iconPictureBox4.IconSize = 63;
+            this.iconPictureBox4.Location = new System.Drawing.Point(26, 40);
+            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(43, 41);
+            this.iconPictureBox4.Size = new System.Drawing.Size(64, 63);
             this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconPictureBox4.TabIndex = 0;
             this.iconPictureBox4.TabStop = false;
@@ -321,9 +339,10 @@ namespace QuanLyHocSinh
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 50);
+            this.label7.Location = new System.Drawing.Point(21, 77);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(82, 20);
             this.label7.TabIndex = 2;
             this.label7.Text = "Subjects";
             // 
@@ -333,20 +352,23 @@ namespace QuanLyHocSinh
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.lblSubject);
-            this.panel7.Location = new System.Drawing.Point(562, 13);
+            this.panel7.Location = new System.Drawing.Point(843, 20);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(166, 88);
+            this.panel7.Size = new System.Drawing.Size(249, 135);
             this.panel7.TabIndex = 3;
             // 
             // chartStudent
             // 
-            this.chartStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.chartStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.chartStudent.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartStudent.Legends.Add(legend1);
-            this.chartStudent.Location = new System.Drawing.Point(13, 132);
+            this.chartStudent.Location = new System.Drawing.Point(20, 214);
+            this.chartStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chartStudent.Name = "chartStudent";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -356,39 +378,42 @@ namespace QuanLyHocSinh
             series2.Name = "GVCN";
             this.chartStudent.Series.Add(series1);
             this.chartStudent.Series.Add(series2);
-            this.chartStudent.Size = new System.Drawing.Size(439, 357);
+            this.chartStudent.Size = new System.Drawing.Size(658, 549);
             this.chartStudent.TabIndex = 4;
             this.chartStudent.Text = "Biểu đồ học sinh theo lớp";
             // 
             // chartSieStudent
             // 
-            this.chartSieStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartSieStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea2.Name = "ChartArea1";
             this.chartSieStudent.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartSieStudent.Legends.Add(legend2);
-            this.chartSieStudent.Location = new System.Drawing.Point(467, 132);
+            this.chartSieStudent.Location = new System.Drawing.Point(700, 214);
+            this.chartSieStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chartSieStudent.Name = "chartSieStudent";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
             series3.Name = "Học sinh";
             this.chartSieStudent.Series.Add(series3);
-            this.chartSieStudent.Size = new System.Drawing.Size(261, 357);
+            this.chartSieStudent.Size = new System.Drawing.Size(392, 549);
             this.chartSieStudent.TabIndex = 5;
             this.chartSieStudent.Text = "Biểu đồ học sinh theo năm học";
             // 
             // frmDashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 487);
+            this.ClientSize = new System.Drawing.Size(1110, 749);
             this.Controls.Add(this.chartSieStudent);
             this.Controls.Add(this.chartStudent);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmDashBoard";
             this.Text = "DashBoard";
             this.panel2.ResumeLayout(false);
