@@ -345,5 +345,20 @@ select * from TaiKhoan
 
 delete from ThongTinCaNhan where MaCN = 'TTCN01'
 
+
+
 alter table ThongTinCaNhan
 alter column Anh nvarchar(max) not null;
+select * from HocSinh
+
+select NamHoc, Count(MaHS) as "SoHocSinh" from LopHoc inner join HocSinh on LopHoc.MaLop = HocSinh.MaLop
+group by NamHoc
+
+select LoaiLop, Count(LoaiLop) as "SoGV" from LopHoc inner join GVCN on LopHoc.MaGV = GVCN.MaGV
+
+select TenMon from MonHoc
+group by TenMon
+
+select TenLop,MaGV,count(MaHS) as "SoHocSinh",1
+ from LopHoc inner join HocSinh on LopHoc.MaLop = HocSinh.MaLop
+ group by TenLop,MaGV
