@@ -34,6 +34,7 @@ namespace QuanLyHocSinh
             this.btnXoa = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvHocSinh = new System.Windows.Forms.DataGridView();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anh = new System.Windows.Forms.DataGridViewImageColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@ namespace QuanLyHocSinh
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemDauVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +60,7 @@ namespace QuanLyHocSinh
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -93,9 +94,9 @@ namespace QuanLyHocSinh
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(52, 35);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(391, 44);
+            this.txtSearch.Size = new System.Drawing.Size(391, 32);
             this.txtSearch.TabIndex = 5;
             // 
             // dgvHocSinh
@@ -121,6 +122,21 @@ namespace QuanLyHocSinh
             this.dgvHocSinh.Size = new System.Drawing.Size(1386, 730);
             this.dgvHocSinh.TabIndex = 6;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.White;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.Location = new System.Drawing.Point(457, 35);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(48, 32);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
             // MaHS
             // 
             this.MaHS.HeaderText = "Mã học sinh";
@@ -131,11 +147,12 @@ namespace QuanLyHocSinh
             // Anh
             // 
             this.Anh.HeaderText = "Ảnh";
+            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Anh.MinimumWidth = 8;
             this.Anh.Name = "Anh";
             this.Anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Anh.Width = 150;
+            this.Anh.Width = 80;
             // 
             // HoTen
             // 
@@ -186,27 +203,12 @@ namespace QuanLyHocSinh
             this.TenLop.Name = "TenLop";
             this.TenLop.Width = 200;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.White;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(457, 35);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(48, 32);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // frmQLHocSinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1384, 825);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.dgvHocSinh);
             this.Controls.Add(this.txtSearch);
@@ -217,6 +219,7 @@ namespace QuanLyHocSinh
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmQLHocSinh";
             this.Text = "Quản Lý Học Sinh";
+            this.Load += new System.EventHandler(this.frmQLHocSinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

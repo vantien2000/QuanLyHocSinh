@@ -53,3 +53,6 @@ E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.cspro
 E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
 E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb
 E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmQLLopHoc.resources
+E:\BTL-Win\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmQLLopHoc.resources
+E:\BTL-Win\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmSuaHS.resources
+E:\BTL-Win\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmThemHS.resources

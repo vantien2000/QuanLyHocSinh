@@ -165,4 +165,17 @@
       <Association Name="ThongTinCaNhan_HocSinh" Member="HocSinhs" ThisKey="MaCN" OtherKey="MaCN" Type="HocSinh" />
     </Type>
   </Table>
+  <Function Name="dbo.ShowStudent" Method="ShowStudent">
+    <ElementType Name="ShowStudentResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Tuoi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DiemDauVao" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
