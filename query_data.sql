@@ -1,14 +1,21 @@
-﻿select * from ThongTinCaNhan
-select * from NhanVien
-select* from TaiKhoan
+﻿--select HocSinh.MaHS,HoTen,Anh,Tuoi,NgaySinh,GioiTinh,DiaChi,DiemDauVao,TenLop from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
 
-delete from ThongTinCaNhan where MaCN = 'TTCN01'
+create proc ShowStudent
+as
+	select HocSinh.MaHS,HoTen,Anh,Tuoi,NgaySinh,GioiTinh,DiaChi,DiemDauVao,TenLop from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
 
-insert into ThongTinCaNhan values ('TTCN01',N'Nguyễn Văn Tiến','avata_nv_02.png',21,N'11/13/2000',N'Nam',N'Thanh Hóa','0123456789')
-insert into NhanVien values ('NV01','07/14/2021',N'Nhân viên',1,'TTCN01')
-insert into TaiKhoan values ('TK01','admin','123456','NV01')
+exec ShowStudent
 
-insert into ThongTinCaNhan values ('TTCN02',N'Nguyễn Văn Tiến','avata_nv_02.png',21,N'11/13/2000',N'Nam',N'Thanh Hóa','0123456789')
-insert into NhanVien values ('NV02','07/14/2021',N'Nhân viên',1,'TTCN02')
-insert into TaiKhoan values ('TK02','admin123','123456','NV02')
+create proc ShowStudentByMa
+(
+	@mahs nchar(10)
+)
+as
+	select HocSinh.MaHS,HoTen,Anh,Tuoi,NgaySinh,GioiTinh,DiaChi,DiemDauVao,TenLop from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
+	where HocSinh.MaHS = @mahs
+exec ShowStudentByMa 'HS01'
+
+select * from HocSinh
+
+select * from ThongTinCaNhan
 

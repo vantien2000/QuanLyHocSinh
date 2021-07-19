@@ -91,7 +91,7 @@ namespace QuanLyHocSinh
                 {
                     pictureAnh.Image = Image.FromFile(openDlg.FileName);
                     fileName = Path.GetFileName(openDlg.FileName);
-                    if(openDlg.FileName != (pathImage() + fileName))
+                    if(!File.Exists(pathImage() + fileName))
                     {
                         File.Copy(openDlg.FileName, pathImage() + fileName);
                     }
@@ -112,7 +112,7 @@ namespace QuanLyHocSinh
 
                 HocSinh stud = new HocSinh();
                 ThongTinCaNhan ttcn = new ThongTinCaNhan();
-                stud.MaHS = txtMaHS.Text;
+
                 ttcn.MaCN = autoKeyTHongTinCaNhan();
                 ttcn.HoTen = txtTenHS.Text;
                 ttcn.Anh = txtAnh.Text;
@@ -139,6 +139,9 @@ namespace QuanLyHocSinh
                 ttcn.NgaySinh = dateNgaySinh.Value;
                 ttcn.DiaChi = txtDiaChi.Text;
                 ttcn.SDT = txtSoDT.Text;
+
+                //Them bang hoc sinh
+                stud.MaHS = txtMaHS.Text;
                 if (int.Parse(txtDiem.Text) < 0)
                 {
                     MessageBox.Show("điểm phải lớn hơn 0");
@@ -148,6 +151,7 @@ namespace QuanLyHocSinh
                     stud.DiemDauVao = int.Parse(txtDiem.Text);
 
                 stud.MaLop = cbbTenLop.SelectedValue.ToString();
+                stud.MaCN = autoKeyTHongTinCaNhan();
                 db.HocSinhs.InsertOnSubmit(stud);
                 db.ThongTinCaNhans.InsertOnSubmit(ttcn);
                 db.SubmitChanges();

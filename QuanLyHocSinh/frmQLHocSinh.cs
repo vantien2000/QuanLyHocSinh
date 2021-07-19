@@ -16,6 +16,7 @@ namespace QuanLyHocSinh
         public frmQLHocSinh()
         {
             InitializeComponent();
+            
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace QuanLyHocSinh
 
         private void frmQLHocSinh_Load(object sender, EventArgs e)
         {
-            loadStudent();
+            LoadStudent();
         }
 
         private string pathImage()
@@ -36,7 +37,7 @@ namespace QuanLyHocSinh
             return newPath;
         }
 
-        private void loadStudent()
+        private void LoadStudent()
         {
             try
             {
@@ -63,6 +64,46 @@ namespace QuanLyHocSinh
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void btnReLoad_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            LoadStudent();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvHocSinh.Rows.Clear();
+                dgvHocSinh.RowTemplate.Height = 80;
+                if(txtSearch.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã để tìm kiếm!!!", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var stud = db.ShowStudentByMa(txtSearch.Text.Trim()).ToList();
+                //foreach(var stud in db.ShowStudentByMa(txtSearch.Text.Trim()))
+                //{
+                    dgvHocSinh.Rows.Add();
+                    dgvHocSinh.Rows[0].Cells[0].Value = stud[0].MaHS;
+                    dgvHocSinh.Rows[0].Cells[1].Value = Image.FromFile(pathImage() + stud[0].Anh);
+                    dgvHocSinh.Rows[0].Cells[2].Value = stud[0].HoTen;
+                    dgvHocSinh.Rows[0].Cells[3].Value = stud[0].Tuoi;
+                    dgvHocSinh.Rows[0].Cells[4].Value = stud[0].NgaySinh.Value.ToString("dd/MM/yyyy");
+                    dgvHocSinh.Rows[0].Cells[5].Value = stud[0].GioiTinh;
+                    dgvHocSinh.Rows[0].Cells[6].Value = stud[0].DiaChi;
+                    dgvHocSinh.Rows[0].Cells[7].Value = stud[0].DiemDauVao;
+                    dgvHocSinh.Rows[0].Cells[8].Value = stud[0].TenLop;
+                //}
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
         }
     }
 }
