@@ -29,11 +29,14 @@ namespace QuanLyHocSinh
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.dgvHocSinh = new System.Windows.Forms.DataGridView();
+            this.btnRefesh = new FontAwesome.Sharp.IconButton();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anh = new System.Windows.Forms.DataGridViewImageColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +44,9 @@ namespace QuanLyHocSinh
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemDauVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.btnReLoad = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +78,7 @@ namespace QuanLyHocSinh
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -100,97 +103,6 @@ namespace QuanLyHocSinh
             this.txtSearch.Size = new System.Drawing.Size(391, 32);
             this.txtSearch.TabIndex = 5;
             // 
-            // dgvHocSinh
-            // 
-            this.dgvHocSinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvHocSinh.BackgroundColor = System.Drawing.Color.White;
-            this.dgvHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaHS,
-            this.Anh,
-            this.HoTen,
-            this.Tuoi,
-            this.NgaySinh,
-            this.GioiTinh,
-            this.DiaChi,
-            this.DiemDauVao,
-            this.TenLop});
-            this.dgvHocSinh.GridColor = System.Drawing.Color.White;
-            this.dgvHocSinh.Location = new System.Drawing.Point(-1, 89);
-            this.dgvHocSinh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.dgvHocSinh.Name = "dgvHocSinh";
-            this.dgvHocSinh.RowHeadersWidth = 62;
-            this.dgvHocSinh.Size = new System.Drawing.Size(1371, 730);
-            this.dgvHocSinh.TabIndex = 6;
-            // 
-            // MaHS
-            // 
-            this.MaHS.HeaderText = "Mã học sinh";
-            this.MaHS.MinimumWidth = 8;
-            this.MaHS.Name = "MaHS";
-            this.MaHS.Width = 160;
-            // 
-            // Anh
-            // 
-            this.Anh.HeaderText = "Ảnh";
-            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Anh.MinimumWidth = 8;
-            this.Anh.Name = "Anh";
-            this.Anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Anh.Width = 80;
-            // 
-            // HoTen
-            // 
-            this.HoTen.HeaderText = "Tên học sinh";
-            this.HoTen.MinimumWidth = 8;
-            this.HoTen.Name = "HoTen";
-            this.HoTen.Width = 210;
-            // 
-            // Tuoi
-            // 
-            this.Tuoi.HeaderText = "Tuổi";
-            this.Tuoi.MinimumWidth = 8;
-            this.Tuoi.Name = "Tuoi";
-            this.Tuoi.Width = 70;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.HeaderText = "Ngày sinh";
-            this.NgaySinh.MinimumWidth = 8;
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Width = 150;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.MinimumWidth = 8;
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Width = 150;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.MinimumWidth = 8;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 180;
-            // 
-            // DiemDauVao
-            // 
-            this.DiemDauVao.HeaderText = "Điểm đầu vào";
-            this.DiemDauVao.MinimumWidth = 8;
-            this.DiemDauVao.Name = "DiemDauVao";
-            this.DiemDauVao.Width = 170;
-            // 
-            // TenLop
-            // 
-            this.TenLop.HeaderText = "Tên lớp";
-            this.TenLop.MinimumWidth = 8;
-            this.TenLop.Name = "TenLop";
-            this.TenLop.Width = 200;
-            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(83)))), ((int)(((byte)(33)))));
@@ -207,23 +119,119 @@ namespace QuanLyHocSinh
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnReLoad
+            // dgvHocSinh
             // 
-            this.btnReLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReLoad.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnReLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReLoad.ForeColor = System.Drawing.Color.White;
-            this.btnReLoad.IconChar = FontAwesome.Sharp.IconChar.Sync;
-            this.btnReLoad.IconColor = System.Drawing.Color.White;
-            this.btnReLoad.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReLoad.IconSize = 25;
-            this.btnReLoad.Location = new System.Drawing.Point(865, 29);
-            this.btnReLoad.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReLoad.Name = "btnReLoad";
-            this.btnReLoad.Size = new System.Drawing.Size(48, 44);
-            this.btnReLoad.TabIndex = 7;
-            this.btnReLoad.UseVisualStyleBackColor = false;
-            this.btnReLoad.Click += new System.EventHandler(this.btnReLoad_Click);
+            this.dgvHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHS,
+            this.Anh,
+            this.HoTen,
+            this.Tuoi,
+            this.NgaySinh,
+            this.GioiTinh,
+            this.DiaChi,
+            this.SoDT,
+            this.DiemDauVao,
+            this.TenLop});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHocSinh.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHocSinh.Location = new System.Drawing.Point(2, 86);
+            this.dgvHocSinh.Name = "dgvHocSinh";
+            this.dgvHocSinh.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgvHocSinh.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
+            this.dgvHocSinh.Size = new System.Drawing.Size(1367, 663);
+            this.dgvHocSinh.TabIndex = 8;
+            this.dgvHocSinh.SelectionChanged += new System.EventHandler(this.dgvHocSinh_SelectionChanged);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefesh.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.btnRefesh.IconColor = System.Drawing.Color.White;
+            this.btnRefesh.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRefesh.IconSize = 25;
+            this.btnRefesh.Location = new System.Drawing.Point(865, 29);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(48, 44);
+            this.btnRefesh.TabIndex = 7;
+            this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnReLoad_Click);
+            // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaHS";
+            this.MaHS.HeaderText = "Mã học sinh";
+            this.MaHS.Name = "MaHS";
+            this.MaHS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaHS.Width = 150;
+            // 
+            // Anh
+            // 
+            this.Anh.DataPropertyName = "Anh";
+            this.Anh.HeaderText = "Ảnh";
+            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Anh.Name = "Anh";
+            this.Anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Anh.Width = 80;
+            // 
+            // HoTen
+            // 
+            this.HoTen.HeaderText = "Tên học sinh";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.HoTen.Width = 200;
+            // 
+            // Tuoi
+            // 
+            this.Tuoi.HeaderText = "Tuổi";
+            this.Tuoi.Name = "Tuoi";
+            this.Tuoi.Width = 80;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.Width = 120;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Width = 150;
+            // 
+            // SoDT
+            // 
+            this.SoDT.HeaderText = "Số điện thoại";
+            this.SoDT.Name = "SoDT";
+            this.SoDT.Width = 150;
+            // 
+            // DiemDauVao
+            // 
+            this.DiemDauVao.HeaderText = "Điểm đầu vào";
+            this.DiemDauVao.Name = "DiemDauVao";
+            this.DiemDauVao.Width = 150;
+            // 
+            // TenLop
+            // 
+            this.TenLop.HeaderText = "Tên lớp";
+            this.TenLop.Name = "TenLop";
+            this.TenLop.Width = 200;
             // 
             // frmQLHocSinh
             // 
@@ -231,9 +239,9 @@ namespace QuanLyHocSinh
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
-            this.Controls.Add(this.btnReLoad);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvHocSinh);
+            this.Controls.Add(this.btnRefesh);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -255,8 +263,9 @@ namespace QuanLyHocSinh
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView dgvHocSinh;
         private FontAwesome.Sharp.IconButton btnSearch;
+        private System.Windows.Forms.DataGridView dgvHocSinh;
+        private FontAwesome.Sharp.IconButton btnRefesh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
         private System.Windows.Forms.DataGridViewImageColumn Anh;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
@@ -264,8 +273,8 @@ namespace QuanLyHocSinh
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemDauVao;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
-        private FontAwesome.Sharp.IconButton btnReLoad;
     }
 }

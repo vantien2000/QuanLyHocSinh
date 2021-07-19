@@ -33,11 +33,18 @@ namespace QuanLyHocSinh
             try
             {
                 dbDataContext db = new dbDataContext();
-                var studCount = (from stud in db.HocSinhs select stud).Count();
-                if (0 < studCount && studCount < 9)
-                    key = "HS0" + (studCount + 1);
+                var studKey = (from stud in db.HocSinhs select stud.MaHS).ToList().Last().Trim();
+
+                int number = int.Parse(studKey.Substring(2));
+
+                if (number > 0 && number < 9)
+                {
+                    key = studKey.Substring(0, 2) + '0' + (number+1);
+                }
                 else
-                    key = "HS" + (studCount + 1);
+                {
+                    key = studKey.Substring(0, 2) + (number+1);
+                }
             }
             catch (Exception ex)
             {
@@ -53,11 +60,18 @@ namespace QuanLyHocSinh
             try
             {
                 dbDataContext db = new dbDataContext();
-                var ttcnCount = (from ttcn in db.ThongTinCaNhans select ttcn).Count();
-                if (0 < ttcnCount && ttcnCount < 9)
-                    key = "HS0" + (ttcnCount + 1);
+                var ttcnKey = (from ttcn in db.ThongTinCaNhans select ttcn.MaCN).ToList().Last().Trim();
+
+                int number = int.Parse(ttcnKey.Substring(4));
+
+                if (number > 0 && number < 9)
+                {
+                    key = ttcnKey.Substring(0, 4) + '0' + (number + 1);
+                }
                 else
-                    key = "HS" + (ttcnCount + 1);
+                {
+                    key = ttcnKey.Substring(0, 4) + (number + 1);
+                }
             }
             catch (Exception ex)
             {
@@ -149,13 +163,13 @@ namespace QuanLyHocSinh
                 }
                 else
                     stud.DiemDauVao = int.Parse(txtDiem.Text);
-
                 stud.MaLop = cbbTenLop.SelectedValue.ToString();
                 stud.MaCN = autoKeyTHongTinCaNhan();
                 db.HocSinhs.InsertOnSubmit(stud);
                 db.ThongTinCaNhans.InsertOnSubmit(ttcn);
                 db.SubmitChanges();
                 MessageBox.Show("Thêm thành công!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                //dong form
                 Close();
             }
             catch (Exception ex)

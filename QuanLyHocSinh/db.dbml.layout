@@ -32,7 +32,7 @@
         <elementListCompartment Id="9a446285-604f-480b-80a5-d0966b2505c3" absoluteBounds="0.51500000000000012, 5.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.5 : 5.25); (1.5 : 5.11342610677083); (2.515625 : 5.11342610677083); (2.515625 : 4.2288232421875); (2.88166666666667 : 4.2288232421875 : JumpStart); (3.04833333333333 : 4.2288232421875 : JumpEnd); (6.8515625 : 4.2288232421875); (6.8515625 : 3.41429768880208); (6.875 : 3.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.5 : 5.25); (1.5 : 5.11342610677083); (2.515625 : 5.11342610677083); (2.515625 : 4.2288232421875); (6.8515625 : 4.2288232421875); (6.8515625 : 3.41429768880208); (6.875 : 3.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/NhanVien/NhanVien_TaiKhoan" />
       <nodes>
         <classShapeMoniker Id="7cbf4f31-d88b-41e0-be4c-7eab5dcb389c" />
@@ -45,7 +45,7 @@
         <elementListCompartment Id="225117f0-844a-467c-a27d-85ca9d450057" absoluteBounds="5.5150000000000006, 4.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(1.5 : 2.1362939453125); (1.5 : 2.734375); (2.88166666666667 : 2.734375 : JumpStart); (3.04833333333333 : 2.734375 : JumpEnd); (3.109375 : 2.734375); (3.109375 : 4.234375); (5.4765625 : 4.234375); (5.4765625 : 5.16429768880208); (5.5 : 5.16429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.5 : 2.1362939453125); (1.5 : 2.734375); (3.109375 : 2.734375); (3.109375 : 4.234375); (5.4765625 : 4.234375); (5.4765625 : 5.16429768880208); (5.5 : 5.16429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/GVCN/GVCN_MonHoc" />
       <nodes>
         <classShapeMoniker Id="b07cc2cf-d6f1-4912-9173-cbec86fde24b" />
@@ -58,7 +58,7 @@
         <elementListCompartment Id="43e2c938-6fc4-4565-ab69-9b6cad401d5d" absoluteBounds="8.39, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.031252 : 2.1362939453125); (2.031252 : 2.28652180989583); (2.57291666666667 : 2.28652180989583 : JumpStart); (2.73958333333333 : 2.28652180989583 : JumpEnd); (2.88166666666667 : 2.28652180989583 : JumpStart); (3.04833333333333 : 2.28652180989583 : JumpEnd); (4.609375 : 2.28652180989583); (4.609375 : 4.2288232421875); (8.3515625 : 4.2288232421875); (8.3515625 : 4.3616357421875); (9.14062525 : 4.3616357421875); (9.14062525 : 4.3381982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.031252 : 2.1362939453125); (2.031252 : 2.28652180989583); (4.609375 : 2.28652180989583); (4.609375 : 4.2288232421875); (8.3515625 : 4.2288232421875); (8.3515625 : 4.3616357421875); (9.14062525 : 4.3616357421875); (9.14062525 : 4.3381982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/GVCN/GVCN_LopHoc" />
       <nodes>
         <classShapeMoniker Id="b07cc2cf-d6f1-4912-9173-cbec86fde24b" />
@@ -71,7 +71,7 @@
         <elementListCompartment Id="e04ec27c-3062-4924-9c5e-869d4f13a5d9" absoluteBounds="7.39, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.8515625 : 2.27089680989583); (3.8515625 : 4.2421875); (5.140625 : 4.2421875); (5.140625 : 6.28929518880208); (7.375 : 6.28929518880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(3.8515625 : 2.27089680989583); (3.8515625 : 4.2421875); (5.140625 : 4.2421875); (5.140625 : 6.28929518880208); (5.18619791666667 : 6.28929518880208 : JumpStart); (5.35286458333333 : 6.28929518880208 : JumpEnd); (7.375 : 6.28929518880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/Diem/Diem_LoaiDiem" />
       <nodes>
         <classShapeMoniker Id="7e2f9e01-0b50-4e3a-9bc9-83796ffad132" />
@@ -130,7 +130,7 @@
         <classShapeMoniker Id="7e2f9e01-0b50-4e3a-9bc9-83796ffad132" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.375 : 0.5); (6.375 : 0.34); (2.965 : 0.34); (2.965 : 6.4531982421875); (4.265627 : 6.4531982421875); (4.265627 : 6.2131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(6.375 : 0.5); (6.375 : 0.34); (2.965 : 0.34); (2.965 : 6.4531982421875); (3.26041666666667 : 6.4531982421875 : JumpStart); (3.42708333333333 : 6.4531982421875 : JumpEnd); (4.265627 : 6.4531982421875); (4.265627 : 6.2131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/HocSinh/HocSinh_ThanhToan" />
       <nodes>
         <classShapeMoniker Id="3b90f14c-2b66-48a2-a353-aaf01cae6e05" />
@@ -196,7 +196,7 @@
         <classShapeMoniker Id="7cbf4f31-d88b-41e0-be4c-7eab5dcb389c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.765626 : 2.75); (1.765626 : 2.1987939453125); (2.57291666666667 : 2.1987939453125 : JumpStart); (2.73958333333333 : 2.1987939453125 : JumpEnd); (2.88166666666667 : 2.1987939453125 : JumpStart); (3.04833333333333 : 2.1987939453125 : JumpEnd); (3.0625 : 2.1987939453125); (3.0625 : 0.4375); (5.28125 : 0.4375); (5.28125 : 1.28929768880208); (5.375 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.765626 : 2.75); (1.765626 : 2.1987939453125); (3.0625 : 2.1987939453125); (3.0625 : 0.4375); (5.28125 : 0.4375); (5.28125 : 1.28929768880208); (5.375 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/ThongTinCaNhan/ThongTinCaNhan_HocSinh" />
       <nodes>
         <classShapeMoniker Id="a4693822-bd18-449c-857e-3f4f92093369" />

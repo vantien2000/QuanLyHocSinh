@@ -113,13 +113,13 @@ namespace QuanLyHocSinh
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(44, 21);
             this.rdNu.TabIndex = 0;
-            this.rdNu.TabStop = true;
             this.rdNu.Text = "Nữ";
             this.rdNu.UseVisualStyleBackColor = true;
             // 
             // rdNam
             // 
             this.rdNam.AutoSize = true;
+            this.rdNam.Checked = true;
             this.rdNam.ForeColor = System.Drawing.Color.Black;
             this.rdNam.Location = new System.Drawing.Point(178, 31);
             this.rdNam.Margin = new System.Windows.Forms.Padding(4);

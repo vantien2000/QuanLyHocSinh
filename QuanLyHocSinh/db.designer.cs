@@ -3611,9 +3611,9 @@ namespace QuanLyHocSinh
 		
 		private string _MaHS;
 		
-		private string _HoTen;
-		
 		private string _Anh;
+		
+		private string _HoTen;
 		
 		private int _Tuoi;
 		
@@ -3622,6 +3622,8 @@ namespace QuanLyHocSinh
 		private string _GioiTinh;
 		
 		private string _DiaChi;
+		
+		private string _SDT;
 		
 		private System.Nullable<double> _DiemDauVao;
 		
@@ -3647,22 +3649,6 @@ namespace QuanLyHocSinh
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(200)")]
-		public string HoTen
-		{
-			get
-			{
-				return this._HoTen;
-			}
-			set
-			{
-				if ((this._HoTen != value))
-				{
-					this._HoTen = value;
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Anh", DbType="VarChar(100)")]
 		public string Anh
 		{
@@ -3675,6 +3661,22 @@ namespace QuanLyHocSinh
 				if ((this._Anh != value))
 				{
 					this._Anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(200)")]
+		public string HoTen
+		{
+			get
+			{
+				return this._HoTen;
+			}
+			set
+			{
+				if ((this._HoTen != value))
+				{
+					this._HoTen = value;
 				}
 			}
 		}
@@ -3739,6 +3741,22 @@ namespace QuanLyHocSinh
 				if ((this._DiaChi != value))
 				{
 					this._DiaChi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="Char(10)")]
+		public string SDT
+		{
+			get
+			{
+				return this._SDT;
+			}
+			set
+			{
+				if ((this._SDT != value))
+				{
+					this._SDT = value;
 				}
 			}
 		}
@@ -3781,9 +3799,9 @@ namespace QuanLyHocSinh
 		
 		private string _MaHS;
 		
-		private string _HoTen;
-		
 		private string _Anh;
+		
+		private string _HoTen;
 		
 		private int _Tuoi;
 		
@@ -3792,6 +3810,8 @@ namespace QuanLyHocSinh
 		private string _GioiTinh;
 		
 		private string _DiaChi;
+		
+		private string _SDT;
 		
 		private System.Nullable<double> _DiemDauVao;
 		
@@ -3817,22 +3837,6 @@ namespace QuanLyHocSinh
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(200)")]
-		public string HoTen
-		{
-			get
-			{
-				return this._HoTen;
-			}
-			set
-			{
-				if ((this._HoTen != value))
-				{
-					this._HoTen = value;
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Anh", DbType="VarChar(100)")]
 		public string Anh
 		{
@@ -3845,6 +3849,22 @@ namespace QuanLyHocSinh
 				if ((this._Anh != value))
 				{
 					this._Anh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(200)")]
+		public string HoTen
+		{
+			get
+			{
+				return this._HoTen;
+			}
+			set
+			{
+				if ((this._HoTen != value))
+				{
+					this._HoTen = value;
 				}
 			}
 		}
@@ -3909,6 +3929,22 @@ namespace QuanLyHocSinh
 				if ((this._DiaChi != value))
 				{
 					this._DiaChi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDT", DbType="Char(10)")]
+		public string SDT
+		{
+			get
+			{
+				return this._SDT;
+			}
+			set
+			{
+				if ((this._SDT != value))
+				{
+					this._SDT = value;
 				}
 			}
 		}
