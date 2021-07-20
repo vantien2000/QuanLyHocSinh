@@ -52,7 +52,7 @@ namespace QuanLyHocSinh
                 }
             }
             catch(Exception ex){
-
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
                 
             

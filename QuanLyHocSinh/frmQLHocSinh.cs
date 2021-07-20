@@ -135,5 +135,31 @@ namespace QuanLyHocSinh
             }
             else return;
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedRow = dgvHocSinh.SelectedRows.Count;
+                if (selectedRow > 0)
+                {
+                    foreach (DataGridViewRow row in dgvHocSinh.SelectedRows)
+                    {
+                        db.DeleteStudent(row.Cells[0].Value.ToString());
+                        db.SubmitChanges();
+                    }
+                    loadStudent();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng để xóa !!");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
+        }
     }
 }

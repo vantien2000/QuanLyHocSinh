@@ -82,45 +82,59 @@ namespace QuanLyHocSinh
         {
             try
             {
-                var getStud = db.HocSinhs.FirstOrDefault(x => x.MaHS == txtMa.Text);
-                var getProfile = db.ThongTinCaNhans.FirstOrDefault(x => x.MaCN == getStud.MaCN);
-                MessageBox.Show(getStud.MaHS);
-                //sửa bang hoc sinh
-                //if (int.Parse(txtDiem.Text) < 0)
-                //{
-                //    MessageBox.Show("điểm phải lớn hơn 0");
-                //    return;
-                //}
-                //else
-                //    getStud.DiemDauVao = int.Parse(txtDiem.Text);
-                //getStud.MaLop = cbbTenLop.SelectedValue.ToString();
+                //kiểm tra rổng
+                if (txtMa.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtTuoi.Text == "" || txtDiaChi.Text == ""
+                    || txtSoDT.Text == "" || txtDiem.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
+                    return;
+                }
+                //kiểm tra điểm hợp lệ
+                int diem = 0;
+                if(int.Parse(txtDiem.Text) < 0)
+                {
+                    MessageBox.Show("điểm phải lớn hơn 0");
+                    return;
+                }
+                else
+                    diem = int.Parse(txtDiem.Text);
 
-                ////sua bảng cá nhân
-                //getProfile.HoTen = txtTenHS.Text;
-                //getProfile.Anh = txtAnh.Text;
-                ////kiểm tra rổng
-                //if (txtMa.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtTuoi.Text == "" || txtDiaChi.Text == ""
-                //    || txtSoDT.Text == "" || txtDiem.Text == "")
-                //{
-                //    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
-                //    return;
-                //}
-                ////kiểm tra tuổi hợp lệ
-                //if (int.Parse(txtTuoi.Text) <= 0)
-                //{
-                //    MessageBox.Show("Tuổi phải lớn hơn 0");
-                //    return;
-                //}
-                //else
-                //    getProfile.Tuoi = int.Parse(txtTuoi.Text);
-                //string gt = "";
-                //if (rdNam.Checked) gt = "Nam";
-                //else gt = "Nữ";
+                //kiểm tra tuổi hợp lệ
+                int tuoi = 0;
+                if (int.Parse(txtTuoi.Text) <= 0)
+                {
+                    MessageBox.Show("tuổi phải lớn hơn 0");
+                    return;
+                }
+                else
+                    tuoi = int.Parse(txtDiem.Text);
 
-                //getProfile.GioiTinh = gt;
-                //getProfile.NgaySinh = txtNgaySinh.Value;
-                //getProfile.DiaChi = txtDiaChi.Text;
-                //getProfile.SDT = txtSoDT.Text;
+                //laays gioi tinh
+                string gt = "";
+                if (rdNam.Checked) gt = "Nam";
+                else gt = "Nữ";
+
+                //check điện thoại
+                string sdt = "";
+                if (txtSoDT.Text.Trim().Length > 10)
+                {
+                    MessageBox.Show("Số điện thoại không qúa 10 số");
+                }
+                else
+                    sdt = txtSoDT.Text.Trim();
+                //update student
+                var updateStudent = db.UpdateStudent(
+                        txtMa.Text,
+                        diem,
+                        cbbTenLop.SelectedValue.ToString(),
+                        txtTenHS.Text,
+                        txtAnh.Text,
+                        tuoi,
+                        txtNgaySinh.Value,
+                        gt,
+                        txtDiaChi.Text,
+                        sdt
+                    );
 
                 db.SubmitChanges();
                 frmQLHocSinh.getLoad.loadStudent();

@@ -122,53 +122,64 @@ namespace QuanLyHocSinh
         {
             try
             {
-
-                HocSinh stud = new HocSinh();
-                ThongTinCaNhan ttcn = new ThongTinCaNhan();
-
-                ttcn.MaCN = autoKeyTHongTinCaNhan();
-                ttcn.HoTen = txtTenHS.Text;
-                ttcn.Anh = txtAnh.Text;
                 //kiểm tra rổng
-                if(txtMaHS.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtTuoi.Text == "" || txtDiaChi.Text == ""
+                if (txtMaHS.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtTuoi.Text == "" || txtDiaChi.Text == ""
                     || txtSoDT.Text == "" || txtDiem.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
                     return;
                 }
-                //kiểm tra tuổi hợp lệ
-                if(int.Parse(txtTuoi.Text) <= 0)
-                {
-                    MessageBox.Show("Tuổi phải lớn hơn 0");
-                    return;
-                }    
-                else
-                    ttcn.Tuoi = int.Parse(txtTuoi.Text);
-                string gt = "";
-                if (rdNam.Checked) gt = "Nam";
-                else gt = "Nữ";
-
-                ttcn.GioiTinh = gt;
-                ttcn.NgaySinh = dateNgaySinh.Value;
-                ttcn.DiaChi = txtDiaChi.Text;
-                ttcn.SDT = txtSoDT.Text;
-
-                //Them bang hoc sinh
-                stud.MaHS = txtMaHS.Text;
+                //kiểm tra điểm hợp lệ
+                int diem = 0;
                 if (int.Parse(txtDiem.Text) < 0)
                 {
                     MessageBox.Show("điểm phải lớn hơn 0");
                     return;
                 }
                 else
-                    stud.DiemDauVao = int.Parse(txtDiem.Text);
-                stud.MaLop = cbbTenLop.SelectedValue.ToString();
-                stud.MaCN = autoKeyTHongTinCaNhan();
-                db.HocSinhs.InsertOnSubmit(stud);
-                db.ThongTinCaNhans.InsertOnSubmit(ttcn);
+                    diem = int.Parse(txtDiem.Text);
+
+                //kiểm tra tuổi hợp lệ
+                int tuoi = 0;
+                if (int.Parse(txtTuoi.Text) <= 0)
+                {
+                    MessageBox.Show("tuổi phải lớn hơn 0");
+                    return;
+                }
+                else
+                    tuoi = int.Parse(txtDiem.Text);
+
+                //laays gioi tinh
+                string gt = "";
+                if (rdNam.Checked) gt = "Nam";
+                else gt = "Nữ";
+
+                //check điện thoại
+                string sdt = "";
+                if (txtSoDT.Text.Trim().Length > 10)
+                {
+                    MessageBox.Show("Số điện thoại không qúa 10 số");
+                }
+                else
+                    sdt = txtSoDT.Text.Trim();
+                //update student
+                var InsertStudent = db.InsertStudent(
+                        txtMaHS.Text.Trim(),
+                        diem,
+                        cbbTenLop.SelectedValue.ToString(),
+                        autoKeyTHongTinCaNhan(),
+                        txtTenHS.Text,
+                        txtAnh.Text,
+                        tuoi,
+                        dateNgaySinh.Value,
+                        gt,
+                        txtDiaChi.Text,
+                        sdt
+                    );
+
                 db.SubmitChanges();
-                MessageBox.Show("Thêm thành công!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 frmQLHocSinh.getLoad.loadStudent();
+                MessageBox.Show("Thêm thành công!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 //dong form
                 Close();
             }

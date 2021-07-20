@@ -194,4 +194,35 @@
       <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.UpdateStudent" Method="UpdateStudent">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="diem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="malop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="anh" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tuoi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertStudent" Method="InsertStudent">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="diem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="malop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="macn" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="anh" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tuoi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteStudent" Method="DeleteStudent">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

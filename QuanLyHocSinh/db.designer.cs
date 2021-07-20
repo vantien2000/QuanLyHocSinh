@@ -251,6 +251,27 @@ namespace QuanLyHocSinh
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs);
 			return ((ISingleResult<ShowStudentByMaResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateStudent")]
+		public int UpdateStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string mahs, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> diem, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string malop, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string hoten, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuoi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ngaySinh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(5)")] string gioiTinh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(500)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string sdt)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs, diem, malop, hoten, anh, tuoi, ngaySinh, gioiTinh, diaChi, sdt);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertStudent")]
+		public int InsertStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string mahs, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> diem, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string malop, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string macn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string hoten, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string anh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuoi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ngaySinh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(5)")] string gioiTinh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(500)")] string diaChi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string sdt)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs, diem, malop, macn, hoten, anh, tuoi, ngaySinh, gioiTinh, diaChi, sdt);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteStudent")]
+		public int DeleteStudent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string mahs)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahs);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Diem")]
