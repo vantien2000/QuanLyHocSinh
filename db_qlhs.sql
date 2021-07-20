@@ -363,4 +363,5 @@ select TenLop,MaGV,count(MaHS) as "SoHocSinh",1
  from LopHoc inner join HocSinh on LopHoc.MaLop = HocSinh.MaLop
  group by TenLop,MaGV
 
-select * from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join GVCN on LopHoc.MaGV=GVCN.MaGV inner join ThongTinCaNhan on HocSinh.MaCN=ThongTinCaNhan.MaCN 
+update ThongTinCaNhan set HoTen = N'Quách Phương Thảo',Anh='avata_nv_02.png',Tuoi=16,NgaySinh='10/20/2006',GioiTinh=N'Nữ',DiaChi=N'Thanh Hóa',SDT='0987633345'
+where MaCN = 'TTCN09'

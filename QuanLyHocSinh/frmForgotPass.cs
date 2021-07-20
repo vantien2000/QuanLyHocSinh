@@ -37,9 +37,10 @@ namespace QuanLyHocSinh
 
         private void btnYeuCau_Click(object sender, EventArgs e)
         {
-            foreach (var p in db.TaiKhoans)
+            try
             {
-                if (txtXacThuc.Text == number.ToString() && txtTaiKhoan.Text == p.TaiKhoan1.Trim())
+                var p = db.TaiKhoans.Single(tk => tk.TaiKhoan1 == txtTaiKhoan.Text.Trim());
+                if (p!=null)
                 {
                     this.Hide();
                     frmResetPass resetForm = new frmResetPass(txtTaiKhoan.Text);
@@ -50,6 +51,10 @@ namespace QuanLyHocSinh
                     MessageBox.Show("Xác thực không thành công!!!");
                 }
             }
+            catch(Exception ex){
+
+            }
+                
             
         }
     }

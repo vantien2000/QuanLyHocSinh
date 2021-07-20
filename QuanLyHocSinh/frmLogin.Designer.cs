@@ -30,7 +30,6 @@ namespace QuanLyHocSinh
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.lblThongBao = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,6 +40,7 @@ namespace QuanLyHocSinh
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.lblThongBao = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -57,14 +57,6 @@ namespace QuanLyHocSinh
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblThongBao
-            // 
-            this.lblThongBao.AutoSize = true;
-            this.lblThongBao.Location = new System.Drawing.Point(59, 225);
-            this.lblThongBao.Name = "lblThongBao";
-            this.lblThongBao.Size = new System.Drawing.Size(0, 25);
-            this.lblThongBao.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
@@ -97,6 +89,7 @@ namespace QuanLyHocSinh
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnDangNhap);
+            this.panel1.Controls.Add(this.lblThongBao);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button3);
@@ -118,7 +111,7 @@ namespace QuanLyHocSinh
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtPass);
             this.panel2.Controls.Add(this.iconPictureBox2);
-            this.panel2.Location = new System.Drawing.Point(79, 328);
+            this.panel2.Location = new System.Drawing.Point(82, 361);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(360, 45);
             this.panel2.TabIndex = 16;
@@ -131,7 +124,7 @@ namespace QuanLyHocSinh
             this.txtPass.Location = new System.Drawing.Point(57, 14);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(295, 32);
+            this.txtPass.Size = new System.Drawing.Size(295, 22);
             this.txtPass.TabIndex = 0;
             // 
             // iconPictureBox2
@@ -158,7 +151,7 @@ namespace QuanLyHocSinh
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtUser);
             this.panel3.Controls.Add(this.iconPictureBox1);
-            this.panel3.Location = new System.Drawing.Point(79, 263);
+            this.panel3.Location = new System.Drawing.Point(82, 296);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(360, 44);
             this.panel3.TabIndex = 14;
@@ -168,9 +161,9 @@ namespace QuanLyHocSinh
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
-            this.txtUser.Location = new System.Drawing.Point(57, 8);
+            this.txtUser.Location = new System.Drawing.Point(57, 5);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(295, 32);
+            this.txtUser.Size = new System.Drawing.Size(295, 22);
             this.txtUser.TabIndex = 0;
             // 
             // iconPictureBox1
@@ -199,7 +192,7 @@ namespace QuanLyHocSinh
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(267, 440);
+            this.btnThoat.Location = new System.Drawing.Point(270, 473);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(158, 44);
             this.btnThoat.TabIndex = 21;
@@ -216,13 +209,26 @@ namespace QuanLyHocSinh
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(85, 440);
+            this.btnDangNhap.Location = new System.Drawing.Point(88, 473);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(165, 44);
             this.btnDangNhap.TabIndex = 20;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // lblThongBao
+            // 
+            this.lblThongBao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblThongBao.AutoSize = true;
+            this.lblThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lblThongBao.Location = new System.Drawing.Point(35, 259);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(85, 20);
+            this.lblThongBao.TabIndex = 19;
+            this.lblThongBao.Text = "Thông báo";
             // 
             // label4
             // 
@@ -231,9 +237,9 @@ namespace QuanLyHocSinh
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(284, 393);
+            this.label4.Location = new System.Drawing.Point(276, 427);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 29);
+            this.label4.Size = new System.Drawing.Size(115, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "quên mật khẩu";
             // 
@@ -244,9 +250,9 @@ namespace QuanLyHocSinh
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(52, 393);
+            this.label3.Location = new System.Drawing.Point(55, 426);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 29);
+            this.label3.Size = new System.Drawing.Size(157, 20);
             this.label3.TabIndex = 18;
             this.label3.Text = "Bạn quên mật khẩu?";
             // 
@@ -254,7 +260,7 @@ namespace QuanLyHocSinh
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(85, 313);
+            this.button3.Location = new System.Drawing.Point(88, 346);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(261, 0);
             this.button3.TabIndex = 17;
@@ -265,7 +271,7 @@ namespace QuanLyHocSinh
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(85, 263);
+            this.button2.Location = new System.Drawing.Point(88, 296);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(261, 0);
             this.button2.TabIndex = 15;
@@ -296,7 +302,7 @@ namespace QuanLyHocSinh
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(150, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 25);
+            this.label2.Size = new System.Drawing.Size(163, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Nhân viên đăng nhập";
             // 
@@ -308,7 +314,7 @@ namespace QuanLyHocSinh
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(73, 157);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(376, 29);
+            this.label1.Size = new System.Drawing.Size(255, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Trường THPT Chuyên Lam Sơn";
             // 
@@ -326,12 +332,11 @@ namespace QuanLyHocSinh
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(534, 597);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.lblThongBao);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -349,12 +354,10 @@ namespace QuanLyHocSinh
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblThongBao;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -373,6 +376,7 @@ namespace QuanLyHocSinh
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }
 

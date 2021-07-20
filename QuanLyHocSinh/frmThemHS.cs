@@ -13,6 +13,7 @@ namespace QuanLyHocSinh
 {
     public partial class frmThemHS : Form
     {
+        private dbDataContext db = new dbDataContext();
         private string fileName = "";
         public frmThemHS()
         {
@@ -32,7 +33,7 @@ namespace QuanLyHocSinh
             string key = "";
             try
             {
-                dbDataContext db = new dbDataContext();
+                
                 var studKey = (from stud in db.HocSinhs select stud.MaHS).ToList().Last().Trim();
 
                 int number = int.Parse(studKey.Substring(2));
@@ -59,7 +60,6 @@ namespace QuanLyHocSinh
             string key = "";
             try
             {
-                dbDataContext db = new dbDataContext();
                 var ttcnKey = (from ttcn in db.ThongTinCaNhans select ttcn.MaCN).ToList().Last().Trim();
 
                 int number = int.Parse(ttcnKey.Substring(4));
@@ -122,7 +122,6 @@ namespace QuanLyHocSinh
         {
             try
             {
-                dbDataContext db = new dbDataContext();
 
                 HocSinh stud = new HocSinh();
                 ThongTinCaNhan ttcn = new ThongTinCaNhan();
@@ -169,6 +168,7 @@ namespace QuanLyHocSinh
                 db.ThongTinCaNhans.InsertOnSubmit(ttcn);
                 db.SubmitChanges();
                 MessageBox.Show("Thêm thành công!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                frmQLHocSinh.getLoad.loadStudent();
                 //dong form
                 Close();
             }

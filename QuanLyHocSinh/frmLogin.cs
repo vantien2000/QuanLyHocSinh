@@ -13,7 +13,6 @@ namespace QuanLyHocSinh
     public partial class frmLogin : Form
     {
         private dbDataContext db = new dbDataContext();
-        private TaiKhoan tk = new TaiKhoan();
         int solanClick = 1;
         public frmLogin()
         {
@@ -33,59 +32,47 @@ namespace QuanLyHocSinh
         public frmLogin(string user,string pass)
         {
             InitializeComponent();
-            foreach (var p in db.TaiKhoans)
-            {
-                if (p.TaiKhoan1.Trim().Equals(user))
-                {
-                    //gán mật khẩu mới
-                    p.MatKhau = pass;
-                }
-            }
-        }
-
-        private bool checkAdmin()
-        {
-            bool check = true;
-            foreach (var p in db.TaiKhoans)
-            {
-                if (p.TaiKhoan1.Trim().Equals(txtUser.Text) && p.MatKhau.Trim().Equals(txtPass.Text))
-                {
-                    tk = p;
-                    check = true;
-                    break;
-                }
-                else
-                    check = false;
-            }
-            return check;
+            var p = db.TaiKhoans.Single(tk => tk.TaiKhoan1 == user);
+            p.MatKhau = pass;
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-                //if(txtUser.Text == "" || txtPass.Text == "")
-                //{
-                //    MessageBox.Show("Bạn chưa nhập thông tin tài khoản và mật khẩu!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    return;
-            if (checkAdmin()) { 
-                this.Hide();
-                frmAdmin admin = new frmAdmin(tk);
-                admin.Show();
-            }
-            else
+            try
             {
-                lblThongBao.Text = "Nhập sai mật khẩu quá 5 lần. Tài khoản sẽ bị khóa";
-                lblThongBao.ForeColor = System.Drawing.Color.Red;
-                lblThongBao.Visible = true;
-                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (solanClick == 5)
+                var p = db.TaiKhoans.Single(tk => tk.TaiKhoan1 == txtUser.Text.Trim() && tk.MatKhau == txtPass.Text);
+                if (txtUser.Text == "" || txtPass.Text == "")
                 {
-                    txtUser.Enabled = false;
-                    txtPass.Enabled = false;
-                    lblThongBao.Text = "Bạn đã Nhập sai mật khẩu quá 5 lần. Không thể đăng nhập";
-                    lblThongBao.ForeColor = System.Drawing.Color.Red;
-                    btnDangNhap.Enabled = false;
+                    MessageBox.Show("Bạn chưa nhập thông tin tài khoản và mật khẩu!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                solanClick++;
-            } 
+                if (p != null)
+                {
+                    this.Hide();
+                    frmAdmin admin = new frmAdmin(p);
+                    admin.Show();
+                }
+                else
+                {
+                    lblThongBao.Text = "Nhập sai mật khẩu quá 5 lần. Tài khoản sẽ bị khóa";
+                    lblThongBao.ForeColor = System.Drawing.Color.Red;
+                    lblThongBao.Visible = true;
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (solanClick == 5)
+                    {
+                        txtUser.Enabled = false;
+                        txtPass.Enabled = false;
+                        lblThongBao.Text = "Bạn đã Nhập sai mật khẩu quá 5 lần. Không thể đăng nhập";
+                        lblThongBao.ForeColor = System.Drawing.Color.Red;
+                        btnDangNhap.Enabled = false;
+                    }
+                    solanClick++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+             
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {

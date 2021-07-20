@@ -141,6 +141,7 @@ namespace QuanLyHocSinh
             this.btnChooseFile.TabIndex = 24;
             this.btnChooseFile.Text = "Chọn file";
             this.btnChooseFile.UseVisualStyleBackColor = true;
+            this.btnChooseFile.Click += new System.EventHandler(this.btnChonFile_Click);
             // 
             // btnHuy
             // 
@@ -306,6 +307,7 @@ namespace QuanLyHocSinh
             // 
             // txtMa
             // 
+            this.txtMa.Enabled = false;
             this.txtMa.Location = new System.Drawing.Point(279, 112);
             this.txtMa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMa.Name = "txtMa";

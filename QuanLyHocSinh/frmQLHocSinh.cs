@@ -14,9 +14,11 @@ namespace QuanLyHocSinh
     {
         private dbDataContext db = new dbDataContext();
         private ShowStudentByMaResult show = null;
+        public static frmQLHocSinh getLoad;
         public frmQLHocSinh()
         {
             InitializeComponent();
+            getLoad = this;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -84,18 +86,18 @@ namespace QuanLyHocSinh
                 }
                 dgvHocSinh.Rows.Clear();
                 dgvHocSinh.RowTemplate.Height = 80;
-                var stud = db.ShowStudentByMa(txtSearch.Text.Trim()).ToList();
+                var stud = db.ShowStudentByMa(txtSearch.Text.Trim()).Single();
                 dgvHocSinh.Rows.Add();
-                dgvHocSinh.Rows[0].Cells[0].Value = stud[0].MaHS.ToString();
-                dgvHocSinh.Rows[0].Cells[1].Value = new Bitmap(pathImage() + stud[0].Anh);
-                dgvHocSinh.Rows[0].Cells[2].Value = stud[0].HoTen;
-                dgvHocSinh.Rows[0].Cells[3].Value = stud[0].Tuoi;
-                dgvHocSinh.Rows[0].Cells[4].Value = stud[0].NgaySinh.Value.ToString("dd/MM/yyyy");
-                dgvHocSinh.Rows[0].Cells[5].Value = stud[0].GioiTinh;
-                dgvHocSinh.Rows[0].Cells[6].Value = stud[0].DiaChi;
-                dgvHocSinh.Rows[0].Cells[7].Value = stud[0].SDT;
-                dgvHocSinh.Rows[0].Cells[8].Value = stud[0].DiemDauVao;
-                dgvHocSinh.Rows[0].Cells[9].Value = stud[0].TenLop;
+                dgvHocSinh.Rows[0].Cells[0].Value = stud.MaHS.ToString();
+                dgvHocSinh.Rows[0].Cells[1].Value = new Bitmap(pathImage() + stud.Anh);
+                dgvHocSinh.Rows[0].Cells[2].Value = stud.HoTen;
+                dgvHocSinh.Rows[0].Cells[3].Value = stud.Tuoi;
+                dgvHocSinh.Rows[0].Cells[4].Value = stud.NgaySinh.Value.ToString("dd/MM/yyyy");
+                dgvHocSinh.Rows[0].Cells[5].Value = stud.GioiTinh;
+                dgvHocSinh.Rows[0].Cells[6].Value = stud.DiaChi;
+                dgvHocSinh.Rows[0].Cells[7].Value = stud.SDT;
+                dgvHocSinh.Rows[0].Cells[8].Value = stud.DiemDauVao;
+                dgvHocSinh.Rows[0].Cells[9].Value = stud.TenLop;
             }
             catch (Exception ex)
             {
@@ -128,7 +130,7 @@ namespace QuanLyHocSinh
             if (selectedRow > 0 && selectedRow <= 1)
             {
                 string keyStud = dgvHocSinh.SelectedRows[0].Cells[0].Value+"";
-                var getInforChange = db.ShowStudentByMa(keyStud.Trim()).First();
+                var getInforChange = db.ShowStudentByMa(keyStud.Trim()).Single();
                 show = getInforChange;
             }
             else return;
