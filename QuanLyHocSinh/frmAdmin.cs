@@ -14,7 +14,7 @@ namespace QuanLyHocSinh
         private IconPictureBox iconHide = new IconPictureBox();
         //Nut sổ lên
         private IconButton caretUpBtn = new IconButton();
-        public frmAdmin(TaiKhoan tk)
+        public frmAdmin(NhanVien nv)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -28,7 +28,7 @@ namespace QuanLyHocSinh
             //open form
             //login
             lblLogin.BackColor = Color.Transparent;
-            lblLogin.Text = tk.TaiKhoan1;
+            lblLogin.Text = nv.TaiKhoan;
             lblLogin.ForeColor = Color.White;
             //panel Hoc Phi
             panelHocPhi.Hide();
@@ -40,7 +40,7 @@ namespace QuanLyHocSinh
             panelHocPhi.AutoScroll = true;
             //load Avatar
             
-            string filename = pathImage() + tk.NhanVien.ThongTinCaNhan.Anh;
+            string filename = pathImage() + nv.ThongTinCaNhan.Anh;
             pictureAvatar.Image = Image.FromFile(filename);
         }
 
@@ -258,6 +258,11 @@ namespace QuanLyHocSinh
             this.Hide();
             frmLogin frmout = new frmLogin();
             frmout.Show();
+        }
+
+        private void btnDiemSo_Click(object sender, System.EventArgs e)
+        {
+            OpenChildForm(new frmDiemSo());
         }
     }
 }

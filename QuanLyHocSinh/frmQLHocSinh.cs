@@ -54,13 +54,12 @@ namespace QuanLyHocSinh
                     dgvHocSinh.Rows[index].Cells[0].Value = stud.MaHS.ToString();
                     dgvHocSinh.Rows[index].Cells[1].Value = new Bitmap(pathImage()+stud.Anh);
                     dgvHocSinh.Rows[index].Cells[2].Value = stud.HoTen;
-                    dgvHocSinh.Rows[index].Cells[3].Value = stud.Tuoi;
-                    dgvHocSinh.Rows[index].Cells[4].Value = stud.NgaySinh.Value.ToString("dd/MM/yyyy");
-                    dgvHocSinh.Rows[index].Cells[5].Value = stud.GioiTinh;
-                    dgvHocSinh.Rows[index].Cells[6].Value = stud.DiaChi;
-                    dgvHocSinh.Rows[index].Cells[7].Value = stud.SDT;
-                    dgvHocSinh.Rows[index].Cells[8].Value = stud.DiemDauVao;
-                    dgvHocSinh.Rows[index].Cells[9].Value = stud.TenLop;
+                    dgvHocSinh.Rows[index].Cells[3].Value = stud.NgaySinh.Value.ToString("dd/MM/yyyy");
+                    dgvHocSinh.Rows[index].Cells[4].Value = stud.GioiTinh;
+                    dgvHocSinh.Rows[index].Cells[5].Value = stud.DiaChi;
+                    dgvHocSinh.Rows[index].Cells[6].Value = stud.SDT;
+                    dgvHocSinh.Rows[index].Cells[7].Value = stud.DiemDauVao;
+                    dgvHocSinh.Rows[index].Cells[8].Value = stud.TenLop;
                     index++;
                 }
             }
@@ -91,13 +90,12 @@ namespace QuanLyHocSinh
                 dgvHocSinh.Rows[0].Cells[0].Value = stud.MaHS.ToString();
                 dgvHocSinh.Rows[0].Cells[1].Value = new Bitmap(pathImage() + stud.Anh);
                 dgvHocSinh.Rows[0].Cells[2].Value = stud.HoTen;
-                dgvHocSinh.Rows[0].Cells[3].Value = stud.Tuoi;
-                dgvHocSinh.Rows[0].Cells[4].Value = stud.NgaySinh.Value.ToString("dd/MM/yyyy");
-                dgvHocSinh.Rows[0].Cells[5].Value = stud.GioiTinh;
-                dgvHocSinh.Rows[0].Cells[6].Value = stud.DiaChi;
-                dgvHocSinh.Rows[0].Cells[7].Value = stud.SDT;
-                dgvHocSinh.Rows[0].Cells[8].Value = stud.DiemDauVao;
-                dgvHocSinh.Rows[0].Cells[9].Value = stud.TenLop;
+                dgvHocSinh.Rows[0].Cells[3].Value = stud.NgaySinh.Value.ToString("dd/MM/yyyy");
+                dgvHocSinh.Rows[0].Cells[4].Value = stud.GioiTinh;
+                dgvHocSinh.Rows[0].Cells[5].Value = stud.DiaChi;
+                dgvHocSinh.Rows[0].Cells[6].Value = stud.SDT;
+                dgvHocSinh.Rows[0].Cells[7].Value = stud.DiemDauVao;
+                dgvHocSinh.Rows[0].Cells[8].Value = stud.TenLop;
             }
             catch (Exception ex)
             {

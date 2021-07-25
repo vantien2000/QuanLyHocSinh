@@ -86,7 +86,7 @@ namespace QuanLyHocSinh
         }
         private void loadCombobox()
         {
-            dbDataContext db = new dbDataContext();
+
             var names = (from _class in db.LopHocs
                          select new { _class.MaLop, _class.TenLop }).ToList();
             cbbTenLop.DataSource = names;
@@ -123,7 +123,7 @@ namespace QuanLyHocSinh
             try
             {
                 //kiểm tra rổng
-                if (txtMaHS.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtTuoi.Text == "" || txtDiaChi.Text == ""
+                if (txtMaHS.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtDiaChi.Text == ""
                     || txtSoDT.Text == "" || txtDiem.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
@@ -138,17 +138,6 @@ namespace QuanLyHocSinh
                 }
                 else
                     diem = int.Parse(txtDiem.Text);
-
-                //kiểm tra tuổi hợp lệ
-                int tuoi = 0;
-                if (int.Parse(txtTuoi.Text) <= 0)
-                {
-                    MessageBox.Show("tuổi phải lớn hơn 0");
-                    return;
-                }
-                else
-                    tuoi = int.Parse(txtDiem.Text);
-
                 //laays gioi tinh
                 string gt = "";
                 if (rdNam.Checked) gt = "Nam";
@@ -170,7 +159,6 @@ namespace QuanLyHocSinh
                         autoKeyTHongTinCaNhan(),
                         txtTenHS.Text,
                         txtAnh.Text,
-                        tuoi,
                         dateNgaySinh.Value,
                         gt,
                         txtDiaChi.Text,

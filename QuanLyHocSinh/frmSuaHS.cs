@@ -34,7 +34,6 @@ namespace QuanLyHocSinh
             txtAnh.Text = show.Anh;
             pictureAnh.Image = new Bitmap(pathImage() + show.Anh);
             txtNgaySinh.Value = show.NgaySinh.Value;
-            txtTuoi.Text = show.Tuoi+"";
             if (show.GioiTinh == "Nam") rdNam.Select();
             else rdNu.Select();
             txtDiaChi.Text = show.DiaChi;
@@ -83,7 +82,7 @@ namespace QuanLyHocSinh
             try
             {
                 //kiểm tra rổng
-                if (txtMa.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtTuoi.Text == "" || txtDiaChi.Text == ""
+                if (txtMa.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtDiaChi.Text == ""
                     || txtSoDT.Text == "" || txtDiem.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
@@ -98,16 +97,6 @@ namespace QuanLyHocSinh
                 }
                 else
                     diem = int.Parse(txtDiem.Text);
-
-                //kiểm tra tuổi hợp lệ
-                int tuoi = 0;
-                if (int.Parse(txtTuoi.Text) <= 0)
-                {
-                    MessageBox.Show("tuổi phải lớn hơn 0");
-                    return;
-                }
-                else
-                    tuoi = int.Parse(txtDiem.Text);
 
                 //laays gioi tinh
                 string gt = "";
@@ -129,7 +118,6 @@ namespace QuanLyHocSinh
                         cbbTenLop.SelectedValue.ToString(),
                         txtTenHS.Text,
                         txtAnh.Text,
-                        tuoi,
                         txtNgaySinh.Value,
                         gt,
                         txtDiaChi.Text,

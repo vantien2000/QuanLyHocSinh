@@ -39,7 +39,7 @@ namespace QuanLyHocSinh
         {
             try
             {
-                var p = db.TaiKhoans.Single(tk => tk.TaiKhoan1 == txtTaiKhoan.Text.Trim());
+                var p = db.NhanViens.Single(tk => tk.TaiKhoan == txtTaiKhoan.Text.Trim());
                 if (p!=null)
                 {
                     this.Hide();

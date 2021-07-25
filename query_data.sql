@@ -2,7 +2,7 @@
 
 create proc ShowStudent
 as
-	select HocSinh.MaHS,Anh,HoTen,Tuoi,NgaySinh,GioiTinh,DiaChi,SDT,DiemDauVao,TenLop from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
+	select HocSinh.MaHS,Anh,HoTen,NgaySinh,GioiTinh,DiaChi,SDT,DiemDauVao,TenLop from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
 
 exec ShowStudent
 --thêm học sinh
@@ -14,7 +14,6 @@ create proc InsertStudent
 	@macn char(10),
 	@hoten nvarchar(200),
 	@anh varchar(100),
-	@tuoi int,
 	@ngaySinh date,
 	@gioiTinh char(5),
 	@diaChi nvarchar(500),
@@ -22,16 +21,16 @@ create proc InsertStudent
 )
 as
 begin
-	insert into ThongTinCaNhan values(@macn,@hoten,@anh,@tuoi,@ngaySinh,@gioiTinh,@diaChi,@sdt)
+	insert into ThongTinCaNhan values(@macn,@hoten,@anh,@ngaySinh,@gioiTinh,@diaChi,@sdt)
 	insert into HocSinh values(@mahs,@diem,@macn,@malop)
 end
---sửa học sinh
+
 create proc ShowStudentByMa
 (
 	@mahs nchar(10)
 )
 as
-	select HocSinh.MaHS,Anh,HoTen,Tuoi,NgaySinh,GioiTinh,DiaChi,SDT,DiemDauVao,TenLop from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
+	select HocSinh.MaHS,Anh,HoTen,NgaySinh,GioiTinh,DiaChi,SDT,DiemDauVao,TenLop from HocSinh inner join LopHoc on HocSinh.MaLop=LopHoc.MaLop inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
 	where HocSinh.MaHS = @mahs
 exec ShowStudentByMa 'HS01'
 
@@ -42,7 +41,6 @@ create proc UpdateStudent
 	@malop char(10),
 	@hoten nvarchar(200),
 	@anh varchar(100),
-	@tuoi int,
 	@ngaySinh date,
 	@gioiTinh char(5),
 	@diaChi nvarchar(500),
@@ -54,7 +52,7 @@ begin
 	select @macn = MaCN from HocSinh where HocSinh.MaHS = @mahs
 	update HocSinh set DiemDauVao = @diem,MaLop = @malop 
 		where MaHS = @mahs
-	update ThongTinCaNhan set HoTen = @hoten,Anh = @anh,Tuoi = @tuoi,NgaySinh = @ngaySinh,GioiTinh = @gioiTinh,DiaChi = @diaChi,SDT=@sdt
+	update ThongTinCaNhan set HoTen = @hoten,Anh = @anh,NgaySinh = @ngaySinh,GioiTinh = @gioiTinh,DiaChi = @diaChi,SDT=@sdt
 		where ThongTinCaNhan.MaCN = @macn
 end
 

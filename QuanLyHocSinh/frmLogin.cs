@@ -32,14 +32,14 @@ namespace QuanLyHocSinh
         public frmLogin(string user,string pass)
         {
             InitializeComponent();
-            var p = db.TaiKhoans.Single(tk => tk.TaiKhoan1 == user);
+            var p = db.NhanViens.Single(tk => tk.TaiKhoan == user);
             p.MatKhau = pass;
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             try
             {
-                var p = db.TaiKhoans.Single(tk => tk.TaiKhoan1 == txtUser.Text.Trim() && tk.MatKhau == txtPass.Text);
+                var p = db.NhanViens.Single(tk => tk.TaiKhoan == txtUser.Text.Trim() && tk.MatKhau == txtPass.Text);
                 if (txtUser.Text == "" || txtPass.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập thông tin tài khoản và mật khẩu!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

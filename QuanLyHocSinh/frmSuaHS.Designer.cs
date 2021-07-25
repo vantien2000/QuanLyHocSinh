@@ -47,10 +47,8 @@ namespace QuanLyHocSinh
             this.txtSoDT = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTenHS = new System.Windows.Forms.TextBox();
-            this.txtTuoi = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +62,7 @@ namespace QuanLyHocSinh
             this.btnSua.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(241, 676);
+            this.btnSua.Location = new System.Drawing.Point(241, 612);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(108, 43);
@@ -88,7 +86,7 @@ namespace QuanLyHocSinh
             // cbbTenLop
             // 
             this.cbbTenLop.FormattingEnabled = true;
-            this.cbbTenLop.Location = new System.Drawing.Point(279, 607);
+            this.cbbTenLop.Location = new System.Drawing.Point(279, 543);
             this.cbbTenLop.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTenLop.Name = "cbbTenLop";
             this.cbbTenLop.Size = new System.Drawing.Size(224, 24);
@@ -99,7 +97,7 @@ namespace QuanLyHocSinh
             this.groupBox1.Controls.Add(this.rdNu);
             this.groupBox1.Controls.Add(this.rdNam);
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(101, 364);
+            this.groupBox1.Location = new System.Drawing.Point(101, 300);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -148,7 +146,7 @@ namespace QuanLyHocSinh
             this.btnHuy.BackColor = System.Drawing.Color.Red;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(413, 676);
+            this.btnHuy.Location = new System.Drawing.Point(413, 612);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(108, 43);
@@ -212,7 +210,7 @@ namespace QuanLyHocSinh
             // 
             // txtDiem
             // 
-            this.txtDiem.Location = new System.Drawing.Point(279, 556);
+            this.txtDiem.Location = new System.Drawing.Point(279, 492);
             this.txtDiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiem.Name = "txtDiem";
             this.txtDiem.Size = new System.Drawing.Size(380, 23);
@@ -222,7 +220,7 @@ namespace QuanLyHocSinh
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(96, 557);
+            this.label9.Location = new System.Drawing.Point(96, 493);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 17);
@@ -231,7 +229,7 @@ namespace QuanLyHocSinh
             // 
             // txtSoDT
             // 
-            this.txtSoDT.Location = new System.Drawing.Point(279, 505);
+            this.txtSoDT.Location = new System.Drawing.Point(279, 441);
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(380, 23);
@@ -241,7 +239,7 @@ namespace QuanLyHocSinh
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(96, 507);
+            this.label8.Location = new System.Drawing.Point(96, 443);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 17);
@@ -256,17 +254,9 @@ namespace QuanLyHocSinh
             this.txtTenHS.Size = new System.Drawing.Size(380, 23);
             this.txtTenHS.TabIndex = 18;
             // 
-            // txtTuoi
-            // 
-            this.txtTuoi.Location = new System.Drawing.Point(279, 308);
-            this.txtTuoi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTuoi.Name = "txtTuoi";
-            this.txtTuoi.Size = new System.Drawing.Size(380, 23);
-            this.txtTuoi.TabIndex = 17;
-            // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(279, 454);
+            this.txtDiaChi.Location = new System.Drawing.Point(279, 390);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(380, 23);
@@ -276,29 +266,18 @@ namespace QuanLyHocSinh
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(96, 607);
+            this.label10.Location = new System.Drawing.Point(96, 543);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 17);
             this.label10.TabIndex = 9;
             this.label10.Text = "Tên lớp";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(96, 311);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 17);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Tuổi";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(96, 457);
+            this.label7.Location = new System.Drawing.Point(96, 393);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 17);
@@ -338,7 +317,7 @@ namespace QuanLyHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 744);
+            this.ClientSize = new System.Drawing.Size(754, 673);
             this.Controls.Add(this.pictureAnh);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.cbbTenLop);
@@ -356,10 +335,8 @@ namespace QuanLyHocSinh
             this.Controls.Add(this.txtSoDT);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTenHS);
-            this.Controls.Add(this.txtTuoi);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtMa);
             this.Controls.Add(this.label2);
@@ -396,10 +373,8 @@ namespace QuanLyHocSinh
         private System.Windows.Forms.TextBox txtSoDT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTenHS;
-        private System.Windows.Forms.TextBox txtTuoi;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label label2;
