@@ -85,5 +85,7 @@ namespace QuanLyHocSinh
             frmForgotPass fgpFrom = new frmForgotPass();
             fgpFrom.Show();
         }
+
+
     }
 }

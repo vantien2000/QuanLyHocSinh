@@ -22,10 +22,16 @@ namespace QuanLyHocSinh
         {
             if(txtMK.Text == txtXacThuc.Text)
             {
-                MessageBox.Show("Đặt Lại Mật Khẩu Thành Công!!");
-                this.Hide();
-                frmLogin login = new frmLogin(user,txtMK.Text);
-                login.Show();
+                using(dbDataContext db = new dbDataContext())
+                {
+                    var updatePass = db.NhanViens.Where(w => w.TaiKhoan == user).Select(x => x).Single();
+                    updatePass.MatKhau = txtXacThuc.Text.Trim();
+                    db.SubmitChanges();
+                    MessageBox.Show("Đặt Lại Mật Khẩu Thành Công!!");
+                    this.Hide();
+                    frmLogin login = new frmLogin(user, txtMK.Text);
+                    login.Show();
+                }
             }
             else
             {

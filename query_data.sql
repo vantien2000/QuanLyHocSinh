@@ -118,3 +118,5 @@ begin
 	insert into ThongTinCaNhan values(@macn,@hoten,@anh,@ngaySinh,@gioiTinh,@diaChi,@sdt)
 	insert into GVCN values(@magv,@macn)
 end
+
+select * from NhanVien

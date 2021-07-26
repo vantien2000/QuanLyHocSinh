@@ -19,7 +19,9 @@ namespace QuanLyHocSinh
         public frmThemGV()
         {
             InitializeComponent();
-            txtMaGV.Text = autoKeyGiaoVien();
+            //txtMaGV.Text = autoKeyGiaoVien();
+            var teachKey = (from teach in db.GVCNs select teach.MaGV).ToList().Last().Trim();
+            MessageBox.Show(teachKey);
         }
         private string pathImage()
         {
@@ -37,15 +39,15 @@ namespace QuanLyHocSinh
                 var teachKey = (from teach in db.GVCNs select teach.MaGV).ToList().Last().Trim();
 
                 int number = int.Parse(teachKey.Substring(2));
-
-                if (number > 0 && number < 9)
-                {
-                    key = teachKey.Substring(0, 2) + '0' + (number + 1);
-                }
-                else
-                {
-                    key = teachKey.Substring(0, 2) + (number + 1);
-                }
+                key = teachKey.Substring(0, 2);
+                //if (number > 0 && number < 9)
+                //{
+                //    key = teachKey.Substring(0, 2) + '0' + (number + 1);
+                //}
+                //else
+                //{
+                //    key = teachKey.Substring(0, 2) + (number + 1);
+                //}
             }
             catch (Exception ex)
             {
@@ -132,7 +134,7 @@ namespace QuanLyHocSinh
                 else
                     sdt = txtSoDT.Text.Trim();
                 //update student
-                var InsertStudent = db.InsertTeacher(
+                var InsertTeacher = db.InsertTeacher(
                         txtMaGV.Text.Trim(),
                         autoKeyTHongTinCaNhan(),
                         txtTenGV.Text,
