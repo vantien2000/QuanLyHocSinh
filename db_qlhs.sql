@@ -223,21 +223,6 @@ go
 
 
 
-
-Set quoted_identifier on
-go
-
-
-Set quoted_identifier off
-go
-
-
-/* Roles permissions */
-
-
-/* Users permissions */
-
-
 insert into ThongTinCaNhan values ('TTCN01',N'Nguyễn Văn Tiến','avata_nv_02.png',N'11/13/2000',N'Nam',N'Thanh Hóa','0123456789')
 insert into ThongTinCaNhan values ('TTCN02',N'Đoàn Văn Dũng','avata_nv_05.png',N'08/17/2000',N'Nam',N'Thanh Hóa','0354738859')
 insert into ThongTinCaNhan values ('TTCN03',N'Têu Phong','avata_nv_04.png',N'05/19/1999',N'Nam',N'Hà Nội','0123987623')
@@ -276,6 +261,16 @@ insert into LopHoc values ('L02', N'10 B2', N'Chuyên Lý', 'GV02', N'2018 - 201
 insert into LopHoc values ('L03', N'10 B3', N'Chuyên Hóa', 'GV03', N'2018 - 2019', 'K01')
 insert into LopHoc values ('L04', N'10 B4', N'Chuyên Văn', 'GV04', N'2019 - 2020', 'K01')
 insert into LopHoc values ('L05', N'10 B5', N'Chuyên Anh', 'GV05', N'2019 - 2020', 'K01')
+insert into LopHoc values ('L06', N'11 A1', N'Chuyên Toán', 'GV01', N'2018 - 2019', 'K02')
+insert into LopHoc values ('L07', N'11 A2', N'Chuyên Lý', 'GV02', N'2018 - 2019', 'K02')
+insert into LopHoc values ('L08', N'11 A3', N'Chuyên Hóa', 'GV03', N'2018 - 2019', 'K02')
+insert into LopHoc values ('L09', N'11 A4', N'Chuyên Văn', 'GV04', N'2019 - 2020', 'K02')
+insert into LopHoc values ('L10', N'11 A5', N'Chuyên Anh', 'GV05', N'2019 - 2020', 'K02')
+insert into LopHoc values ('L11', N'12 C1', N'Chuyên Toán', 'GV01', N'2018 - 2019', 'K03')
+insert into LopHoc values ('L12', N'12 C2', N'Chuyên Lý', 'GV02', N'2018 - 2019', 'K03')
+insert into LopHoc values ('L13', N'12 C3', N'Chuyên Hóa', 'GV03', N'2018 - 2019', 'K03')
+insert into LopHoc values ('L14', N'12 C4', N'Chuyên Văn', 'GV04', N'2019 - 2020', 'K03')
+insert into LopHoc values ('L15', N'12 C5', N'Chuyên Anh', 'GV05', N'2019 - 2020', 'K03')
 
 insert into HocSinh values ('HS01', '45', 'TTCN11', 'L01')
 insert into HocSinh values ('HS02', '47', 'TTCN12', 'L02')

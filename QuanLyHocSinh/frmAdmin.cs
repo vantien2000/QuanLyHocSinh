@@ -116,7 +116,7 @@ namespace QuanLyHocSinh
 
         private void btnGVCN_Click(object sender, System.EventArgs e)
         {
-
+            OpenChildForm(new frmQLGiaoVien());
         }
 
         private void btnGVCN_MouseHover(object sender, System.EventArgs e)
@@ -263,6 +263,11 @@ namespace QuanLyHocSinh
         private void btnDiemSo_Click(object sender, System.EventArgs e)
         {
             OpenChildForm(new frmDiemSo());
+        }
+
+        private void btnQLLopHoc_Click(object sender, System.EventArgs e)
+        {
+            OpenChildForm(new frmQLLopHoc());
         }
     }
 }

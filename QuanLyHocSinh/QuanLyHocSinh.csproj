@@ -78,6 +78,12 @@
     <Compile Include="frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLGiaoVien.Designer.cs">
+      <DependentUpon>frmQLGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +120,23 @@
     <Compile Include="frmSuaHS.Designer.cs">
       <DependentUpon>frmSuaHS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemGV.Designer.cs">
+      <DependentUpon>frmThemGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemHS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmThemHS.Designer.cs">
       <DependentUpon>frmThemHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemLop.Designer.cs">
+      <DependentUpon>frmThemLop.cs</DependentUpon>
     </Compile>
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
@@ -139,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLGiaoVien.resx">
+      <DependentUpon>frmQLGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLHocSinh.resx">
       <DependentUpon>frmQLHocSinh.cs</DependentUpon>
@@ -161,8 +182,14 @@
     <EmbeddedResource Include="frmSuaHS.resx">
       <DependentUpon>frmSuaHS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThemGV.resx">
+      <DependentUpon>frmThemGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThemHS.resx">
       <DependentUpon>frmThemHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemLop.resx">
+      <DependentUpon>frmThemLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -32,5 +32,16 @@ namespace QuanLyHocSinh.Properties {
                 return ((string)(this["db_qlhsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SLNDDHO;Initial Catalog=db_qlhs;Integrated Security=True;Conn" +
+            "ect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string db_qlhsConnectionString1 {
+            get {
+                return ((string)(this["db_qlhsConnectionString1"]));
+            }
+        }
     }
 }

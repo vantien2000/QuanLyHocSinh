@@ -57,3 +57,9 @@ E:\BTL-Win\QuanLyHocSinh\QuanLyHocSinh\bin\Debug\FontAwesome.Sharp.dll
 E:\BTL-Win\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.csproj.CopyComplete
 E:\BTL-Win\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
 E:\BTL-Win\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb
+E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmDiemSo.resources
+E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmSuaHS.resources
+E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmThemHS.resources
+E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmThemLop.resources
+E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmQLGiaoVien.resources
+E:\lapTrinhWindows\btl\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmThemGV.resources
