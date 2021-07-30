@@ -39,12 +39,13 @@ namespace QuanLyHocSinh
         {
             try
             {
-                var p = db.NhanViens.Single(tk => tk.TaiKhoan == txtUser.Text.Trim() && tk.MatKhau == txtPass.Text);
                 if (txtUser.Text == "" || txtPass.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập thông tin tài khoản và mật khẩu!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                NhanVien p = db.NhanViens.Where(tk => tk.TaiKhoan == txtUser.Text.Trim() && tk.MatKhau == txtPass.Text).Select(x => x).FirstOrDefault();
+
                 if (p != null)
                 {
                     this.Hide();
@@ -53,10 +54,10 @@ namespace QuanLyHocSinh
                 }
                 else
                 {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     lblThongBao.Text = "Nhập sai mật khẩu quá 5 lần. Tài khoản sẽ bị khóa";
                     lblThongBao.ForeColor = System.Drawing.Color.Red;
                     lblThongBao.Visible = true;
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     if (solanClick == 5)
                     {
                         txtUser.Enabled = false;
@@ -67,12 +68,11 @@ namespace QuanLyHocSinh
                     }
                     solanClick++;
                 }
-            }
-            catch (Exception ex)
+            }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
-             
+            
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {

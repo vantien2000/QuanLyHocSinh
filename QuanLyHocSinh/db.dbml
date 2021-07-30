@@ -4,27 +4,126 @@
     <Type Name="Diem">
       <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaMon" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="DiemMieng" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="Diem15Phut" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="Diem1Tiet" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="DiemGiuaKy" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="DiemCuoiKy" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Association Name="Diem_KetQua" Member="KetQuas" ThisKey="MaHS,MaMon" OtherKey="MaHS,MaMon" Type="KetQua" />
+      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaKQ" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
       <Association Name="HocSinh_Diem" Member="HocSinh" ThisKey="MaHS" OtherKey="MaHS" Type="HocSinh" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="KetQua_Diem" Member="KetQua" ThisKey="MaKQ" OtherKey="MaKQ" Type="KetQua" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MonHoc_Diem" Member="MonHoc" ThisKey="MaMon" OtherKey="MaMon" Type="MonHoc" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.ThongTinCaNhan" Member="ThongTinCaNhans">
-    <Type Name="ThongTinCaNhan">
-      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="ThongTinCaNhan_NhanVien" Member="NhanViens" ThisKey="MaCN" OtherKey="MaCN" Type="NhanVien" />
-      <Association Name="ThongTinCaNhan_HocSinh" Member="HocSinhs" ThisKey="MaCN" OtherKey="MaCN" Type="HocSinh" />
-      <Association Name="ThongTinCaNhan_GVCN" Member="GVCNs" ThisKey="MaCN" OtherKey="MaCN" Type="GVCN" />
+  <Table Name="dbo.GVCN" Member="GVCNs">
+    <Type Name="GVCN">
+      <Column Name="MaGV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="GVCN_LopHoc" Member="LopHocs" ThisKey="MaGV" OtherKey="MaGV" Type="LopHoc" />
+      <Association Name="ThongTinCaNhan_GVCN" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HanhKiem" Member="HanhKiems">
+    <Type Name="HanhKiem">
+      <Column Name="MaHanhKiem" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoaiHanhKiem" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="HanhKiem_TongKet" Member="TongKets" ThisKey="MaHanhKiem" OtherKey="MaHanhKiem" Type="TongKet" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HocKy" Member="HocKies">
+    <Type Name="HocKy">
+      <Column Name="MaHK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HeSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HocKy_KetQua" Member="KetQuas" ThisKey="MaHK" OtherKey="MaHK" Type="KetQua" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HocLuc" Member="HocLucs">
+    <Type Name="HocLuc">
+      <Column Name="MaHocLuc" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHocLuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TuDiem" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DenDiem" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HocSinh" Member="HocSinhs">
+    <Type Name="HocSinh">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiemDauVao" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="HocSinh_Diem" Member="Diems" ThisKey="MaHS" OtherKey="MaHS" Type="Diem" />
+      <Association Name="HocSinh_ThanhToan" Member="ThanhToans" ThisKey="MaHS" OtherKey="MaHS" Type="ThanhToan" />
+      <Association Name="ThongTinCaNhan_HocSinh" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KetQua" Member="KetQuas">
+    <Type Name="KetQua">
+      <Column Name="MaKQ" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaHK" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="KetQua_Diem" Member="Diems" ThisKey="MaKQ" OtherKey="MaKQ" Type="Diem" />
+      <Association Name="HocKy_KetQua" Member="HocKy" ThisKey="MaHK" OtherKey="MaHK" Type="HocKy" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhoiLop" Member="KhoiLops">
+    <Type Name="KhoiLop">
+      <Column Name="MaKhoiLop" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="KhoiLop_LopHoc" Member="LopHocs" ThisKey="MaKhoiLop" OtherKey="MaKhoiLop" Type="LopHoc" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LichSuGiaoDich" Member="LichSuGiaoDiches">
+    <Type Name="LichSuGiaoDich">
+      <Column Name="MaLS" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayGD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaGD" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ThanhToan_LichSuGiaoDich" Member="ThanhToan" ThisKey="MaGD" OtherKey="MaGD" Type="ThanhToan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiDiem" Member="LoaiDiems">
+    <Type Name="LoaiDiem">
+      <Column Name="MaLoai" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoaiDiem" Member="LoaiDiem1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HeSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LopHoc" Member="LopHocs">
+    <Type Name="LopHoc">
+      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NamHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaKhoiLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="GVCN_LopHoc" Member="GVCN" ThisKey="MaGV" OtherKey="MaGV" Type="GVCN" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="KhoiLop_LopHoc" Member="KhoiLop" ThisKey="MaKhoiLop" OtherKey="MaKhoiLop" Type="KhoiLop" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MonHoc" Member="MonHocs">
+    <Type Name="MonHoc">
+      <Column Name="MaMon" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="HeSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MonHoc_Diem" Member="Diems" ThisKey="MaMon" OtherKey="MaMon" Type="Diem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="MaNV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ThongTinCaNhan_NhanVien" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TongKet" Member="TongKets">
+    <Type Name="TongKet">
+      <Column Name="MaDiemTK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiemTK" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LenLop" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaHanhKiem" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="HanhKiem_TongKet" Member="HanhKiem" ThisKey="MaHanhKiem" OtherKey="MaHanhKiem" Type="HanhKiem" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ThanhToan" Member="ThanhToans">
@@ -39,147 +138,41 @@
       <Association Name="HocSinh_ThanhToan" Member="HocSinh" ThisKey="MaHS" OtherKey="MaHS" Type="HocSinh" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TongKet" Member="TongKets">
-    <Type Name="TongKet">
-      <Column Name="MaDiemTK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="DiemTK" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="MaHanhKiem" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="HanhKiem_TongKet" Member="HanhKiem" ThisKey="MaHanhKiem" OtherKey="MaHanhKiem" Type="HanhKiem" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.NhanVien" Member="NhanViens">
-    <Type Name="NhanVien">
-      <Column Name="MaNV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TaiKhoan" Type="System.String" DbType="Char(32)" CanBeNull="true" />
-      <Column Name="MatKhau" Type="System.String" DbType="Char(32)" CanBeNull="true" />
-      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="ThongTinCaNhan_NhanVien" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.MonHoc" Member="MonHocs">
-    <Type Name="MonHoc">
-      <Column Name="MaMon" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="MaGV" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="HeSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="GVCN_MonHoc" Member="GVCN" ThisKey="MaGV" OtherKey="MaGV" Type="GVCN" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LopHoc" Member="LopHocs">
-    <Type Name="LopHoc">
-      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="MaGV" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="NamHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MaKhoiLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="KhoiLop_LopHoc" Member="KhoiLop" ThisKey="MaKhoiLop" OtherKey="MaKhoiLop" Type="KhoiLop" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="GVCN_LopHoc" Member="GVCN" ThisKey="MaGV" OtherKey="MaGV" Type="GVCN" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LoaiDiem" Member="LoaiDiems">
-    <Type Name="LoaiDiem">
-      <Column Name="MaLoai" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="LoaiDiem" Member="LoaiDiem1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="HeSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LichSuGiaoDich" Member="LichSuGiaoDiches">
-    <Type Name="LichSuGiaoDich">
-      <Column Name="MaLS" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="NgayGD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="MaGD" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="ThanhToan_LichSuGiaoDich" Member="ThanhToan" ThisKey="MaGD" OtherKey="MaGD" Type="ThanhToan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KhoiLop" Member="KhoiLops">
-    <Type Name="KhoiLop">
-      <Column Name="MaKhoiLop" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenKhoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="KhoiLop_LopHoc" Member="LopHocs" ThisKey="MaKhoiLop" OtherKey="MaKhoiLop" Type="LopHoc" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KetQua" Member="KetQuas">
-    <Type Name="KetQua">
-      <Column Name="MaKQ" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="DiemTB" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="LenLop" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="MaMon" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="MaHK" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="Diem_KetQua" Member="Diem" ThisKey="MaHS,MaMon" OtherKey="MaHS,MaMon" Type="Diem" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="HocKy_KetQua" Member="HocKy" ThisKey="MaHK" OtherKey="MaHK" Type="HocKy" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.HocSinh" Member="HocSinhs">
-    <Type Name="HocSinh">
-      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="DiemDauVao" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="HocSinh_Diem" Member="Diems" ThisKey="MaHS" OtherKey="MaHS" Type="Diem" />
-      <Association Name="HocSinh_ThanhToan" Member="ThanhToans" ThisKey="MaHS" OtherKey="MaHS" Type="ThanhToan" />
-      <Association Name="ThongTinCaNhan_HocSinh" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.HocLuc" Member="HocLucs">
-    <Type Name="HocLuc">
-      <Column Name="MaHocLuc" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenHocLuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="TuDiem" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DenDiem" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.HocKy" Member="HocKies">
-    <Type Name="HocKy">
-      <Column Name="MaHK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="HeSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="HocKy_KetQua" Member="KetQuas" ThisKey="MaHK" OtherKey="MaHK" Type="KetQua" />
-    </Type>
-  </Table>
-  <Table Name="dbo.HanhKiem" Member="HanhKiems">
-    <Type Name="HanhKiem">
-      <Column Name="MaHanhKiem" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="LoaiHanhKiem" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Association Name="HanhKiem_TongKet" Member="TongKets" ThisKey="MaHanhKiem" OtherKey="MaHanhKiem" Type="TongKet" />
-    </Type>
-  </Table>
-  <Table Name="dbo.GVCN" Member="GVCNs">
-    <Type Name="GVCN">
-      <Column Name="MaGV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="GVCN_MonHoc" Member="MonHocs" ThisKey="MaGV" OtherKey="MaGV" Type="MonHoc" />
-      <Association Name="GVCN_LopHoc" Member="LopHocs" ThisKey="MaGV" OtherKey="MaGV" Type="LopHoc" />
-      <Association Name="ThongTinCaNhan_GVCN" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
-  <Function Name="dbo.ShowStudent" Method="ShowStudent">
-    <ElementType Name="ShowStudentResult">
-      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+  <Table Name="dbo.ThongTinCaNhan" Member="ThongTinCaNhans">
+    <Type Name="ThongTinCaNhan">
+      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="GioiTinh" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="DiemDauVao" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
+      <Association Name="ThongTinCaNhan_GVCN" Member="GVCNs" ThisKey="MaCN" OtherKey="MaCN" Type="GVCN" />
+      <Association Name="ThongTinCaNhan_HocSinh" Member="HocSinhs" ThisKey="MaCN" OtherKey="MaCN" Type="HocSinh" />
+      <Association Name="ThongTinCaNhan_NhanVien" Member="NhanViens" ThisKey="MaCN" OtherKey="MaCN" Type="NhanVien" />
+    </Type>
+  </Table>
+  <Function Name="dbo.DeleteScores" Method="DeleteScores">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="mamon" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ShowStudentByMa" Method="ShowStudentByMa">
-    <Parameter Name="mahs" Type="System.String" DbType="NChar(10)" />
-    <ElementType Name="ShowStudentByMaResult">
-      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="DiemDauVao" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
+  <Function Name="dbo.DeleteStudent" Method="DeleteStudent">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertScores" Method="InsertScores">
+    <Parameter Name="makq" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="diemtb" Type="System.Double" DbType="Float" />
+    <Parameter Name="mahk" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="mamon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="diemM" Type="System.Double" DbType="Float" />
+    <Parameter Name="diem15" Type="System.Double" DbType="Float" />
+    <Parameter Name="diem1" Type="System.Double" DbType="Float" />
+    <Parameter Name="diemgk" Type="System.Double" DbType="Float" />
+    <Parameter Name="diemck" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.InsertStudent" Method="InsertStudent">
     <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
@@ -194,6 +187,50 @@
     <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.ShowScores" Method="ShowScores">
+    <Parameter Name="maLop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maMon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maHocKy" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="ShowScoresResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ShowStudent" Method="ShowStudent">
+    <ElementType Name="ShowStudentResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemDauVao" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ShowStudentByMa" Method="ShowStudentByMa">
+    <Parameter Name="mahs" Type="System.String" DbType="NChar(10)" />
+    <ElementType Name="ShowStudentByMaResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemDauVao" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.UpdateStudent" Method="UpdateStudent">
     <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
     <Parameter Name="diem" Type="System.Int32" DbType="Int" />
@@ -206,8 +243,52 @@
     <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.DeleteStudent" Method="DeleteStudent">
+  <Function Name="dbo.FindScoresByHoTen" Method="FindScoresByHoTen">
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="maLop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maMon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maHocKy" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="FindScoresByHoTenResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FindScoresByMaHS" Method="FindScoresByMaHS">
     <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maLop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maMon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maHocKy" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="FindScoresByMaHSResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateScores" Method="UpdateScores">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="mamon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="mahk" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="diemM" Type="System.Double" DbType="Float" />
+    <Parameter Name="diem15" Type="System.Double" DbType="Float" />
+    <Parameter Name="diem1" Type="System.Double" DbType="Float" />
+    <Parameter Name="diemgk" Type="System.Double" DbType="Float" />
+    <Parameter Name="diemck" Type="System.Double" DbType="Float" />
+    <Parameter Name="diemtb" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

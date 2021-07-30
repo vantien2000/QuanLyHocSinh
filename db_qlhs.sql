@@ -30,7 +30,7 @@ go
 Create table [HocSinh]
 (
 	[MaHS] Char(10) NOT NULL,
-	[DiemDauVao] Integer NULL,
+	[DiemDauVao] Float NULL,
 	[MaCN] Char(10) NOT NULL,
 	[MaLop] Char(10) NOT NULL,
 Primary Key ([MaHS])
@@ -71,7 +71,6 @@ Create table [MonHoc]
 (
 	[MaMon] Char(10) NOT NULL,
 	[TenMon] Nvarchar(30) NULL,
-	[MaGV] Char(10) NULL,
 	[HeSo] Integer NULL,
 Primary Key ([MaMon])
 ) 
@@ -93,11 +92,12 @@ Create table [Diem]
 (
 	[MaHS] Char(10) NOT NULL,
 	[MaMon] Char(10) NOT NULL,
-	[DiemMieng] Decimal(18,0) NULL,
-	[Diem15Phut] Decimal(18,0) NULL,
-	[Diem1Tiet] Decimal(18,0) NULL,
-	[DiemGiuaKy] Decimal(18,0) NULL,
-	[DiemCuoiKy] Decimal(18,0) NULL,
+	[DiemMieng] Float NULL,
+	[Diem15Phut] Float NULL,
+	[Diem1Tiet] Float NULL,
+	[DiemGiuaKy] Float NULL,
+	[DiemCuoiKy] Float NULL,
+	[MaKQ] Char(10) NOT NULL,
 Primary Key ([MaHS],[MaMon])
 ) 
 go
@@ -105,10 +105,7 @@ go
 Create table [KetQua]
 (
 	[MaKQ] Char(10) NOT NULL,
-	[DiemTB] Decimal(18,0) NULL,
-	[LenLop] Nvarchar(20) NULL,
-	[MaHS] Char(10) NOT NULL,
-	[MaMon] Char(10) NOT NULL,
+	[DiemTB] Float NULL,
 	[MaHK] Char(10) NOT NULL,
 Primary Key ([MaKQ])
 ) 
@@ -170,7 +167,8 @@ go
 Create table [TongKet]
 (
 	[MaDiemTK] Char(10) NOT NULL,
-	[DiemTK] Decimal(18,0) NULL,
+	[DiemTK] Float NULL,
+	[LenLop] bit NULL,
 	[MaHanhKiem] Char(10) NOT NULL,
 Primary Key ([MaDiemTK])
 ) 
@@ -197,7 +195,7 @@ Alter table [Diem] add  foreign key([MaMon]) references [MonHoc] ([MaMon])  on u
 go
 Alter table [LichSuGiaoDich] add  foreign key([MaGD]) references [ThanhToan] ([MaGD])  on update cascade on delete cascade 
 go
-Alter table [KetQua] add  foreign key([MaHS],[MaMon]) references [Diem] ([MaHS],[MaMon])  on update cascade on delete cascade 
+Alter table [Diem] add  foreign key([MaKQ]) references [KetQua] ([MaKQ])  on update cascade on delete cascade 
 go
 Alter table [KetQua] add  foreign key([MaHK]) references [HocKy] ([MaHK]) on update cascade on delete cascade 
 go
@@ -205,23 +203,6 @@ Alter table [TongKet] add  foreign key([MaHanhKiem]) references [HanhKiem] ([MaH
 go
 Alter table [LopHoc] add  foreign key([MaKhoiLop]) references [KhoiLop] ([MaKhoiLop]) on update cascade on delete cascade 
 go
-
-
-Set quoted_identifier on
-go
-
-
-Set quoted_identifier off
-go
-
-
-/* Roles permissions */
-
-
-/* Users permissions */
-
-
-
 
 
 Set quoted_identifier on
@@ -289,15 +270,15 @@ insert into LoaiDiem values ('LD03', N'Điểm kiểm tra 1 tiết', 1)
 insert into LoaiDiem values ('LD04', N'Điểm giữa kỳ', 2)
 insert into LoaiDiem values ('LD05', N'Điểm cuối kỳ', 2)
 
-insert into MonHoc values ('M01', N'Toán Học', 'GV01', 2)
-insert into MonHoc values ('M02', N'Vật Lý', 'GV01', 1)
-insert into MonHoc values ('M03', N'Hóa Học', 'GV01', 1)
-insert into MonHoc values ('M04', N'Sinh Học', 'GV01', 1)
-insert into MonHoc values ('M05', N'Ngữ Văn', 'GV01', 1)
-insert into MonHoc values ('M06', N'Tiếng Anh', 'GV01', 2)
-insert into MonHoc values ('M07', N'Địa Lý', 'GV01', 1)
-insert into MonHoc values ('M08', N'Lịch Sử', 'GV01', 1)
-insert into MonHoc values ('M09', N'GDCD', 'GV01', 1)
+insert into MonHoc values ('M01', N'Toán Học', 2)
+insert into MonHoc values ('M02', N'Vật Lý', 1)
+insert into MonHoc values ('M03', N'Hóa Học', 1)
+insert into MonHoc values ('M04', N'Sinh Học', 1)
+insert into MonHoc values ('M05', N'Ngữ Văn', 1)
+insert into MonHoc values ('M06', N'Tiếng Anh', 2)
+insert into MonHoc values ('M07', N'Địa Lý', 1)
+insert into MonHoc values ('M08', N'Lịch Sử', 1)
+insert into MonHoc values ('M09', N'GDCD', 1)
 
 insert into HocKy values ('HK01', N'Học kỳ 1', 1)
 insert into HocKy values ('HK02', N'Học kỳ 2', 2)
@@ -331,6 +312,8 @@ select * from HanhKiem
 select * from ThanhToan
 select * from LichSuGiaoDich
 select * from Diem
+select * from KetQua
 
-delete from ThongTinCaNhan where MaCN = 'TTCN01'
+
+
 
