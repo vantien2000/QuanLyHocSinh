@@ -13,7 +13,7 @@ namespace QuanLyHocSinh
     public partial class frmQLHocSinh : Form
     {
         private dbDataContext db = new dbDataContext();
-        private ShowStudentByMaResult show = null;
+        private FindStudentByMaResult show = null;
         public static frmQLHocSinh getLoad;
         public frmQLHocSinh()
         {
@@ -85,7 +85,7 @@ namespace QuanLyHocSinh
                 }
                 dgvHocSinh.Rows.Clear();
                 dgvHocSinh.RowTemplate.Height = 80;
-                var stud = db.ShowStudentByMa(txtSearch.Text.Trim()).Single();
+                var stud = db.FindStudentByMa(txtSearch.Text.Trim()).Single();
                 dgvHocSinh.Rows.Add();
                 dgvHocSinh.Rows[0].Cells[0].Value = stud.MaHS.ToString();
                 dgvHocSinh.Rows[0].Cells[1].Value = new Bitmap(pathImage() + stud.Anh);
@@ -128,7 +128,7 @@ namespace QuanLyHocSinh
             if (selectedRow > 0 && selectedRow <= 1)
             {
                 string keyStud = dgvHocSinh.SelectedRows[0].Cells[0].Value+"";
-                var getInforChange = db.ShowStudentByMa(keyStud.Trim()).Single();
+                var getInforChange = db.FindStudentByMa(keyStud.Trim()).Single();
                 show = getInforChange;
             }
             else return;

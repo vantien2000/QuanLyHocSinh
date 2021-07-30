@@ -124,7 +124,7 @@ namespace QuanLyHocSinh
             this.txtPass.Location = new System.Drawing.Point(57, 14);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(295, 22);
+            this.txtPass.Size = new System.Drawing.Size(295, 32);
             this.txtPass.TabIndex = 0;
             // 
             // iconPictureBox2
@@ -163,7 +163,7 @@ namespace QuanLyHocSinh
             this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
             this.txtUser.Location = new System.Drawing.Point(57, 5);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(295, 22);
+            this.txtUser.Size = new System.Drawing.Size(295, 32);
             this.txtUser.TabIndex = 0;
             // 
             // iconPictureBox1
@@ -226,7 +226,7 @@ namespace QuanLyHocSinh
             this.lblThongBao.ForeColor = System.Drawing.Color.Red;
             this.lblThongBao.Location = new System.Drawing.Point(35, 259);
             this.lblThongBao.Name = "lblThongBao";
-            this.lblThongBao.Size = new System.Drawing.Size(85, 20);
+            this.lblThongBao.Size = new System.Drawing.Size(130, 29);
             this.lblThongBao.TabIndex = 19;
             this.lblThongBao.Text = "Thông báo";
             // 
@@ -239,9 +239,10 @@ namespace QuanLyHocSinh
             this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(276, 427);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 20);
+            this.label4.Size = new System.Drawing.Size(169, 29);
             this.label4.TabIndex = 19;
             this.label4.Text = "quên mật khẩu";
+            this.label4.Click += new System.EventHandler(this.ForgetPass);
             // 
             // label3
             // 
@@ -252,7 +253,7 @@ namespace QuanLyHocSinh
             this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(55, 426);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 20);
+            this.label3.Size = new System.Drawing.Size(229, 29);
             this.label3.TabIndex = 18;
             this.label3.Text = "Bạn quên mật khẩu?";
             // 
@@ -302,7 +303,7 @@ namespace QuanLyHocSinh
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(150, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 17);
+            this.label2.Size = new System.Drawing.Size(217, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "Nhân viên đăng nhập";
             // 
@@ -314,7 +315,7 @@ namespace QuanLyHocSinh
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(73, 157);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 20);
+            this.label1.Size = new System.Drawing.Size(376, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Trường THPT Chuyên Lam Sơn";
             // 
@@ -332,7 +333,7 @@ namespace QuanLyHocSinh
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(534, 597);

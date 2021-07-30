@@ -386,6 +386,7 @@ namespace QuanLyHocSinh
             this.btnQLLopHoc.Text = "Quản Lý Lớp Học";
             this.btnQLLopHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLLopHoc.UseVisualStyleBackColor = true;
+            this.btnQLLopHoc.Click += new System.EventHandler(this.btnQLLopHoc_Click);
             this.btnQLLopHoc.MouseHover += new System.EventHandler(this.btnQLLopHoc_MouseHover);
             // 
             // btnQLHocSinh
@@ -464,7 +465,7 @@ namespace QuanLyHocSinh
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
             this.label2.Location = new System.Drawing.Point(72, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 18);
+            this.label2.Size = new System.Drawing.Size(151, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Trường THPT";
             // 
@@ -475,7 +476,7 @@ namespace QuanLyHocSinh
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(83)))), ((int)(((byte)(33)))));
             this.label1.Location = new System.Drawing.Point(72, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 18);
+            this.label1.Size = new System.Drawing.Size(195, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chuyên Lam Sơn";
             // 
@@ -538,7 +539,7 @@ namespace QuanLyHocSinh
             this.lblLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblLogin.Location = new System.Drawing.Point(956, 14);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(57, 20);
+            this.lblLogin.Size = new System.Drawing.Size(85, 29);
             this.lblLogin.TabIndex = 3;
             this.lblLogin.Text = "label3";
             // 
@@ -601,7 +602,7 @@ namespace QuanLyHocSinh
             this.lblChange.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblChange.Location = new System.Drawing.Point(65, 15);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(52, 20);
+            this.lblChange.Size = new System.Drawing.Size(78, 29);
             this.lblChange.TabIndex = 1;
             this.lblChange.Text = "Home";
             // 
@@ -622,7 +623,7 @@ namespace QuanLyHocSinh
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
