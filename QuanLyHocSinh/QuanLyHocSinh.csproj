@@ -129,19 +129,17 @@
     <Compile Include="frmSuaHS.Designer.cs">
       <DependentUpon>frmSuaHS.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="frmThemDiemSo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmThemDiemSo.Designer.cs">
       <DependentUpon>frmThemDiemSo.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="frmThemGV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmThemGV.Designer.cs">
       <DependentUpon>frmThemGV.cs</DependentUpon>
->>>>>>> 92d8beb491667a014dabf13de8d0d65aa33fbb4f
     </Compile>
     <Compile Include="frmThemHS.cs">
       <SubType>Form</SubType>
@@ -149,19 +147,17 @@
     <Compile Include="frmThemHS.Designer.cs">
       <DependentUpon>frmThemHS.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="frmTimDiemSo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTimDiemSo.Designer.cs">
       <DependentUpon>frmTimDiemSo.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="frmThemLop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmThemLop.Designer.cs">
       <DependentUpon>frmThemLop.cs</DependentUpon>
->>>>>>> 92d8beb491667a014dabf13de8d0d65aa33fbb4f
     </Compile>
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
@@ -210,24 +206,20 @@
     <EmbeddedResource Include="frmSuaHS.resx">
       <DependentUpon>frmSuaHS.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="frmThemDiemSo.resx">
       <DependentUpon>frmThemDiemSo.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThemGV.resx">
       <DependentUpon>frmThemGV.cs</DependentUpon>
->>>>>>> 92d8beb491667a014dabf13de8d0d65aa33fbb4f
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemHS.resx">
       <DependentUpon>frmThemHS.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="frmTimDiemSo.resx">
       <DependentUpon>frmTimDiemSo.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThemLop.resx">
       <DependentUpon>frmThemLop.cs</DependentUpon>
->>>>>>> 92d8beb491667a014dabf13de8d0d65aa33fbb4f
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

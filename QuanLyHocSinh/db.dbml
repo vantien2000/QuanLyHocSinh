@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_qlhs" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-SLNDDHO;Initial Catalog=db_qlhs;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="QuanLyHocSinh.Properties.Settings" SettingsPropertyName="db_qlhsConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=db_qlhs;Integrated Security=True" SettingsObjectName="QuanLyHocSinh.Properties.Settings" SettingsPropertyName="db_qlhsConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Diem" Member="Diems">
     <Type Name="Diem">
       <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -108,15 +108,6 @@
       <Association Name="MonHoc_Diem" Member="Diems" ThisKey="MaMon" OtherKey="MaMon" Type="Diem" />
     </Type>
   </Table>
-  <Table Name="dbo.NhanVien" Member="NhanViens">
-    <Type Name="NhanVien">
-      <Column Name="MaNV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TaiKhoan" Type="System.String" DbType="Char(32)" CanBeNull="true" />
-      <Column Name="MatKhau" Type="System.String" DbType="Char(32)" CanBeNull="true" />
-      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Association Name="ThongTinCaNhan_NhanVien" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.TongKet" Member="TongKets">
     <Type Name="TongKet">
       <Column Name="MaDiemTK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -124,6 +115,15 @@
       <Column Name="LenLop" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="MaHanhKiem" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
       <Association Name="HanhKiem_TongKet" Member="HanhKiem" ThisKey="MaHanhKiem" OtherKey="MaHanhKiem" Type="HanhKiem" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="MaNV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="MaCN" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ThongTinCaNhan_NhanVien" Member="ThongTinCaNhan" ThisKey="MaCN" OtherKey="MaCN" Type="ThongTinCaNhan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ThanhToan" Member="ThanhToans">
@@ -160,6 +160,42 @@
   <Function Name="dbo.DeleteStudent" Method="DeleteStudent">
     <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FindScoresByHoTen" Method="FindScoresByHoTen">
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="maLop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maMon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maHocKy" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="FindScoresByHoTenResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FindScoresByMaHS" Method="FindScoresByMaHS">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maLop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maMon" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="maHocKy" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="FindScoresByMaHSResult">
+      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.InsertScores" Method="InsertScores">
     <Parameter Name="makq" Type="System.String" DbType="Char(10)" />
@@ -217,72 +253,6 @@
       <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-<<<<<<< HEAD
-  <Function Name="dbo.ShowStudentByMa" Method="ShowStudentByMa">
-    <Parameter Name="mahs" Type="System.String" DbType="NChar(10)" />
-    <ElementType Name="ShowStudentByMaResult">
-      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Anh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="DiemDauVao" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.UpdateStudent" Method="UpdateStudent">
-=======
-  <Function Name="dbo.InsertStudent" Method="InsertStudent">
->>>>>>> 92d8beb491667a014dabf13de8d0d65aa33fbb4f
-    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="diem" Type="System.Int32" DbType="Int" />
-    <Parameter Name="malop" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="anh" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="gioiTinh" Type="System.String" DbType="Char(5)" />
-    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(500)" />
-    <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.FindScoresByHoTen" Method="FindScoresByHoTen">
-    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="maLop" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="maMon" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="maHocKy" Type="System.String" DbType="Char(10)" />
-    <ElementType Name="FindScoresByHoTenResult">
-      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.FindScoresByMaHS" Method="FindScoresByMaHS">
-    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="maLop" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="maMon" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="maHocKy" Type="System.String" DbType="Char(10)" />
-    <ElementType Name="FindScoresByMaHSResult">
-      <Column Name="MaHS" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="DiemMieng" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diem15Phut" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="Diem1Tiet" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DiemGiuaKy" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DiemCuoiKy" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="TenHocKy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.UpdateScores" Method="UpdateScores">
     <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
     <Parameter Name="mamon" Type="System.String" DbType="Char(10)" />
@@ -295,16 +265,17 @@
     <Parameter Name="diemtb" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ShowClass" Method="ShowClass">
-    <ElementType Name="ShowClassResult">
-      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="NamHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MaKhoiLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="TenKhoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-    </ElementType>
+  <Function Name="dbo.UpdateStudent" Method="UpdateStudent">
+    <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="diem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="malop" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="anh" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.FindStudentByMa" Method="FindStudentByMa">
     <Parameter Name="mahs" Type="System.String" DbType="Char(10)" />
@@ -316,9 +287,31 @@
       <Column Name="GioiTinh" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
-      <Column Name="DiemDauVao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiemDauVao" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.ShowClass" Method="ShowClass">
+    <ElementType Name="ShowClassResult">
+      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaKhoiLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertTeacher" Method="InsertTeacher">
+    <Parameter Name="magv" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="macn" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="anh" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ShowTeacher" Method="ShowTeacher">
     <ElementType Name="ShowTeacherResult">
@@ -343,15 +336,16 @@
       <Column Name="SDT" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.InsertTeacher" Method="InsertTeacher">
-    <Parameter Name="magv" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="macn" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="anh" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="ngaySinh" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="gioiTinh" Type="System.String" DbType="Char(5)" />
-    <Parameter Name="diaChi" Type="System.String" DbType="NVarChar(500)" />
-    <Parameter Name="sdt" Type="System.String" DbType="Char(10)" />
-    <Return Type="System.Int32" />
+  <Function Name="dbo.FindClassByMa" Method="FindClassByMa">
+    <Parameter Name="malop" Type="System.String" DbType="Char(10)" />
+    <ElementType Name="FindClassByMaResult">
+      <Column Name="MaLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaKhoiLop" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

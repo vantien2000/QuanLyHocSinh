@@ -127,7 +127,7 @@ namespace QuanLyHocSinh
         }
         private void cbbMa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var names = db.ShowStudentByMa(cbbMa.Text);
+            var names = db.FindStudentByMa(cbbMa.Text);
             foreach(var item in names)
             {
                 txtHoTen.Text = item.HoTen.ToString();

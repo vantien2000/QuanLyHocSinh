@@ -71,7 +71,7 @@ select * from HocSinh
 
 select * from ThongTinCaNhan
 
-<<<<<<< HEAD
+
 create proc ShowScores
 (
 	@maLop char(10),
@@ -182,7 +182,7 @@ begin
 end
 select * from KetQua
 select * from Diem
-=======
+
 -- form QLLopHoc
 
 create proc ShowClass
@@ -232,4 +232,4 @@ begin
 end
 
 select * from NhanVien
->>>>>>> 92d8beb491667a014dabf13de8d0d65aa33fbb4f
+
