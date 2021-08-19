@@ -55,9 +55,6 @@
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="db.cs">
-      <DependentUpon>db.dbml</DependentUpon>
-    </Compile>
     <Compile Include="db.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +77,18 @@
     </Compile>
     <Compile Include="frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHocPhi.Designer.cs">
+      <DependentUpon>frmHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLSGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLSGD.Designer.cs">
+      <DependentUpon>frmLSGD.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLGiaoVien.cs">
       <SubType>Form</SubType>
@@ -178,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHocPhi.resx">
+      <DependentUpon>frmHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLSGD.resx">
+      <DependentUpon>frmLSGD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLGiaoVien.resx">
       <DependentUpon>frmQLGiaoVien.cs</DependentUpon>

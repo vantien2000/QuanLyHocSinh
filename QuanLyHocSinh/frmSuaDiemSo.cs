@@ -117,13 +117,13 @@ namespace QuanLyHocSinh
                 db.UpdateScores(
                     cbbMa.SelectedItem.ToString(),
                     cbbMon.SelectedValue.ToString(),
-                    cbbHocKy.SelectedValue.ToString(),
+                    Double.Parse(cbbHocKy.SelectedValue.ToString()),
                     Convert.ToSingle(txtDiemM.Text),
                     Convert.ToSingle(txtDiem15.Text),
                     Convert.ToSingle(txtDiem1Tiet.Text),
                     Convert.ToSingle(txtDiemGK.Text),
                     Convert.ToSingle(txtDiemCK.Text),
-                    DiemTB()
+                    DiemTB().ToString()
                 );
                 db.SubmitChanges();
                 MessageBox.Show("sửa điểm thành công!!!");

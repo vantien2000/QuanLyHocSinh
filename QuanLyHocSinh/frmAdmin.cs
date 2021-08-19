@@ -269,5 +269,15 @@ namespace QuanLyHocSinh
         {
             OpenChildForm(new frmQLLopHoc());
         }
+
+        private void btnXemHP_Click(object sender, System.EventArgs e)
+        {
+            OpenChildForm(new frmHocPhi());
+        }
+
+        private void btnLichSu_Click(object sender, System.EventArgs e)
+        {
+            OpenChildForm(new frmLSGD());
+        }
     }
 }

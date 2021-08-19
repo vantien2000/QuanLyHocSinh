@@ -153,7 +153,7 @@ namespace QuanLyHocSinh
                 }
                 db.InsertScores(
                     autoKeyKetQua(),
-                    DiemTB(),
+                    Decimal.Parse(DiemTB().ToString()),
                     cbbHocKy.SelectedValue.ToString(),
                     cbbMa.SelectedItem.ToString().Trim(),
                     cbbMon.SelectedValue.ToString(),

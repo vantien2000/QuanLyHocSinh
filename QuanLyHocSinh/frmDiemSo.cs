@@ -152,7 +152,7 @@ namespace QuanLyHocSinh
                         }
                         db.InsertScores(                     
                             key,
-                            Convert.ToSingle(dgvBangDiem.Rows[row].Cells[7].Value.ToString().Replace(",", ".")),
+                            Decimal.Parse(dgvBangDiem.Rows[row].Cells[7].Value.ToString().Replace(",", ".")),
                             cbbHocKy.SelectedValue.ToString(),
                             dgvBangDiem.Rows[row].Cells[0].Value.ToString(),
                             cbbMonHoc.SelectedValue.ToString(),

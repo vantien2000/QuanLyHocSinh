@@ -233,3 +233,16 @@ end
 
 select * from NhanVien
 
+-- form học phí
+
+create proc ShowHPhi
+as
+	select HocSinh.MaHS,Anh,HoTen,HocPhi,PhiPhatSinh,ThanhTien,TinhTrang from HocSinh inner join ThanhToan on HocSinh.MaHS=ThanhToan.MaHS inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN
+
+exec ShowHPhi
+
+create proc ShowLSGD
+as
+	select HocSinh.MaHS,Anh,HoTen,HocPhi,PhiPhatSinh,ThanhTien,NgayGD from HocSinh inner join ThanhToan on HocSinh.MaHS=ThanhToan.MaHS inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN inner join LichSuGiaoDich on ThanhToan.MaGD=LichSuGiaoDich.MaGD
+
+exec ShowLSGD

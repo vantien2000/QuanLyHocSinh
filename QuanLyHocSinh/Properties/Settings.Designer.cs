@@ -43,5 +43,16 @@ namespace QuanLyHocSinh.Properties {
                 return ((string)(this["db_qlhsConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SLNDDHO\\SQLEXPRESS;Initial Catalog=db_qlhs;Integrated Securit" +
+            "y=True")]
+        public string db_qlhsConnectionString2 {
+            get {
+                return ((string)(this["db_qlhsConnectionString2"]));
+            }
+        }
     }
 }
