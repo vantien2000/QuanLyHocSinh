@@ -51,5 +51,37 @@ namespace QuanLyHocSinh
             loadClass();
             dgvLopHoc.CurrentCell.Selected = false;
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtSearch.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã để tìm kiếm!!!", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    return;
+                }
+                dgvLopHoc.Rows.Clear();
+                dgvLopHoc.RowTemplate.Height = 80;
+                var lop = db.FindClassByMa(txtSearch.Text.Trim()).Single();
+                dgvLopHoc.Rows.Add();
+                dgvLopHoc.Rows[0].Cells[0].Value = lop.MaLop.ToString();
+                dgvLopHoc.Rows[0].Cells[1].Value = lop.TenLop;
+                dgvLopHoc.Rows[0].Cells[2].Value = lop.LoaiLop;
+                dgvLopHoc.Rows[0].Cells[3].Value = lop.NamHoc;
+                dgvLopHoc.Rows[0].Cells[4].Value = lop.MaKhoiLop;
+                dgvLopHoc.Rows[0].Cells[5].Value = lop.TenKhoi;
+                dgvLopHoc.Rows[0].Cells[6].Value = lop.HoTen;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            frmQLLopHoc_Load(sender, e);
+        }
     }
 }

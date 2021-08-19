@@ -130,13 +130,6 @@ Primary Key ([MaHocLuc])
 ) 
 go
 
-Create table [HanhKiem]
-(
-	[MaHanhKiem] Char(10) NOT NULL,
-	[LoaiHanhKiem] Nvarchar(30) NULL,
-Primary Key ([MaHanhKiem])
-) 
-go
 
 Create table [KhoiLop]
 (
@@ -164,15 +157,6 @@ Primary Key ([MaLS])
 ) 
 go
 
-Create table [TongKet]
-(
-	[MaDiemTK] Char(10) NOT NULL,
-	[DiemTK] Float NULL,
-	[LenLop] bit NULL,
-	[MaHanhKiem] Char(10) NOT NULL,
-Primary Key ([MaDiemTK])
-) 
-go
 
 
 Alter table [NhanVien] add  foreign key([MaCN]) references [ThongTinCaNhan] ([MaCN])  on update cascade on delete cascade 
@@ -199,8 +183,6 @@ Alter table [Diem] add  foreign key([MaKQ]) references [KetQua] ([MaKQ])  on upd
 go
 Alter table [KetQua] add  foreign key([MaHK]) references [HocKy] ([MaHK]) on update cascade on delete cascade 
 go
-Alter table [TongKet] add  foreign key([MaHanhKiem]) references [HanhKiem] ([MaHanhKiem]) on update cascade on delete cascade 
-go
 Alter table [LopHoc] add  foreign key([MaKhoiLop]) references [KhoiLop] ([MaKhoiLop]) on update cascade on delete cascade 
 go
 
@@ -219,11 +201,6 @@ go
 /* Users permissions */
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 92d8beb491667a014dabf13de8d0d65aa33fbb4f
 insert into ThongTinCaNhan values ('TTCN01',N'Nguyễn Văn Tiến','avata_nv_02.png',N'11/13/2000',N'Nam',N'Thanh Hóa','0123456789')
 insert into ThongTinCaNhan values ('TTCN02',N'Đoàn Văn Dũng','avata_nv_05.png',N'08/17/2000',N'Nam',N'Thanh Hóa','0354738859')
 insert into ThongTinCaNhan values ('TTCN03',N'Têu Phong','avata_nv_04.png',N'05/19/1999',N'Nam',N'Hà Nội','0123987623')
@@ -303,11 +280,6 @@ insert into HocLuc values ('HL02', N'Học lực khá', 6.5, 7.9)
 insert into HocLuc values ('HL03', N'Học lực trung bình', 5, 6.4)
 insert into HocLuc values ('HL04', N'Học lực yếu', 0, 4.9)
 
-insert into HanhKiem values ('HKiem01', N'Xuất sắc')
-insert into HanhKiem values ('HKiem02', N'Tốt')
-insert into HanhKiem values ('HKiem03', N'Khá')
-insert into HanhKiem values ('HKiem04', N'Trung bình')
-insert into HanhKiem values ('HKiem05', N'Yếu')
 
 insert into ThanhToan values ('TT01', '6000000', '300000', '6300000', N'Đã nộp', 'HS01')
 
@@ -323,7 +295,6 @@ select * from LoaiDiem
 select * from MonHoc
 select * from HocKy
 select * from HocLuc
-select * from HanhKiem
 select * from ThanhToan
 select * from LichSuGiaoDich
 select * from Diem

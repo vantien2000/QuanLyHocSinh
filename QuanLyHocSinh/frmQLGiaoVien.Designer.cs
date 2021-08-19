@@ -29,7 +29,7 @@ namespace QuanLyHocSinh
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anh = new System.Windows.Forms.DataGridViewImageColumn();
@@ -61,15 +61,15 @@ namespace QuanLyHocSinh
             this.GioiTinh,
             this.DiaChi,
             this.SoDT});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGiaoVien.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGiaoVien.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvGiaoVien.Location = new System.Drawing.Point(7, 94);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
             this.dgvGiaoVien.RowHeadersWidth = 62;
@@ -201,6 +201,7 @@ namespace QuanLyHocSinh
             this.btnRefesh.Size = new System.Drawing.Size(48, 44);
             this.btnRefesh.TabIndex = 13;
             this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnSearch
             // 
@@ -210,12 +211,13 @@ namespace QuanLyHocSinh
             this.btnSearch.IconColor = System.Drawing.Color.White;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 25;
-            this.btnSearch.Location = new System.Drawing.Point(406, 22);
+            this.btnSearch.Location = new System.Drawing.Point(406, 23);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(48, 32);
             this.btnSearch.TabIndex = 14;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // frmQLGiaoVien
             // 
@@ -230,7 +232,7 @@ namespace QuanLyHocSinh
             this.Controls.Add(this.btnRefesh);
             this.Controls.Add(this.btnSearch);
             this.Name = "frmQLGiaoVien";
-            this.Text = "frmQLGiaoVien";
+            this.Text = "Giáo Viên Chủ Nhiệm";
             this.Load += new System.EventHandler(this.frmQLGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).EndInit();
             this.ResumeLayout(false);

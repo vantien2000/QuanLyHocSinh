@@ -29,8 +29,7 @@ namespace QuanLyHocSinh
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnRefesh = new FontAwesome.Sharp.IconButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLopHoc = new System.Windows.Forms.DataGridView();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,27 +40,9 @@ namespace QuanLyHocSinh
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnRefesh = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLopHoc)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefesh.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefesh.IconChar = FontAwesome.Sharp.IconChar.Sync;
-            this.btnRefesh.IconColor = System.Drawing.Color.White;
-            this.btnRefesh.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRefesh.IconSize = 25;
-            this.btnRefesh.Location = new System.Drawing.Point(865, 14);
-            this.btnRefesh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(48, 44);
-            this.btnRefesh.TabIndex = 13;
-            this.btnRefesh.UseVisualStyleBackColor = false;
             // 
             // dgvLopHoc
             // 
@@ -77,15 +58,15 @@ namespace QuanLyHocSinh
             this.MaKhoiLop,
             this.TenKhoi,
             this.HoTen});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLopHoc.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLopHoc.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvLopHoc.Location = new System.Drawing.Point(-31, 71);
             this.dgvLopHoc.Name = "dgvLopHoc";
             this.dgvLopHoc.RowHeadersWidth = 62;
@@ -154,12 +135,13 @@ namespace QuanLyHocSinh
             this.btnSearch.IconColor = System.Drawing.Color.White;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 25;
-            this.btnSearch.Location = new System.Drawing.Point(418, 20);
+            this.btnSearch.Location = new System.Drawing.Point(418, 22);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(48, 32);
             this.btnSearch.TabIndex = 14;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -170,47 +152,21 @@ namespace QuanLyHocSinh
             this.txtSearch.Size = new System.Drawing.Size(391, 44);
             this.txtSearch.TabIndex = 12;
             // 
-            // btnXoa
+            // btnRefesh
             // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.BackColor = System.Drawing.Color.Red;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(1218, 14);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(138, 44);
-            this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(1070, 14);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(138, 44);
-            this.btnSua.TabIndex = 10;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(922, 14);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(138, 44);
-            this.btnThem.TabIndex = 9;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnRefesh.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.btnRefesh.IconColor = System.Drawing.Color.White;
+            this.btnRefesh.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRefesh.IconSize = 25;
+            this.btnRefesh.Location = new System.Drawing.Point(514, 22);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(48, 32);
+            this.btnRefesh.TabIndex = 16;
+            this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // frmQLLopHoc
             // 
@@ -221,9 +177,6 @@ namespace QuanLyHocSinh
             this.Controls.Add(this.dgvLopHoc);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
             this.Name = "frmQLLopHoc";
             this.Text = "Quản Lý Lớp Học";
             this.Load += new System.EventHandler(this.frmQLLopHoc_Load);
@@ -234,8 +187,6 @@ namespace QuanLyHocSinh
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton btnRefesh;
         private System.Windows.Forms.DataGridView dgvLopHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
@@ -246,8 +197,6 @@ namespace QuanLyHocSinh
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
+        private FontAwesome.Sharp.IconButton btnRefesh;
     }
 }

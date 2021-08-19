@@ -65,5 +65,37 @@ namespace QuanLyHocSinh
             frmThemGV themGV = new frmThemGV();
             themGV.Show();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtSearch.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã để tìm kiếm!!!", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    return;
+                }
+                dgvGiaoVien.Rows.Clear();
+                dgvGiaoVien.RowTemplate.Height = 80;
+                var teach = db.FindTeacherByMa(txtSearch.Text.Trim()).Single();
+                dgvGiaoVien.Rows.Add();
+                dgvGiaoVien.Rows[0].Cells[0].Value = teach.MaGV.ToString();
+                dgvGiaoVien.Rows[0].Cells[1].Value = new Bitmap(pathImage() + teach.Anh);
+                dgvGiaoVien.Rows[0].Cells[2].Value = teach.HoTen;
+                dgvGiaoVien.Rows[0].Cells[3].Value = teach.NgaySinh.Value.ToString("dd/MM/yyyy");
+                dgvGiaoVien.Rows[0].Cells[4].Value = teach.GioiTinh;
+                dgvGiaoVien.Rows[0].Cells[5].Value = teach.DiaChi;
+                dgvGiaoVien.Rows[0].Cells[6].Value = teach.SDT;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            frmQLGiaoVien_Load(sender, e);
+        }
     }
 }

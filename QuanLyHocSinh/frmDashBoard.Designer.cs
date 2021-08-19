@@ -415,7 +415,7 @@ namespace QuanLyHocSinh
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmDashBoard";
-            this.Text = "DashBoard";
+            this.Text = "Thống kê";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -279,5 +279,10 @@ namespace QuanLyHocSinh
         {
             OpenChildForm(new frmLSGD());
         }
+
+        private void btnTrangChu_Click(object sender, System.EventArgs e)
+        {
+            OpenChildForm(new frmHome());
+        }
     }
 }

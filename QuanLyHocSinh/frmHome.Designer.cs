@@ -38,20 +38,22 @@ namespace QuanLyHocSinh
             this.pictureHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureHome.Image = global::QuanLyHocSinh.Properties.Resources.dashboard;
             this.pictureHome.Location = new System.Drawing.Point(0, 0);
+            this.pictureHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureHome.Name = "pictureHome";
-            this.pictureHome.Size = new System.Drawing.Size(800, 450);
+            this.pictureHome.Size = new System.Drawing.Size(1200, 692);
             this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureHome.TabIndex = 1;
             this.pictureHome.TabStop = false;
             // 
-            // Home
+            // frmHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.pictureHome);
-            this.Name = "Home";
-            this.Text = "Home";
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "frmHome";
+            this.Text = "Trang chủ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
             this.ResumeLayout(false);
 
