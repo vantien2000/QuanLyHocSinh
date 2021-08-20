@@ -11,49 +11,46 @@ using System.Windows.Forms;
 
 namespace QuanLyHocSinh
 {
-    public partial class frmSuaHS : Form
+
+    public partial class frmSuaGV : Form
     {
         private dbDataContext db = new dbDataContext();
-        private FindStudentByMaResult show = null;
+        private FindTeacherByMaResult show = null;
         private string fileName = "";
-        public frmSuaHS(FindStudentByMaResult result)
+        private FindStudentByMaResult show1;
+
+        public frmSuaGV(FindTeacherByMaResult result)
         {
             InitializeComponent();
             show = result;
         }
+
+        public frmSuaGV(FindStudentByMaResult show1)
+        {
+            this.show1 = show1;
+        }
+
         private string pathImage()
         {
             string pathProject = Application.StartupPath;
             string newPath = pathProject.Substring(0, pathProject.Length - 23) + "Image" + '\\';
             return newPath;
         }
-        private void frmSuaHS_Load(object sender, EventArgs e)
+
+        private void frmSuaGV_Load(object sender, EventArgs e)
         {
-            txtMa.Text = show.MaHS;
-            txtTenHS.Text = show.HoTen;
+            txtMaGV.Text = show.MaGV;
+            txtTenGV.Text = show.HoTen;
             txtAnh.Text = show.Anh;
             pictureAnh.Image = new Bitmap(pathImage() + show.Anh);
-            txtNgaySinh.Value = show.NgaySinh.Value;
+            dtpNS.Value = show.NgaySinh.Value;
             if (show.GioiTinh.ToString().Trim().Equals("Nam"))
                 rdNam.Checked = true;
             else
                 rdNu.Checked = true;
             txtDiaChi.Text = show.DiaChi;
             txtSoDT.Text = show.SDT;
-            txtDiem.Text = show.DiemDauVao + "";
-            loadCombobox();
-            cbbTenLop.Text = show.TenLop;
         }
-
-        private void loadCombobox()
-        {
-            var names = (from _class in db.LopHocs
-                         select new { _class.MaLop, _class.TenLop }).ToList();
-            cbbTenLop.DataSource = names;
-            cbbTenLop.DisplayMember = "TenLop";
-            cbbTenLop.ValueMember = "MaLop";
-        }
-
 
         private void btnChonFile_Click(object sender, EventArgs e)
         {
@@ -79,26 +76,19 @@ namespace QuanLyHocSinh
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
         }
-        private void btnSua_Click(object sender, EventArgs e)
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
                 //kiểm tra rổng
-                if (txtMa.Text == "" || txtTenHS.Text == "" || txtAnh.Text == "" || txtDiaChi.Text == ""
-                    || txtSoDT.Text == "" || txtDiem.Text == "")
+                if (txtMaGV.Text == "" || txtTenGV.Text == "" || txtAnh.Text == "" || txtDiaChi.Text == ""
+                    || txtSoDT.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
                     return;
                 }
-                //kiểm tra điểm hợp lệ
-                int diem = 0;
-                if(int.Parse(txtDiem.Text) < 0)
-                {
-                    MessageBox.Show("điểm phải lớn hơn 0");
-                    return;
-                }
-                else
-                    diem = int.Parse(txtDiem.Text);
+
 
                 //laays gioi tinh
                 string gt = "";
@@ -114,25 +104,23 @@ namespace QuanLyHocSinh
                 else
                     sdt = txtSoDT.Text.Trim();
                 //update student
-                var updateStudent = db.UpdateStudent(
-                        txtMa.Text,
-                        diem,
-                        cbbTenLop.SelectedValue.ToString(),
-                        txtTenHS.Text,
+                var updateStudent = db.UpdateTeacher(
+                        txtMaGV.Text,
+                        txtTenGV.Text,
                         txtAnh.Text,
-                        txtNgaySinh.Value,
+                        dtpNS.Value,
                         gt,
                         txtDiaChi.Text,
                         sdt
                     );
 
                 db.SubmitChanges();
-                frmQLHocSinh.getLoad.loadStudent();
+                frmQLGiaoVien.getLoad.loadTeacher();
                 MessageBox.Show("Sửa thành công!!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 //dong form
                 Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }

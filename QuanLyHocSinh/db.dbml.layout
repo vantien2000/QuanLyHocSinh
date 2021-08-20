@@ -112,7 +112,7 @@
         <classShapeMoniker Id="8f010e45-fcd4-4c19-b414-784e5d6c9f84" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 11.0681469726562); (6.63541416666667 : 11.0681469726562 : JumpStart); (6.80208083333333 : 11.0681469726562 : JumpEnd); (7.25 : 11.0681469726562); (7.25 : 10.3478011067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 11.0681469726562); (7.25 : 11.0681469726562); (7.25 : 10.3478011067708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/KetQua/KetQua_Diem" />
       <nodes>
         <classShapeMoniker Id="c9c1b33e-4d5c-4e04-a47e-890130459166" />

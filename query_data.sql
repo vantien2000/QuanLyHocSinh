@@ -231,6 +231,36 @@ begin
 	insert into GVCN values(@magv,@macn)
 end
 
+create proc UpdateTeacher
+(
+	@magv char(10),
+	@hoten nvarchar(200),
+	@anh varchar(100),
+	@ngaySinh date,
+	@gioiTinh char(5),
+	@diaChi nvarchar(500),
+	@sdt char(10)
+)
+as
+begin
+	declare @macn char(10)
+	select @macn = MaCN from GVCN where GVCN.MaGV = @magv
+	update ThongTinCaNhan set HoTen = @hoten,Anh = @anh,NgaySinh = @ngaySinh,GioiTinh = @gioiTinh,DiaChi = @diaChi,SDT=@sdt
+		where ThongTinCaNhan.MaCN = @macn
+end
+
+create proc DeleteTeacher
+(
+	@magv char(10)
+)
+as
+begin
+	declare @macn char(10)
+	select @macn = MaCN from GVCN where GVCN.MaGV = @magv
+	delete from ThongTinCaNhan where MaCN = @macn
+end
+
+
 select * from NhanVien
 
 -- form học phí
@@ -246,3 +276,32 @@ as
 	select HocSinh.MaHS,Anh,HoTen,HocPhi,PhiPhatSinh,ThanhTien,NgayGD from HocSinh inner join ThanhToan on HocSinh.MaHS=ThanhToan.MaHS inner join ThongTinCaNhan on ThongTinCaNhan.MaCN = HocSinh.MaCN inner join LichSuGiaoDich on ThanhToan.MaGD=LichSuGiaoDich.MaGD
 
 exec ShowLSGD
+
+-- form cài đặt
+
+alter proc UpdateInfor
+(
+	@manv char(10),
+	@hoten nvarchar(200),
+	@anh varchar(100),
+	@ngaySinh date,
+	@gioiTinh char(5),
+	@diaChi nvarchar(500),
+	@sdt char(10)
+)
+as
+begin
+	declare @macn char(10)
+	select @macn = MaCN from NhanVien where NhanVien.MaNV = @manv
+	update ThongTinCaNhan set HoTen = @hoten,Anh = @anh,NgaySinh = @ngaySinh,GioiTinh = @gioiTinh,DiaChi = @diaChi,SDT=@sdt
+		where ThongTinCaNhan.MaCN = @macn
+end
+
+create proc FindNVByMa
+(
+	@manv char(10)
+)
+as
+	select MaNV,Anh,HoTen,NgaySinh,GioiTinh,DiaChi,SDT from NhanVien inner join ThongTinCaNhan on NhanVien.MaCN = ThongTinCaNhan.MaCN
+	where MaNV = @manv
+exec FindNVByMa 'NV01'

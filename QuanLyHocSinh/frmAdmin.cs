@@ -14,8 +14,11 @@ namespace QuanLyHocSinh
         private IconPictureBox iconHide = new IconPictureBox();
         //Nut sổ lên
         private IconButton caretUpBtn = new IconButton();
+        private NhanVien nVien;
+
         public frmAdmin(NhanVien nv)
         {
+            nVien = nv;
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(5, 40);
@@ -283,6 +286,12 @@ namespace QuanLyHocSinh
         private void btnTrangChu_Click(object sender, System.EventArgs e)
         {
             OpenChildForm(new frmHome());
+        }
+
+        private void iconProfile_Click(object sender, System.EventArgs e)
+        {
+            frmProfile suaInfor = new frmProfile(nVien);
+            suaInfor.Show();
         }
     }
 }

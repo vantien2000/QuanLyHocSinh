@@ -503,6 +503,7 @@ namespace QuanLyHocSinh
             this.iconProfile.Size = new System.Drawing.Size(22, 31);
             this.iconProfile.TabIndex = 5;
             this.iconProfile.UseVisualStyleBackColor = false;
+            this.iconProfile.Click += new System.EventHandler(this.iconProfile_Click);
             // 
             // inconLogout
             // 

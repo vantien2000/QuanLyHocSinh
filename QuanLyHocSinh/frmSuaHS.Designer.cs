@@ -78,7 +78,7 @@ namespace QuanLyHocSinh
             this.rdNu.Location = new System.Drawing.Point(385, 33);
             this.rdNu.Margin = new System.Windows.Forms.Padding(4);
             this.rdNu.Name = "rdNu";
-            this.rdNu.Size = new System.Drawing.Size(44, 21);
+            this.rdNu.Size = new System.Drawing.Size(62, 29);
             this.rdNu.TabIndex = 0;
             this.rdNu.Text = "Nữ";
             this.rdNu.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@ namespace QuanLyHocSinh
             this.cbbTenLop.Location = new System.Drawing.Point(279, 543);
             this.cbbTenLop.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTenLop.Name = "cbbTenLop";
-            this.cbbTenLop.Size = new System.Drawing.Size(224, 24);
+            this.cbbTenLop.Size = new System.Drawing.Size(224, 33);
             this.cbbTenLop.TabIndex = 28;
             // 
             // groupBox1
@@ -114,7 +114,7 @@ namespace QuanLyHocSinh
             this.rdNam.Location = new System.Drawing.Point(178, 33);
             this.rdNam.Margin = new System.Windows.Forms.Padding(4);
             this.rdNam.Name = "rdNam";
-            this.rdNam.Size = new System.Drawing.Size(55, 21);
+            this.rdNam.Size = new System.Drawing.Size(78, 29);
             this.rdNam.TabIndex = 0;
             this.rdNam.TabStop = true;
             this.rdNam.Text = "Nam";
@@ -127,7 +127,7 @@ namespace QuanLyHocSinh
             this.txtNgaySinh.Location = new System.Drawing.Point(279, 259);
             this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(380, 23);
+            this.txtNgaySinh.Size = new System.Drawing.Size(380, 30);
             this.txtNgaySinh.TabIndex = 26;
             // 
             // btnChooseFile
@@ -160,7 +160,7 @@ namespace QuanLyHocSinh
             this.txtAnh.Location = new System.Drawing.Point(316, 210);
             this.txtAnh.Margin = new System.Windows.Forms.Padding(4);
             this.txtAnh.Name = "txtAnh";
-            this.txtAnh.Size = new System.Drawing.Size(214, 23);
+            this.txtAnh.Size = new System.Drawing.Size(214, 30);
             this.txtAnh.TabIndex = 21;
             // 
             // label5
@@ -170,7 +170,7 @@ namespace QuanLyHocSinh
             this.label5.Location = new System.Drawing.Point(96, 262);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.Size = new System.Drawing.Size(99, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Ngày sinh";
             // 
@@ -181,7 +181,7 @@ namespace QuanLyHocSinh
             this.label4.Location = new System.Drawing.Point(96, 213);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 17);
+            this.label4.Size = new System.Drawing.Size(53, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "Ảnh ";
             // 
@@ -192,7 +192,7 @@ namespace QuanLyHocSinh
             this.label3.Location = new System.Drawing.Point(96, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 17);
+            this.label3.Size = new System.Drawing.Size(125, 25);
             this.label3.TabIndex = 12;
             this.label3.Text = "Tên học sinh";
             // 
@@ -204,7 +204,7 @@ namespace QuanLyHocSinh
             this.label1.Location = new System.Drawing.Point(289, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 25);
+            this.label1.Size = new System.Drawing.Size(210, 36);
             this.label1.TabIndex = 13;
             this.label1.Text = "Sửa Học Sinh";
             // 
@@ -213,7 +213,7 @@ namespace QuanLyHocSinh
             this.txtDiem.Location = new System.Drawing.Point(279, 492);
             this.txtDiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(380, 23);
+            this.txtDiem.Size = new System.Drawing.Size(380, 30);
             this.txtDiem.TabIndex = 19;
             // 
             // label9
@@ -223,7 +223,7 @@ namespace QuanLyHocSinh
             this.label9.Location = new System.Drawing.Point(96, 493);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 17);
+            this.label9.Size = new System.Drawing.Size(132, 25);
             this.label9.TabIndex = 15;
             this.label9.Text = "Điểm đầu vào";
             // 
@@ -232,7 +232,7 @@ namespace QuanLyHocSinh
             this.txtSoDT.Location = new System.Drawing.Point(279, 441);
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Size = new System.Drawing.Size(380, 23);
+            this.txtSoDT.Size = new System.Drawing.Size(380, 30);
             this.txtSoDT.TabIndex = 22;
             // 
             // label8
@@ -242,7 +242,7 @@ namespace QuanLyHocSinh
             this.label8.Location = new System.Drawing.Point(96, 443);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 17);
+            this.label8.Size = new System.Drawing.Size(126, 25);
             this.label8.TabIndex = 14;
             this.label8.Text = "Số điện thoại";
             // 
@@ -251,7 +251,7 @@ namespace QuanLyHocSinh
             this.txtTenHS.Location = new System.Drawing.Point(279, 161);
             this.txtTenHS.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenHS.Name = "txtTenHS";
-            this.txtTenHS.Size = new System.Drawing.Size(380, 23);
+            this.txtTenHS.Size = new System.Drawing.Size(380, 30);
             this.txtTenHS.TabIndex = 18;
             // 
             // txtDiaChi
@@ -259,7 +259,7 @@ namespace QuanLyHocSinh
             this.txtDiaChi.Location = new System.Drawing.Point(279, 390);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(380, 23);
+            this.txtDiaChi.Size = new System.Drawing.Size(380, 30);
             this.txtDiaChi.TabIndex = 16;
             // 
             // label10
@@ -269,7 +269,7 @@ namespace QuanLyHocSinh
             this.label10.Location = new System.Drawing.Point(96, 543);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.Size = new System.Drawing.Size(78, 25);
             this.label10.TabIndex = 9;
             this.label10.Text = "Tên lớp";
             // 
@@ -280,7 +280,7 @@ namespace QuanLyHocSinh
             this.label7.Location = new System.Drawing.Point(96, 393);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 17);
+            this.label7.Size = new System.Drawing.Size(71, 25);
             this.label7.TabIndex = 7;
             this.label7.Text = "Địa chỉ";
             // 
@@ -290,7 +290,7 @@ namespace QuanLyHocSinh
             this.txtMa.Location = new System.Drawing.Point(279, 112);
             this.txtMa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(380, 23);
+            this.txtMa.Size = new System.Drawing.Size(380, 30);
             this.txtMa.TabIndex = 20;
             // 
             // label2
@@ -300,7 +300,7 @@ namespace QuanLyHocSinh
             this.label2.Location = new System.Drawing.Point(96, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(118, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Mã học sinh";
             // 
@@ -315,7 +315,7 @@ namespace QuanLyHocSinh
             // 
             // frmSuaHS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 673);
             this.Controls.Add(this.pictureAnh);
@@ -343,7 +343,7 @@ namespace QuanLyHocSinh
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSuaHS";
-            this.Text = "frmSuaHS";
+            this.Text = "Sửa Học Sinh";
             this.Load += new System.EventHandler(this.frmSuaHS_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

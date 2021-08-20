@@ -13,7 +13,7 @@ namespace QuanLyHocSinh
     public partial class frmQLGiaoVien : Form
     {
         private dbDataContext db = new dbDataContext();
-        private FindStudentByMaResult show = null;
+        private FindTeacherByMaResult show = null;
         public static frmQLGiaoVien getLoad;
 
         public frmQLGiaoVien()
@@ -96,6 +96,63 @@ namespace QuanLyHocSinh
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             frmQLGiaoVien_Load(sender, e);
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (dgvGiaoVien.SelectedRows.Count > 0 && dgvGiaoVien.SelectedRows.Count <= 1)
+            {
+                frmSuaGV suaGV = new frmSuaGV(show);
+                suaGV.Show();
+            }
+            else if (dgvGiaoVien.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Chỉ chọn một giáo viên để sửa!!!", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn giáo viên!!!", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedRow = dgvGiaoVien.SelectedRows.Count;
+            if (selectedRow > 0 && selectedRow <= 1)
+            {
+                string keyStud = dgvGiaoVien.SelectedRows[0].Cells[0].Value + "";
+                var getInforChange = db.FindTeacherByMa(keyStud.Trim()).Single();
+                show = getInforChange;
+            }
+            else return;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedRow = dgvGiaoVien.SelectedRows.Count;
+                if (selectedRow > 0)
+                {
+                    foreach (DataGridViewRow row in dgvGiaoVien.SelectedRows)
+                    {
+                        db.DeleteTeacher(row.Cells[0].Value.ToString());
+                        db.SubmitChanges();
+                    }
+                    loadTeacher();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng để xóa !!");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
         }
     }
 }
