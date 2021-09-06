@@ -117,13 +117,13 @@ namespace QuanLyHocSinh
                 db.UpdateScores(
                     cbbMa.SelectedItem.ToString(),
                     cbbMon.SelectedValue.ToString(),
-                    Double.Parse(cbbHocKy.SelectedValue.ToString()),
+                    cbbHocKy.SelectedValue.ToString(),
                     Convert.ToSingle(txtDiemM.Text),
                     Convert.ToSingle(txtDiem15.Text),
                     Convert.ToSingle(txtDiem1Tiet.Text),
                     Convert.ToSingle(txtDiemGK.Text),
                     Convert.ToSingle(txtDiemCK.Text),
-                    DiemTB().ToString()
+                    DiemTB()
                 );
                 db.SubmitChanges();
                 MessageBox.Show("sửa điểm thành công!!!");
@@ -139,6 +139,7 @@ namespace QuanLyHocSinh
                 {
                     MessageBox.Show("Học sinh này đã có điểm!!");
                 }
+                else
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
 

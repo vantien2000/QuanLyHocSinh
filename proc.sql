@@ -122,26 +122,29 @@ begin
 	delete from KetQua where MaKQ=@makq
 end
 
-create proc UpdateScores
+alter proc UpdateScores
 (
 	@mahs char(10),
 	@mamon char(10),
+	@mahk char(10),
 	@diemM float,
 	@diem15 float,
 	@diem1 float,
 	@diemgk float,
 	@diemck float,
-	@diemtb float,
-	@mahk char(10)
+	@diemtb float
+	
 )
 as
 begin
 	declare @makq char(10)
 	select @makq=Diem.MaKQ from Diem where MaHS=@mahs and MaMon=@mamon
-	Update Diemset set DiemM=@diemM,Diem15phut=@diem15,Diem1Tiet=@diem1,DiemGiuaKy=@diemgk,DiemCuoiKy=@diemck
+	Update Diem set DiemMieng = @diemM,Diem15phut=@diem15,Diem1Tiet=@diem1,DiemGiuaKy=@diemgk,DiemCuoiKy=@diemck
 	where MaHS=@mahs and MaMon=@mamon;
 	Update KetQua set DiemTB=@diemtb where MaKQ=@makq
 end
+
+exec UpdateScores 'HS01', 'M01', 'HK01', 9, 8, 7, 8, 9, 9
 
 create proc FindScoresByMaHS
 (

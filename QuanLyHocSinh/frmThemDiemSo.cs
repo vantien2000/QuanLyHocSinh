@@ -177,6 +177,7 @@ namespace QuanLyHocSinh
                 {
                     MessageBox.Show("Học sinh này đã có điểm!!");
                 }
+                else
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
             
@@ -210,7 +211,8 @@ namespace QuanLyHocSinh
             }
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+
+        private void btnHuy_Click_1(object sender, EventArgs e)
         {
             Close();
         }

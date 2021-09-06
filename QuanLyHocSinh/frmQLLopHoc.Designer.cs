@@ -29,8 +29,11 @@ namespace QuanLyHocSinh
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLopHoc = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnRefesh = new FontAwesome.Sharp.IconButton();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,9 +41,6 @@ namespace QuanLyHocSinh
             this.MaKhoiLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnRefesh = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLopHoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,15 +58,15 @@ namespace QuanLyHocSinh
             this.MaKhoiLop,
             this.TenKhoi,
             this.HoTen});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLopHoc.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLopHoc.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLopHoc.Location = new System.Drawing.Point(-31, 71);
             this.dgvLopHoc.Name = "dgvLopHoc";
             this.dgvLopHoc.RowHeadersWidth = 62;
@@ -74,58 +74,6 @@ namespace QuanLyHocSinh
             this.dgvLopHoc.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
             this.dgvLopHoc.Size = new System.Drawing.Size(1367, 663);
             this.dgvLopHoc.TabIndex = 15;
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã lớp";
-            this.MaLop.MinimumWidth = 8;
-            this.MaLop.Name = "MaLop";
-            this.MaLop.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaLop.Width = 120;
-            // 
-            // TenLop
-            // 
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.MinimumWidth = 8;
-            this.TenLop.Name = "TenLop";
-            this.TenLop.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TenLop.Width = 200;
-            // 
-            // LoaiLop
-            // 
-            this.LoaiLop.HeaderText = "Loại lớp";
-            this.LoaiLop.MinimumWidth = 8;
-            this.LoaiLop.Name = "LoaiLop";
-            this.LoaiLop.Width = 150;
-            // 
-            // NamHoc
-            // 
-            this.NamHoc.HeaderText = "Năm học";
-            this.NamHoc.MinimumWidth = 8;
-            this.NamHoc.Name = "NamHoc";
-            this.NamHoc.Width = 150;
-            // 
-            // MaKhoiLop
-            // 
-            this.MaKhoiLop.HeaderText = "Mã khối";
-            this.MaKhoiLop.MinimumWidth = 8;
-            this.MaKhoiLop.Name = "MaKhoiLop";
-            this.MaKhoiLop.Width = 150;
-            // 
-            // TenKhoi
-            // 
-            this.TenKhoi.HeaderText = "Tên khối";
-            this.TenKhoi.MinimumWidth = 8;
-            this.TenKhoi.Name = "TenKhoi";
-            this.TenKhoi.Width = 150;
-            // 
-            // HoTen
-            // 
-            this.HoTen.HeaderText = "GVCN";
-            this.HoTen.MinimumWidth = 8;
-            this.HoTen.Name = "HoTen";
-            this.HoTen.Width = 200;
             // 
             // btnSearch
             // 
@@ -168,6 +116,58 @@ namespace QuanLyHocSinh
             this.btnRefesh.UseVisualStyleBackColor = false;
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Mã lớp";
+            this.MaLop.MinimumWidth = 8;
+            this.MaLop.Name = "MaLop";
+            this.MaLop.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaLop.Width = 150;
+            // 
+            // TenLop
+            // 
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.MinimumWidth = 8;
+            this.TenLop.Name = "TenLop";
+            this.TenLop.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TenLop.Width = 220;
+            // 
+            // LoaiLop
+            // 
+            this.LoaiLop.HeaderText = "Loại lớp";
+            this.LoaiLop.MinimumWidth = 8;
+            this.LoaiLop.Name = "LoaiLop";
+            this.LoaiLop.Width = 250;
+            // 
+            // NamHoc
+            // 
+            this.NamHoc.HeaderText = "Năm học";
+            this.NamHoc.MinimumWidth = 8;
+            this.NamHoc.Name = "NamHoc";
+            this.NamHoc.Width = 250;
+            // 
+            // MaKhoiLop
+            // 
+            this.MaKhoiLop.HeaderText = "Mã khối";
+            this.MaKhoiLop.MinimumWidth = 8;
+            this.MaKhoiLop.Name = "MaKhoiLop";
+            this.MaKhoiLop.Width = 200;
+            // 
+            // TenKhoi
+            // 
+            this.TenKhoi.HeaderText = "Tên khối";
+            this.TenKhoi.MinimumWidth = 8;
+            this.TenKhoi.Name = "TenKhoi";
+            this.TenKhoi.Width = 250;
+            // 
+            // HoTen
+            // 
+            this.HoTen.HeaderText = "GVCN";
+            this.HoTen.MinimumWidth = 8;
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Width = 250;
+            // 
             // frmQLLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -188,6 +188,9 @@ namespace QuanLyHocSinh
 
         #endregion
         private System.Windows.Forms.DataGridView dgvLopHoc;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private FontAwesome.Sharp.IconButton btnRefesh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiLop;
@@ -195,8 +198,5 @@ namespace QuanLyHocSinh
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoiLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
-        private FontAwesome.Sharp.IconButton btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
-        private FontAwesome.Sharp.IconButton btnRefesh;
     }
 }

@@ -31,6 +31,12 @@ namespace QuanLyHocSinh
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnRefesh = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anh = new System.Windows.Forms.DataGridViewImageColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,12 +44,6 @@ namespace QuanLyHocSinh
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnRefesh = new FontAwesome.Sharp.IconButton();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,62 +78,6 @@ namespace QuanLyHocSinh
             this.dgvGiaoVien.Size = new System.Drawing.Size(1321, 587);
             this.dgvGiaoVien.TabIndex = 15;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
-            // 
-            // MaHS
-            // 
-            this.MaHS.DataPropertyName = "MaGV";
-            this.MaHS.HeaderText = "Mã giáo viên";
-            this.MaHS.MinimumWidth = 8;
-            this.MaHS.Name = "MaHS";
-            this.MaHS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaHS.Width = 160;
-            // 
-            // Anh
-            // 
-            this.Anh.DataPropertyName = "Anh";
-            this.Anh.HeaderText = "Ảnh";
-            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Anh.MinimumWidth = 8;
-            this.Anh.Name = "Anh";
-            this.Anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Anh.Width = 80;
-            // 
-            // HoTen
-            // 
-            this.HoTen.HeaderText = "Tên giáo viên";
-            this.HoTen.MinimumWidth = 8;
-            this.HoTen.Name = "HoTen";
-            this.HoTen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.HoTen.Width = 200;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.HeaderText = "Ngày sinh";
-            this.NgaySinh.MinimumWidth = 8;
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Width = 180;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.MinimumWidth = 8;
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Width = 150;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.MinimumWidth = 8;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 180;
-            // 
-            // SoDT
-            // 
-            this.SoDT.HeaderText = "Số điện thoại";
-            this.SoDT.MinimumWidth = 8;
-            this.SoDT.Name = "SoDT";
-            this.SoDT.Width = 180;
             // 
             // txtSearch
             // 
@@ -221,6 +165,62 @@ namespace QuanLyHocSinh
             this.btnSearch.TabIndex = 14;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaGV";
+            this.MaHS.HeaderText = "Mã giáo viên";
+            this.MaHS.MinimumWidth = 8;
+            this.MaHS.Name = "MaHS";
+            this.MaHS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaHS.Width = 200;
+            // 
+            // Anh
+            // 
+            this.Anh.DataPropertyName = "Anh";
+            this.Anh.HeaderText = "Ảnh";
+            this.Anh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Anh.MinimumWidth = 8;
+            this.Anh.Name = "Anh";
+            this.Anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Anh.Width = 150;
+            // 
+            // HoTen
+            // 
+            this.HoTen.HeaderText = "Tên giáo viên";
+            this.HoTen.MinimumWidth = 8;
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.HoTen.Width = 250;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.MinimumWidth = 8;
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.Width = 250;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.MinimumWidth = 8;
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.Width = 250;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.MinimumWidth = 8;
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Width = 250;
+            // 
+            // SoDT
+            // 
+            this.SoDT.HeaderText = "Số điện thoại";
+            this.SoDT.MinimumWidth = 8;
+            this.SoDT.Name = "SoDT";
+            this.SoDT.Width = 250;
             // 
             // frmQLGiaoVien
             // 

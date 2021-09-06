@@ -29,7 +29,7 @@ namespace QuanLyHocSinh
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHocPhi = new System.Windows.Forms.DataGridView();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Anh = new System.Windows.Forms.DataGridViewImageColumn();
@@ -55,15 +55,15 @@ namespace QuanLyHocSinh
             this.PhiPhatSinh,
             this.ThanhTien,
             this.TinhTrang});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHocPhi.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHocPhi.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHocPhi.Location = new System.Drawing.Point(12, 47);
             this.dgvHocPhi.Name = "dgvHocPhi";
             this.dgvHocPhi.RowHeadersWidth = 62;
@@ -79,7 +79,7 @@ namespace QuanLyHocSinh
             this.MaHS.MinimumWidth = 8;
             this.MaHS.Name = "MaHS";
             this.MaHS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaHS.Width = 160;
+            this.MaHS.Width = 200;
             // 
             // Anh
             // 
@@ -90,7 +90,6 @@ namespace QuanLyHocSinh
             this.Anh.Name = "Anh";
             this.Anh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Anh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Anh.Width = 80;
             // 
             // HoTen
             // 
@@ -98,35 +97,35 @@ namespace QuanLyHocSinh
             this.HoTen.MinimumWidth = 8;
             this.HoTen.Name = "HoTen";
             this.HoTen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.HoTen.Width = 200;
+            this.HoTen.Width = 250;
             // 
             // HocPhi
             // 
             this.HocPhi.HeaderText = "Học phí";
             this.HocPhi.MinimumWidth = 8;
             this.HocPhi.Name = "HocPhi";
-            this.HocPhi.Width = 180;
+            this.HocPhi.Width = 250;
             // 
             // PhiPhatSinh
             // 
             this.PhiPhatSinh.HeaderText = "Phí phát sinh";
             this.PhiPhatSinh.MinimumWidth = 8;
             this.PhiPhatSinh.Name = "PhiPhatSinh";
-            this.PhiPhatSinh.Width = 150;
+            this.PhiPhatSinh.Width = 250;
             // 
             // ThanhTien
             // 
             this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.MinimumWidth = 8;
             this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.Width = 180;
+            this.ThanhTien.Width = 250;
             // 
             // TinhTrang
             // 
             this.TinhTrang.HeaderText = "Tình trạng";
             this.TinhTrang.MinimumWidth = 8;
             this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.Width = 180;
+            this.TinhTrang.Width = 250;
             // 
             // frmHocPhi
             // 

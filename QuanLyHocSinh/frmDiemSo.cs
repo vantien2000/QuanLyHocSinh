@@ -61,6 +61,7 @@ namespace QuanLyHocSinh
         }
         public void loadTable()
         {
+            dgvBangDiem.RowTemplate.Height = 50;
             var ds = db.ShowScores(cbbTenLop.SelectedValue.ToString()
                 , cbbMonHoc.SelectedValue.ToString(),
                 cbbHocKy.SelectedValue.ToString()).ToList();

@@ -282,8 +282,14 @@ insert into HocLuc values ('HL04', N'Học lực yếu', 0, 4.9)
 
 
 insert into ThanhToan values ('TT01', '6000000', '300000', '6300000', N'Đã nộp', 'HS01')
+insert into ThanhToan values ('TT02', '6000000', '300000', '6300000', N'Chưa nộp', 'HS02')
+insert into ThanhToan values ('TT03', '6000000', '300000', '6300000', N'Đã nộp', 'HS03')
+insert into ThanhToan values ('TT04', '6000000', '300000', '6300000', N'Chưa nộp', 'HS04')
+insert into ThanhToan values ('TT05', '6000000', '300000', '6300000', N'Đã nộp', 'HS05')
 
 insert into LichSuGiaoDich values ('LS01', '09/09/2020', 'TT01')
+insert into LichSuGiaoDich values ('LS02', '08/09/2020', 'TT03')
+insert into LichSuGiaoDich values ('LS03', '10/09/2020', 'TT05')
 
 select * from ThongTinCaNhan
 select * from NhanVien

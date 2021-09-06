@@ -21,7 +21,6 @@ namespace QuanLyHocSinh
             InitializeComponent();
             //txtMaGV.Text = autoKeyGiaoVien();
             var teachKey = (from teach in db.GVCNs select teach.MaGV).ToList().Last().Trim();
-            MessageBox.Show(teachKey);
         }
         private string pathImage()
         {

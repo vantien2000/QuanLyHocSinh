@@ -141,12 +141,16 @@ namespace QuanLyHocSinh
                 int selectedRow = dgvHocSinh.SelectedRows.Count;
                 if (selectedRow > 0)
                 {
-                    foreach (DataGridViewRow row in dgvHocSinh.SelectedRows)
+                    DialogResult dr = MessageBox.Show("Bạn có muốn xóa học sinh này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                    if(dr == DialogResult.Yes)
                     {
-                        db.DeleteStudent(row.Cells[0].Value.ToString());
-                        db.SubmitChanges();
+                        foreach (DataGridViewRow row in dgvHocSinh.SelectedRows)
+                        {
+                            db.DeleteStudent(row.Cells[0].Value.ToString());
+                            db.SubmitChanges();
+                        }
+                        loadStudent();
                     }
-                    loadStudent();
                 }
                 else
                 {

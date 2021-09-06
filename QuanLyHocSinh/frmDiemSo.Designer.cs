@@ -31,16 +31,6 @@ namespace QuanLyHocSinh
         {
             this.components = new System.ComponentModel.Container();
             this.dgvBangDiem = new System.Windows.Forms.DataGridView();
-            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem15Phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diem1Tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemGiuaKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemCuoiKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUpload = new System.Windows.Forms.TextBox();
             this.cbbTenLop = new System.Windows.Forms.ComboBox();
             this.cbbMonHoc = new System.Windows.Forms.ComboBox();
@@ -53,6 +43,16 @@ namespace QuanLyHocSinh
             this.FindStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRefesh = new FontAwesome.Sharp.IconButton();
             this.btnBrower = new FontAwesome.Sharp.IconButton();
+            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem15Phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diem1Tiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemGiuaKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemCuoiKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangDiem)).BeginInit();
             this.contextMenu.SuspendLayout();
             this.SuspendLayout();
@@ -76,70 +76,11 @@ namespace QuanLyHocSinh
             this.TenMon});
             this.dgvBangDiem.Location = new System.Drawing.Point(0, 83);
             this.dgvBangDiem.Name = "dgvBangDiem";
+            this.dgvBangDiem.RowHeadersWidth = 62;
             this.dgvBangDiem.Size = new System.Drawing.Size(1370, 667);
             this.dgvBangDiem.TabIndex = 0;
             this.dgvBangDiem.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.dgvBangDiem_CellContextMenuStripNeeded);
             this.dgvBangDiem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvBangDiem_MouseClick);
-            // 
-            // MaHS
-            // 
-            this.MaHS.DataPropertyName = "MaHS";
-            this.MaHS.HeaderText = "Mã học sinh";
-            this.MaHS.Name = "MaHS";
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "HoTen";
-            this.HoTen.HeaderText = "Họ tên";
-            this.HoTen.Name = "HoTen";
-            // 
-            // DiemMieng
-            // 
-            this.DiemMieng.DataPropertyName = "DiemMieng";
-            this.DiemMieng.HeaderText = "Điểm miệng";
-            this.DiemMieng.Name = "DiemMieng";
-            // 
-            // Diem15Phut
-            // 
-            this.Diem15Phut.DataPropertyName = "Diem15Phut";
-            this.Diem15Phut.HeaderText = "Điểm 15 phút";
-            this.Diem15Phut.Name = "Diem15Phut";
-            // 
-            // Diem1Tiet
-            // 
-            this.Diem1Tiet.DataPropertyName = "Diem1Tiet";
-            this.Diem1Tiet.HeaderText = "Điểm 1 tiết";
-            this.Diem1Tiet.Name = "Diem1Tiet";
-            // 
-            // DiemGiuaKy
-            // 
-            this.DiemGiuaKy.DataPropertyName = "DiemGiuaKy";
-            this.DiemGiuaKy.HeaderText = "Điểm giữa kỳ";
-            this.DiemGiuaKy.Name = "DiemGiuaKy";
-            // 
-            // DiemCuoiKy
-            // 
-            this.DiemCuoiKy.DataPropertyName = "DiemCuoiKy";
-            this.DiemCuoiKy.HeaderText = "Điểm cuối kỳ";
-            this.DiemCuoiKy.Name = "DiemCuoiKy";
-            // 
-            // DiemTB
-            // 
-            this.DiemTB.DataPropertyName = "DiemTB";
-            this.DiemTB.HeaderText = "Điếm trung bình";
-            this.DiemTB.Name = "DiemTB";
-            // 
-            // TenHocKy
-            // 
-            this.TenHocKy.DataPropertyName = "TenHocKy";
-            this.TenHocKy.HeaderText = "Tên học kỳ";
-            this.TenHocKy.Name = "TenHocKy";
-            // 
-            // TenMon
-            // 
-            this.TenMon.DataPropertyName = "TenMon";
-            this.TenMon.HeaderText = "Tên môn";
-            this.TenMon.Name = "TenMon";
             // 
             // txtUpload
             // 
@@ -147,7 +88,7 @@ namespace QuanLyHocSinh
             this.txtUpload.Location = new System.Drawing.Point(469, 28);
             this.txtUpload.Margin = new System.Windows.Forms.Padding(4);
             this.txtUpload.Name = "txtUpload";
-            this.txtUpload.Size = new System.Drawing.Size(373, 32);
+            this.txtUpload.Size = new System.Drawing.Size(373, 44);
             this.txtUpload.TabIndex = 8;
             // 
             // cbbTenLop
@@ -156,7 +97,7 @@ namespace QuanLyHocSinh
             this.cbbTenLop.FormattingEnabled = true;
             this.cbbTenLop.Location = new System.Drawing.Point(12, 26);
             this.cbbTenLop.Name = "cbbTenLop";
-            this.cbbTenLop.Size = new System.Drawing.Size(121, 33);
+            this.cbbTenLop.Size = new System.Drawing.Size(121, 45);
             this.cbbTenLop.TabIndex = 10;
             this.cbbTenLop.SelectedIndexChanged += new System.EventHandler(this.cbbTenLop_SelectedIndexChanged);
             // 
@@ -166,7 +107,7 @@ namespace QuanLyHocSinh
             this.cbbMonHoc.FormattingEnabled = true;
             this.cbbMonHoc.Location = new System.Drawing.Point(148, 26);
             this.cbbMonHoc.Name = "cbbMonHoc";
-            this.cbbMonHoc.Size = new System.Drawing.Size(121, 33);
+            this.cbbMonHoc.Size = new System.Drawing.Size(121, 45);
             this.cbbMonHoc.TabIndex = 10;
             this.cbbMonHoc.SelectedIndexChanged += new System.EventHandler(this.cbbMonHoc_SelectedIndexChanged);
             // 
@@ -176,7 +117,7 @@ namespace QuanLyHocSinh
             this.cbbHocKy.FormattingEnabled = true;
             this.cbbHocKy.Location = new System.Drawing.Point(284, 27);
             this.cbbHocKy.Name = "cbbHocKy";
-            this.cbbHocKy.Size = new System.Drawing.Size(121, 33);
+            this.cbbHocKy.Size = new System.Drawing.Size(121, 45);
             this.cbbHocKy.TabIndex = 10;
             this.cbbHocKy.SelectedIndexChanged += new System.EventHandler(this.cbbHocKy_SelectedIndexChanged);
             // 
@@ -196,19 +137,20 @@ namespace QuanLyHocSinh
             // 
             // contextMenu
             // 
+            this.contextMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.insertTripMenu,
             this.updateStrip,
             this.deleteTripMenu,
             this.FindStrip});
             this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(181, 114);
+            this.contextMenu.Size = new System.Drawing.Size(212, 132);
             // 
             // insertTripMenu
             // 
             this.insertTripMenu.Name = "insertTripMenu";
             this.insertTripMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.insertTripMenu.Size = new System.Drawing.Size(180, 22);
+            this.insertTripMenu.Size = new System.Drawing.Size(211, 32);
             this.insertTripMenu.Text = "Insert ";
             this.insertTripMenu.Click += new System.EventHandler(this.insertTripMenu_Click);
             // 
@@ -216,7 +158,7 @@ namespace QuanLyHocSinh
             // 
             this.updateStrip.Name = "updateStrip";
             this.updateStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.updateStrip.Size = new System.Drawing.Size(180, 22);
+            this.updateStrip.Size = new System.Drawing.Size(211, 32);
             this.updateStrip.Text = "Update";
             this.updateStrip.Click += new System.EventHandler(this.updateStrip_Click);
             // 
@@ -224,7 +166,7 @@ namespace QuanLyHocSinh
             // 
             this.deleteTripMenu.Name = "deleteTripMenu";
             this.deleteTripMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
-            this.deleteTripMenu.Size = new System.Drawing.Size(180, 22);
+            this.deleteTripMenu.Size = new System.Drawing.Size(211, 32);
             this.deleteTripMenu.Text = "Delete";
             this.deleteTripMenu.Click += new System.EventHandler(this.deleteTripMenu_Click);
             // 
@@ -232,7 +174,7 @@ namespace QuanLyHocSinh
             // 
             this.FindStrip.Name = "FindStrip";
             this.FindStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.FindStrip.Size = new System.Drawing.Size(180, 22);
+            this.FindStrip.Size = new System.Drawing.Size(211, 32);
             this.FindStrip.Text = "Find";
             this.FindStrip.Click += new System.EventHandler(this.FindStrip_Click);
             // 
@@ -273,9 +215,89 @@ namespace QuanLyHocSinh
             this.btnBrower.UseVisualStyleBackColor = false;
             this.btnBrower.Click += new System.EventHandler(this.btnBrower_Click);
             // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaHS";
+            this.MaHS.HeaderText = "Mã học sinh";
+            this.MaHS.MinimumWidth = 8;
+            this.MaHS.Name = "MaHS";
+            this.MaHS.Width = 150;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.MinimumWidth = 8;
+            this.HoTen.Name = "HoTen";
+            this.HoTen.Width = 170;
+            // 
+            // DiemMieng
+            // 
+            this.DiemMieng.DataPropertyName = "DiemMieng";
+            this.DiemMieng.HeaderText = "Điểm miệng";
+            this.DiemMieng.MinimumWidth = 8;
+            this.DiemMieng.Name = "DiemMieng";
+            this.DiemMieng.Width = 150;
+            // 
+            // Diem15Phut
+            // 
+            this.Diem15Phut.DataPropertyName = "Diem15Phut";
+            this.Diem15Phut.HeaderText = "Điểm 15 phút";
+            this.Diem15Phut.MinimumWidth = 8;
+            this.Diem15Phut.Name = "Diem15Phut";
+            this.Diem15Phut.Width = 170;
+            // 
+            // Diem1Tiet
+            // 
+            this.Diem1Tiet.DataPropertyName = "Diem1Tiet";
+            this.Diem1Tiet.HeaderText = "Điểm 1 tiết";
+            this.Diem1Tiet.MinimumWidth = 8;
+            this.Diem1Tiet.Name = "Diem1Tiet";
+            this.Diem1Tiet.Width = 160;
+            // 
+            // DiemGiuaKy
+            // 
+            this.DiemGiuaKy.DataPropertyName = "DiemGiuaKy";
+            this.DiemGiuaKy.HeaderText = "Điểm giữa kỳ";
+            this.DiemGiuaKy.MinimumWidth = 8;
+            this.DiemGiuaKy.Name = "DiemGiuaKy";
+            this.DiemGiuaKy.Width = 160;
+            // 
+            // DiemCuoiKy
+            // 
+            this.DiemCuoiKy.DataPropertyName = "DiemCuoiKy";
+            this.DiemCuoiKy.HeaderText = "Điểm cuối kỳ";
+            this.DiemCuoiKy.MinimumWidth = 8;
+            this.DiemCuoiKy.Name = "DiemCuoiKy";
+            this.DiemCuoiKy.Width = 160;
+            // 
+            // DiemTB
+            // 
+            this.DiemTB.DataPropertyName = "DiemTB";
+            this.DiemTB.HeaderText = "Điếm trung bình";
+            this.DiemTB.MinimumWidth = 8;
+            this.DiemTB.Name = "DiemTB";
+            this.DiemTB.Width = 180;
+            // 
+            // TenHocKy
+            // 
+            this.TenHocKy.DataPropertyName = "TenHocKy";
+            this.TenHocKy.HeaderText = "Tên học kỳ";
+            this.TenHocKy.MinimumWidth = 8;
+            this.TenHocKy.Name = "TenHocKy";
+            this.TenHocKy.Width = 140;
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMon";
+            this.TenMon.HeaderText = "Tên môn";
+            this.TenMon.MinimumWidth = 8;
+            this.TenMon.Name = "TenMon";
+            this.TenMon.Width = 140;
+            // 
             // frmDiemSo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 750);
